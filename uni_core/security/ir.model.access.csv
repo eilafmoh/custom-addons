@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_uni_student_student,uni.core.student,model_uni_student,,1,1,1,1
+access_uni_faculty_department,uni.faculty.department,model_uni_faculty_department,,1,1,1,1
+access_uni_faculty_level,uni.faculty.level,model_uni_faculty_level,,1,1,1,1
+access_uni_faculty_semester,uni.faculty.semester,model_uni_faculty_semester,,1,1,1,1
+access_uni_faculty_department_batch,uni.faculty.department.batch,model_uni_faculty_department_batch,,1,1,1,1
+access_uni_faculty_department_program,uni.core.uni_faculty_department_program,model_uni_faculty_department_program,,1,1,1,1
+access_uni_faculty_department_program_line,uni.core.uni_faculty_department_program_line,model_uni_faculty_department_program_line,,1,1,1,1
+access_uni_faculty_subject,uni.core.uni_faculty_subject,model_uni_faculty_subject,,1,1,1,1
+access_uni_faculty_subject_line,uni.core.uni_faculty_subject_line,model_uni_faculty_subject_line,,1,1,1,1
+access_secendery_school_result,uni.core.secendery_school_result,model_secendery_school_result,,1,1,1,1
+access_fees_payment,fees.payment.line.payment_details,model_fees_payment_line,,1,1,1,1
+
+

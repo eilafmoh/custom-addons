@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record id="category_end_of_service" model="ir.module.category">
+            <field name="name">End of service</field>
+        </record>
+
+
+
+        <record id="end_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="category_id" ref="category_end_of_service" />
+        </record>
+
+        <record id="end_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="category_end_of_service" />
+        </record>
+
+
+
+        <record id="end_of_service_user" model="ir.rule">
+            <field name="name">End of seveice User</field>
+            <field name="model_id" ref="model_hr_end_of_service"/>
+            <field name="domain_force">[('user_id.id','=',user.id)]</field>
+            <field name="groups" eval="[(4,ref('hr_end_of_service.end_user'))]"/>
+        </record>
+
+        
+
+    </data>
+</odoo>

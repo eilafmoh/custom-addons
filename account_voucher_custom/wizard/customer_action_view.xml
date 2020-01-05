@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+    <record id="check_action_form" model="ir.ui.view">
+        <field name="name">check.action</field>
+        <field name="model">check.action</field>
+        <field name="arch" type="xml">
+            <form string="Check action" version="7.0" >
+                
+                <group>
+                    <field name="journal_id" required="True"/>
+                    <!-- <group>
+                    <label string="If you click confirm it will confirm checks and post them and create their 
+                    entries " confirm="Are you sure you want to confirm those checks?"/>
+                </group> -->
+                </group>
+
+                <group>    
+                    <footer>
+                        <button string="confirm" name="paid" type="object" default_focus="1" class="oe_highlight" />
+
+                        <button string="Cancel" class="oe_link" special="cancel" icon="fa-ban"/>
+                    </footer>
+                </group>
+            </form>
+        </field>
+    </record>
+    <record id="customer_check_action_main" model="ir.actions.act_window">
+        <field name="name">Customer check</field>
+        <field name="res_model">check.action</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form,tree</field>
+    </record>
+
+    <act_window id="action_check_action"
+        multi="True"
+        key2="client_action_multi" name="Post check's"
+        res_model="check.action" src_model="customer.check.line"
+        view_mode="form" target="new" view_type="form" />
+
+    <act_window id="action_check_action_test"
+    multi="True"
+    key2="client_action_multi" name="Post check's  (out check)"
+    res_model="check.action" src_model="oncreadit.check.line"
+    view_mode="form" target="new" view_type="form" />
+
+
+
+
+    </data>
+</odoo>

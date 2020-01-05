@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- employee report wizard -->
+	<record id="hr_employee_wizard_view" model="ir.ui.view">
+		<field name="name">hr.employee.reports.wizard.form</field>
+		<field name="model">hr.employee.reports.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Employees Report">
+				<group col='6'>
+                    <field name="qualifications"/>
+                    <field name="status"/>
+                    <field name="date_appointment"/>
+                    <field name="birthday"/>
+                    <field name="emp_phone"/>
+                    <field name="email"/>
+				</group>
+ 			
+ 				<notebook>
+					<page string="Employees and Tags">
+						<group>
+							<field name="employee_ids" widget="many2many_tags" options="{'no_create': True}" domain="[('state','=', 'in_service')]"/>
+
+							<field name="category_ids" widget="many2many_tags" options="{'no_create': True}"/>
+						</group>
+					</page>
+					
+					<page string="Salary Structure">
+						<group>
+							<field name="salary_structure_ids" widget="many2many_tags" options="{'no_create': True}"/>
+
+							<!-- <field name="status_ids" widget="many2many_tags" options="{'no_create': True}"/> -->
+						</group>
+					</page>
+				</notebook>
+ 			
+				<footer>
+					<button name="print_report" string="Print" type="object" default_focus="1" class="oe_highlight"/>                or
+					<button string="Cancel" class="oe_link" special="cancel" />
+				</footer>
+			</form>
+		</field>
+	</record>
+	<record id="hr_employee_wizard_menu_action" model="ir.actions.act_window">
+		<field name="name">Employees Reports</field>
+		<field name="res_model">hr.employee.reports.wizard</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">form</field>
+		<field name="target">new</field>
+	</record>
+
+	<menuitem name="Reports" id="hr_reports_menu"
+        parent="hr.menu_hr_root"/>
+
+	<menuitem id="hr_employee_wizard_menu" name="Employees Details" action="hr_employee_wizard_menu_action" parent="hr_reports_menu" sequence="1"/>
+
+
+	<!-- xml excel -->
+	<record id="view_excel_form_extended" model="ir.ui.view">
+		<field name="name">excel.extended.report.form</field>
+		<field name="model">excel.extended.report</field>
+		<field name="arch" type="xml">
+			<form string="Excel Report file">
+				<group>
+					<field name="excel_file" readonly="1" filename="file_name"/>
+					<field name="file_name" invisible="1"/>
+				</group>
+			</form>
+		</field>
+	</record>
+	<record id="action_excel_form" model="ir.actions.act_window">
+		<field name="name">Reportes Excel</field>
+		<field name="view_id" ref="view_excel_form_extended"/>
+		<field name="view_type">form</field>
+		<field name="view_mode">form</field>
+		<field name="res_model">excel.extended.report</field>
+		<field name="target">new</field>
+	</record>
+</odoo>

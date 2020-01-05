@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="emp_custody_dev_report">
+            <t t-call="web.html_container">
+                <t t-call="web.internal_layout">
+
+                    <div class="page">
+                        <center class="text-center" style="background-color:#F0F8FF;border-style: solid;border-width: 1px;border-height:10000px">
+                            <strong style="font:30px;">Custody Deliver Detail</strong>
+                        </center>
+                        <br/>
+                        <t t-foreach="docs" t-as="doc">
+                            <strong >Date :</strong>
+                            <span style=" !important;" t-raw="doc.date"/>
+                            <hr/>
+
+                            <div>
+
+                                <strong >Employee :  </strong>
+                                <span style=" !important;" t-raw="doc.employee_id.name"/>
+
+                                <strong style="margin-left:50px;">Job Position  :  </strong>
+                                <span style=" !important;" t-raw="doc.job_id.name"/>
+                                <strong style="margin-left:50px;">Made By :</strong>
+                                <span style=" !important;" t-field="doc.user_id.name"/>
+                            </div>
+                            <br/>
+                            <div>
+
+                                <strong >Custody :</strong>
+                                <span style=" !important;" t-field="doc.custody_id"/>
+                            </div>
+
+
+
+                        </t>
+
+                        <table class="table table-condensed table table-striped" style=" table-layout:fixed;">
+                            <thead style=" background-color:black;">
+                                <tr>
+                                    <th style="border: 1px !important; border-style: solid ; border-color: #fff; color:#fff !important; ">Asset Item</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- <t t-foreach="docs.custody_line_ids" t-as="do"> -->
+
+                                <tr>
+                                    <t t-foreach="docs.custody_line_ids" t-as="do">
+                                        <td style="border: 1px !important; border-style: solid !important; border-color: #fff !important;">
+                                            <b>
+                                                <span style="!important;" t-raw="do.asset_id.name"/>
+
+                                            </b>
+                                        </td>
+                                    </t>
+                                </tr>
+                                <th style="border: 1px !important; border-style: solid !important; border-color:  #fff;background-color: coral;">HR Item</th>
+
+                                <tr>
+                                    <t t-foreach="docs.custody_custom_line_ids" t-as="d">
+                                        <td style="border: 1px !important; border-style: solid !important; border-color: #fff !important;">
+                                            <!-- <b>
+                                                <span style="!important;" t-raw="d.product_cutom_id.name"/>
+
+                                            </b> -->
+
+                                        </td>
+                                    </t>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+
+
+
+
+
+
+
+                    </div>
+                </t>
+            </t>
+
+        </template>
+    </data>
+</odoo>

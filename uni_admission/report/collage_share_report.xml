@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="collage_share_report">
+		<t t-call="report.internal_layout">
+			<div class="page">
+				<div class="page-header">
+					<center>
+						<h2>Collage Share </h2>
+					</center>
+				</div>
+				<div class="row" style="margin-left: 40%;border:4px;">
+					<div class="col-xs-6">
+						<strong>من : </strong>
+						<span t-esc="start"/>
+					</div>
+					<div class="col-xs-6">
+						<strong>الى : </strong>
+						<span t-esc="end"/>
+					</div>
+				</div>
+				<br/>
+
+				<div>
+					<table class="table table-condensed table-bordered">
+						<thead >
+							<tr style="background-color:#e6e6e6">
+								<th>
+									<center>										الكلية									</center>
+								</th>
+								<th>
+									<center>									 إجمالي المدفوع 										</center>
+								</th>
+								<th>
+									<center>										نصيب الجامعة									</center>
+								</th>
+								<th>
+									<center>										نصيب الكلية									</center>
+								</th>
+								<th>
+									<center>										إجمالي المتبقي									</center>
+								</th>
+								<th>
+									<center>										نصيب الجامعة									</center>
+								</th>
+								<th>
+									<center>										نصيب الكلية									</center>
+								</th>
+							</tr>
+						</thead>
+						<tbody t-foreach="datas" t-as="line">
+							<tr>
+								<td>
+									<center>
+										<span t-esc="line[0]"/>
+									</center>
+								</td>
+								<td>
+									<center>
+										<span t-esc="line[1]"/>
+									</center>
+								</td>
+								<td >
+									<center>
+										<span t-esc="line[2]"/>
+									</center>
+								</td>
+								<td >
+									<center>
+										<span t-esc="line[3]"/>
+									</center>
+								</td>
+								<td >
+									<center>
+										<span t-esc="line[4]"/>
+									</center>
+								</td>
+								<td >
+									<center>
+										<span t-esc="line[5]"/>
+									</center>
+								</td>
+								<td >
+									<center>
+										<span t-esc="line[6]"/>
+									</center>
+								</td>
+							</tr>
+						</tbody>
+						<thead>
+							<tr style="background-color:#e6e6e6">
+								<th>
+									<center>										الإجمالي									</center>
+								</th>
+								<th>
+									<center>
+										<span t-esc="totals[0]"/>
+									</center>
+								</th>
+								<th>
+									<center>
+										<span t-esc="totals[1]"/>
+									</center>
+								</th>
+								<th>
+									<center>
+										<span t-esc="totals[2]"/>
+									</center>
+								</th>
+								<th>
+									<center>
+										<span t-esc="totals[3]"/>
+									</center>
+								</th>
+								<th>
+									<center>
+										<span t-esc="totals[4]"/>
+									</center>
+								</th>
+								<th>
+									<center>
+										<span t-esc="totals[5]"/>
+									</center>
+								</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+
+			</div>
+		</t>
+	</template>
+</odoo>

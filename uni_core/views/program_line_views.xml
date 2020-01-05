@@ -1,0 +1,64 @@
+<odoo>
+	<data>
+		<record id="uni_faculty_department_program_lines_view_form" model="ir.ui.view">
+			<field name="name">uni.faculty.department.program2.line.form</field>
+			<field name="model">uni.faculty.department.program.line</field>
+			<field name="arch" type="xml">
+				<form string="Program Details" create="0">
+					<sheet>
+						<group>
+							<field name="program_id" required="1" options="{'no_create': True}"/>
+							<field name="faculty_id" readonly="1" options="{'no_create': True}" groups="base.group_multi_company"/>
+							<field name="level_id" options="{'no_create': True}"/>
+							<field name="semester_id" options="{'no_create': True}"/>
+							<field name="specialization_id" options="{'no_create': True}"  invisible="1"/>
+							<field name="subject_id" options="{'no_create': True}"/>
+							<field name="credit_hours"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<record id="uni_faculty_department_program_lines_view_tree" model="ir.ui.view">
+			<field name="name">uni.faculty.department.program.line2.tree</field>
+			<field name="model">uni.faculty.department.program.line</field>
+			<field name="arch" type="xml">
+				<tree string="Program Details" create="0">
+					<field name="program_id"/>
+					<field name="faculty_id" groups="base.group_multi_company"/>
+					<field name="level_id"/>
+					<field name="semester_id"/>
+					<field name="specialization_id"  invisible="1"/>
+					<field name="subject_id"/>
+					<field name="credit_hours"/>
+				</tree>
+			</field>
+		</record>
+		<record id="uni_faculty_department_program_lines_action" model="ir.actions.act_window">
+			<field name="name">Programs Detail</field>
+			<field name="res_model">uni.faculty.department.program.line</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_ids" eval="[(5, 0, 0),(0, 0, {'view_mode': 'tree', 'view_id': ref('uni_faculty_department_program_lines_view_tree')}),(0, 0, {'view_mode': 'form', 'view_id': ref('uni_faculty_department_program_lines_view_form')})]"/>
+		</record>
+		<record id="view_program_lines_line_filter" model="ir.ui.view">
+			<field name="name">view.program.lines.line.select</field>
+			<field name="model">uni.faculty.department.program.line</field>
+			<field name="arch" type="xml">
+				<search>
+					<!-- Search by -->
+					<field name="program_id"/>
+					<field name="subject_id"/>
+					<!-- Group by -->
+					<group expand="0" string="Group By">
+						<filter string="Program" name="group_by_program_id" context="{'group_by':'program_id'}"/>
+						<filter string="Level" name="group_by_level_id" context="{'group_by':'level_id'}"/>
+						<filter string="Semester" name="group_by_semester_id" context="{'group_by':'semester_id'}"/>
+						<filter string="Subject" name="group_by_subject_id" context="{'group_by':'subject_id'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<!-- Menu items -->
+		<menuitem id="uni_program_lines_menu" name="Programs Detail" parent="uni_core_configurations_view_menu" action="uni_faculty_department_program_lines_action"/>
+	</data>
+</odoo>

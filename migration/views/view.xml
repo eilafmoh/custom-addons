@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- <record id="hr_migration_view_form" model="ir.ui.view">
+		<field name="name">hr.migration.form</field>
+		<field name="model">hr.migration</field>
+		<field name="arch" type="xml">
+			<form string="HR Migration">
+				<sheet>
+					<div class="oe_title">
+						<h1>
+							<table>
+								<tr>
+									<td style="padding-right:10px;">
+										<field name="first_name" placeholder="First Name" />
+									</td>
+									<td style="padding-right:10px;">
+										<field name="second_name" placeholder="Second Name" />
+									</td>
+									<td style="padding-right:10px;">
+										<field name="third_name" placeholder="Third Name" />
+									</td>
+									<td style="padding-right:10px;">
+										<field name="last_name" placeholder="Last Name" />
+									</td>
+								</tr>
+							</table>
+						</h1>
+					</div>
+					<group>
+						<field name="emp_code" />
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="hr_migration_view_tree" model="ir.ui.view">
+		<field name="name">hr.migration.tree</field>
+		<field name="model">hr.migration</field>
+		<field name="arch" type="xml">
+			<tree string="HR Migration">
+				<field name="emp_code"/>
+				<field name="first_name"/>
+			</tree>
+		</field>
+	</record>
+	<record id="hr_migration_action" model="ir.actions.act_window">
+		<field name="name">HR Migration</field>
+		<field name="res_model">hr.migration</field>
+		<field name="view_mode">tree,form</field>
+		<field name="help" type="html">
+			<p class="oe_view_nocontent_create">Click on import button to import new employees.</p>
+		</field>
+	</record>-->
+
+	<menuitem id="menu_hr_migration_view" name="Migration" parent="hr.menu_hr_root"/> 
+	<!--<menuitem id="menu_hr_migration" name="HR Migration" parent="menu_hr_migration_view" action="hr_migration_action"/>
+	-->
+
+	<!-- department migration -->
+	<!-- <record id="hr_dept_migration_view_form" model="ir.ui.view">
+		<field name="name">hr.dept.migration.form</field>
+		<field name="model">hr.dept.migration</field>
+		<field name="arch" type="xml">
+			<form string="HR Dept Migration">
+				<sheet>
+					<group col='4'>
+						<field name="name" />
+						<field name="code" />
+					</group>
+					<group>
+						<field name="parent" />
+						<field name="category_code" />						
+					</group>
+					
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="hr_dept_migration_view_tree" model="ir.ui.view">
+		<field name="name">hr.dept.migration.tree</field>
+		<field name="model">hr.dept.migration</field>
+		<field name="arch" type="xml">
+			<tree string="HR Deptartment Migration">
+				<field name="code" />
+				<field name="name" />
+			</tree>
+		</field>
+	</record>
+	<record id="hr_dept_migration_action" model="ir.actions.act_window">
+		<field name="name">HR Deptartment Migration</field>
+		<field name="res_model">hr.dept.migration</field>
+		<field name="view_mode">tree,form</field>
+		
+	</record> -->
+
+	<!--<menuitem id="menu_hr_dept_migration" name="HR Deptartment Migration" parent="menu_hr_migration_view" action="hr_dept_migration_action"/>
+	-->
+
+
+
+	<!-- goal migration -->
+	<!-- <record id="hr_goal_migration_view_form" model="ir.ui.view">
+		<field name="name">hr.goal.migration.form</field>
+		<field name="model">hr.goal.migration</field>
+		<field name="arch" type="xml">
+			<form string="HR Task Migration">
+				<sheet>
+					<group col='2'>
+						<field name="name" />
+						<field name="sequence" />
+						<field name="code" />
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="hr_goal_migration_view_tree" model="ir.ui.view">
+		<field name="name">hr.goal.migration.tree</field>
+		<field name="model">hr.goal.migration</field>
+		<field name="arch" type="xml">
+			<tree string="HR Goal Migration">
+				<field name="name" />
+			</tree>
+		</field>
+	</record>
+	<record id="hr_goal_migration_action" model="ir.actions.act_window">
+		<field name="name">HR Goal Migration</field>
+		<field name="res_model">hr.goal.migration</field>
+		<field name="view_mode">tree,form</field>
+		
+	</record> -->
+
+	<!--<menuitem id="menu_hr_goal_migration" name="HR Goal Migration" parent="menu_hr_migration_view" action="hr_goal_migration_action"/>
+	-->
+
+	<!-- task migration -->
+	<!-- <record id="hr_task_migration_view_form" model="ir.ui.view">
+		<field name="name">hr.task.migration.form</field>
+		<field name="model">hr.task.migration</field>
+		<field name="arch" type="xml">
+			<form string="HR Task Migration">
+				<sheet>
+					<group col='2'>
+						<field name="name" />
+						<field name="sequence" />
+						<field name="code" />
+						<field name="category_code" />
+						<field name="department_code" />
+						<field name="next_job_code" />
+						<field name="degree_code" />
+					</group>
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="hr_task_migration_view_tree" model="ir.ui.view">
+		<field name="name">hr.task.migration.tree</field>
+		<field name="model">hr.task.migration</field>
+		<field name="arch" type="xml">
+			<tree string="HR Task Migration">
+				<field name="name" />
+			</tree>
+		</field>
+	</record>
+	<record id="hr_task_migration_action" model="ir.actions.act_window">
+		<field name="name">HR Task Migration</field>
+		<field name="res_model">hr.task.migration</field>
+		<field name="view_mode">tree,form</field>
+		
+	</record> -->
+
+	<!--<menuitem id="menu_hr_task_migration" name="HR Task Migration" parent="menu_hr_migration_view" action="hr_task_migration_action"/>
+	-->
+
+	<!--  migration -->
+	<!-- <record id="migration_view_form" model="ir.ui.view">
+		<field name="name">migration.migration.form</field>
+		<field name="model">migration.migration</field>
+		<field name="arch" type="xml">
+			<form string="Migration">
+				<sheet>
+					<group col='4'>
+						<field name="emp_code" />
+						<field name="name" />
+					</group>
+					<group>
+					<field name="relation_identity"/>
+						<field name="emp_identity"/>
+						<field name="relation" />
+						<field name="birthday" />	
+						<field name="company_id" />						
+					</group>
+					
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="migration_view_tree" model="ir.ui.view">
+		<field name="name">migration.migration.tree</field>
+		<field name="model">migration.migration</field>
+		<field name="arch" type="xml">
+			<tree string="Migration">
+				<field name="emp_code" />
+				<field name="name" />
+			</tree>
+		</field>
+	</record>
+	<record id="migration_action" model="ir.actions.act_window">
+		<field name="name">Migration</field>
+		<field name="res_model">migration.migration</field>
+		<field name="view_mode">tree,form</field>
+		
+	</record> -->
+
+	<!-- <menuitem id="menu_migration" name="Migration" parent="menu_hr_migration_view" action="migration_action"/> -->
+
+	<!--  migration -->
+	<!-- <record id="res_migration_view_form" model="ir.ui.view">
+		<field name="name">res.bank.migration.form</field>
+		<field name="model">res.bank.migration</field>
+		<field name="arch" type="xml">
+			<form string="Migration">
+				<sheet>
+					<group>
+						<field name="name" />
+					</group>
+					
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="res_migration_view_tree" model="ir.ui.view">
+		<field name="name">res.bank.migration.tree</field>
+		<field name="model">res.bank.migration</field>
+		<field name="arch" type="xml">
+			<tree string="Migration">
+				<field name="name" />
+			</tree>
+		</field>
+	</record>
+	<record id="res_migration_action" model="ir.actions.act_window">
+		<field name="name">Migration</field>
+		<field name="res_model">res.bank.migration</field>
+		<field name="view_mode">tree,form</field>
+		
+	</record> -->
+
+	<!-- <menuitem id="menu_res_migration" name="res bank Migration" parent="menu_hr_migration_view" action="res_migration_action"/> -->
+
+	<!--  migration -->
+	<record id="acc_migration_view_form" model="ir.ui.view">
+		<field name="name">bank.migration.form</field>
+		<field name="model">bank.migration</field>
+		<field name="arch" type="xml">
+			<form string="Migration">
+				<sheet>
+					<group>
+						<field name="name" />
+						<field name="account_bank" />
+						<field name="ipan" />
+					</group>
+					
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="acc_migration_view_tree" model="ir.ui.view">
+		<field name="name">bank.migration.tree</field>
+		<field name="model">bank.migration</field>
+		<field name="arch" type="xml">
+			<tree string="Migration">
+				<field name="account_bank" />
+			</tree>
+		</field>
+	</record>
+	<record id="acc_migration_action" model="ir.actions.act_window">
+		<field name="name">Migration</field>
+		<field name="res_model">bank.migration</field>
+		<field name="view_mode">tree,form</field>
+		
+	</record>
+
+	<menuitem id="menu_acc_migration" name="accounts bank Migration" parent="menu_hr_migration_view" action="acc_migration_action"/>
+
+	<!--  -->
+	<record id="contype_migration_view_form" model="ir.ui.view">
+		<field name="name">contype.migration.form</field>
+		<field name="model">contype.migration</field>
+		<field name="arch" type="xml">
+			<form string="Migration">
+				<sheet>
+					<group>
+						<field name="name" />
+						<field name="_type" />
+					</group>
+					
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="contype_migration_view_tree" model="ir.ui.view">
+		<field name="name">contype.migration.tree</field>
+		<field name="model">contype.migration</field>
+		<field name="arch" type="xml">
+			<tree string="Migration">
+				<field name="name" />
+			</tree>
+		</field>
+	</record>
+	<record id="contype_migration_action" model="ir.actions.act_window">
+		<field name="name">Migration</field>
+		<field name="res_model">contype.migration</field>
+		<field name="view_mode">tree,form</field>
+		
+	</record>
+
+	<menuitem id="menu_contype_migration" name="contype Migration" parent="menu_hr_migration_view" action="contype_migration_action"/>
+
+
+	<!--  migration -->
+	<!-- <record id="ins_migration_view_form" model="ir.ui.view">
+		<field name="name">insurance.migration.form</field>
+		<field name="model">insurance.migration</field>
+		<field name="arch" type="xml">
+			<form string="Migration">
+				<sheet>
+					<group>
+						<field name="doc_num" />
+						<field name="categ_code" />
+					</group>
+					
+				</sheet>
+			</form>
+		</field>
+	</record>
+	<record id="ins_migration_view_tree" model="ir.ui.view">
+		<field name="name">insurance.migration.tree</field>
+		<field name="model">insurance.migration</field>
+		<field name="arch" type="xml">
+			<tree string="Migration">
+				<field name="doc_num" />
+			</tree>
+		</field>
+	</record>
+	<record id="ins_migration_action" model="ir.actions.act_window">
+		<field name="name">Migration</field>
+		<field name="res_model">insurance.migration</field>
+		<field name="view_mode">tree,form</field>
+		
+	</record> -->
+
+	<!-- <menuitem id="menu_ins_migration" name="insurance price Migration" 
+	parent="menu_hr_migration_view" action="ins_migration_action"/> -->
+
+</odoo>

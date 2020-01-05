@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+        <report
+            string="Requested Recruitment"
+            id="action_report_recruitment_request"
+            model="recruitment.request"
+            report_type="qweb-pdf"
+            name="recruitment_custom.report_recruitment_request"
+            file="recruitment_custom.report_recruitment_request"
+        />
+
+</odoo>

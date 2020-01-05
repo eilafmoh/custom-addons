@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <template id="report_recruitment_request">
+        <t t-call="report.html_container">
+            <t t-foreach="docs" t-as="o">
+                <div class="page">
+
+                    <div>
+                        <strong>Request Date:</strong>
+                        <p>
+                            <span t-field="o.request_date"/>
+                        </p>
+                    </div>
+
+                    <div>
+                        <strong>Requested Job:</strong>
+                        <p>
+                            <span t-field="o.job_id.name"/>
+                        </p>
+                    </div>
+
+                    <div>
+                        <strong>Required Number:</strong>
+                        <p>
+                            <span t-field="o.request_number"/>
+                        </p>
+                    </div>
+
+                    <div>
+
+                        <strong>Employment Date:</strong>
+                        <p>
+                            <span t-field="o.employment_date"/>
+                        </p>
+                    </div>
+
+                    <div>
+                        <strong>Employee Name:</strong>
+                        <p>
+                            <span t-field="o.employee_name"/>
+                        </p>
+                    </div>
+
+                    <div>
+                        <strong>Base Salary:</strong>
+                        <p>
+                            <span t-field="o.base_salary"/>
+                        </p>
+                    </div>
+
+                    <div>
+                        <strong>Training Salary:</strong>
+                        <p>
+                            <span t-field="o.training_salary"/>
+                        </p>
+                    </div>
+
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>
+
+

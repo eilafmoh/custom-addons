@@ -1,0 +1,1618 @@
+<odoo>
+	<data>
+		<!-- Website Menu -->
+		<template id="header" inherit_id="website.layout">
+			<xpath expr="//header//ul[@id='top_menu']/li" position="before">
+				<li>
+					<a href="/admission">Admission</a>
+				</li>
+			</xpath>
+		</template>
+		<!-- Static files -->
+		<template id="assets_frontend" inherit_id="website.assets_frontend">
+			<xpath expr="." position="inside">
+				<link rel="stylesheet" href="/uni_admission/static/src/css/website.css" />
+				<script type="text/javascript" src="/uni_admission/static/src/js/website.js"/>
+			</xpath>
+		</template>
+		<!-- /admission -->
+		<template id="index">
+			<t t-call="website.layout">
+				<t t-set="title">Admission | Guidelines</t>
+
+				<section id="service" class="service sections lightbg">
+					<div class="container">
+						<div class="col-sm-12">
+							<div class="head_title text-center">
+								<h1>The Student Guide Line</h1>
+							</div>
+							<!-- End of head title -->
+							<div class="main_service_area">
+								<div class="single_service_area">
+									<div class="row">
+										<!-- <div class="col-sm-5">
+											<div class="signle_service_left">
+												<img src="/web_uofk/static/src/img/persion_icon.png" alt="" />
+											</div>
+										</div> -->
+										<div class="col-sm-6">
+											<div class="single_service">
+												<h2 style="color:#2e6da4;">First</h2>
+												<div class="separator2"></div>
+												<p>The Student Fill his own  Basic information in his Account  </p>
+												<p>Infomatin like adress,city  phone number and parent infromation,Student must be sure and fill the  correct information</p>
+												<p>After the student fill all required data he upload his owen Photo and go to the next level</p>
+											</div>
+											<!-- <img src="/web_uofk/static/src/img/arrow_right.png" alt="" /> -->
+										</div>
+										<div class="col-sm-6 text-right">
+											<div class="single_service">
+												<h2 style="color:#2e6da4;">أولا</h2>
+												<div class="separator2"></div>
+												<p>يقوم الطالب بملأ بياناته الأساسية في حسابه  </p>
+												<p>البيانات مثل العنوان ورقم الهاتف ومعلومات الوالدين ، يجب أن تكون البيانات صحيحة</p>
+												<p>بعد أن يقوم الطالب بملء جميع البيانات المطلوبة يقوم بتحميل صورة الشخصية وينتقل إلى المرحلة التالية</p>
+											</div>
+											<!-- <img src="/web_uofk/static/src/img/arrow_right.png" alt="" /> -->
+										</div>
+									</div>
+								</div>
+								<!-- End of single service area -->
+								<div class="single_service_area  margin-top-80">
+									<div class="row">
+										<!-- <div class="col-sm-5 col-sm-push-5">
+											<div class="signle_service_left">
+												<img src="/web_uofk/static/src/img/medical.png" alt="" />
+											</div>
+										</div> -->
+										<div class="col-sm-6">
+											<div class="single_service">
+												<h2 style="color:#2e6da4;">Secend</h2>
+												<div class="separator2"></div>
+												<p>The secound step in admission is the intervie with college commite </p>
+												<p>The student do short intervie with his college commite to get some advise and information</p>
+												
+											</div>
+											<!-- <img src="/web_uofk/static/src/img/arrow2.png" alt="" /> -->
+										</div>
+										<div class="col-sm-6 text-right">
+											<div class="single_service">
+												<h2 style="color:#2e6da4;">ثانيا</h2>
+												<div class="separator2"></div>
+												<p>الخطوة الثانية في القبول هي المعايتة مع لجنة الكلية </p>
+							
+											</div>
+											<!-- <img src="/web_uofk/static/src/img/arrow2.png" alt="" /> -->
+										</div>
+									</div>
+								</div>
+								<!-- End of single service area -->
+								<div class="single_service_area margin-top-80">
+									<div class="row">
+										<!-- <div class="col-sm-5">
+											<div class="signle_service_left">
+												<img src="/web_uofk/static/src/img/commite.png" alt="" />
+											</div>
+										</div> -->
+										<div class="col-sm-6">
+											<div class="single_service">
+												<h2 style="color:#2e6da4;">Third</h2>
+												<div class="separator2"></div>
+												<p>After the student pass from interview he must filling registration form </p>
+											</div>
+											<!-- <img src="/web_uofk/static/src/img/arrow_right.png" alt="" /> -->
+										</div>
+										<div class="col-sm-6 text-right">
+											<div class="single_service">
+												<h2 style="color:#2e6da4;">ثالثا</h2>
+												<div class="separator2"></div>
+												<p>بعد اجتياز الطالب للمعاينة ، يجب عليه ملء استمارة التسجيل</p>
+											</div>
+											<!-- <img src="/web_uofk/static/src/img/arrow_right.png" alt="" /> -->
+										</div>
+									</div>
+								</div>
+								<div class="single_service_area margin-top-80">
+									<div class="row">
+										<!-- <div class="col-sm-5">
+											<div class="signle_service_left">
+												<img src="/web_uofk/static/src/img/commite.png" alt="" />
+											</div>
+										</div> -->
+										<div class="col-sm-6">
+											<div class="single_service">
+												<h2 style="color:#2e6da4;">Fourth</h2>
+												<div class="separator2"></div>
+												<p>After the student complete from filling form he go to the medical unit and do the medical examination </p>
+											</div>
+											<!-- <img src="/web_uofk/static/src/img/arrow_right.png" alt="" /> -->
+										</div>
+										<div class="col-sm-6 text-right">
+											<div class="single_service">
+												<h2 style="color:#2e6da4;">رابعا</h2>
+												<div class="separator2"></div>
+												<p>بعد إنتهاء الطالب من ملء الاستمارة ، يذهب إلى الوحدة الطبية ويقوم بالفحص الطبي </p>
+											</div>
+											<!-- <img src="/web_uofk/static/src/img/arrow_right.png" alt="" /> -->
+										</div>
+									</div>
+								</div>
+								<!-- End of single service area -->
+								<div class="single_service_area  margin-top-80">
+									<div class="row">
+										<!-- <div class="col-sm-5 col-sm-push-5">
+											<div class="signle_service_left">
+												<img src="/web_uofk/static/src/img/payment.png" alt="" />
+											</div>
+										</div> -->
+										<div class="col-sm-6">
+											<div class="single_service">
+												<h3 style="color:#14679c;">Fifth</h3>
+												<div class="separator2"></div>
+												<p>The last step is payment </p>
+												<p>the student pay the study fees by any payment method</p>
+											</div>
+											<!-- <img src="/web_uofk/static/src/img/arrow2.png" alt="" /> -->
+										</div>
+										<div class="col-sm-6 text-right">
+											<div class="single_service">
+												<h3 style="color:#14679c;">خامسا</h3>
+												<div class="separator2"></div>
+												<p>المرحلة الأخيرة هي الدفع </p>
+												<p>يقوم الطالب بدفع رسومه الدراسية بواحدة من طرق الدفع</p>
+											</div>
+											<!-- <img src="/web_uofk/static/src/img/arrow2.png" alt="" /> -->
+										</div>
+									</div>
+								</div>
+								<br/><br/>
+								<!-- End of single service area -->
+								<h1>
+									<div class="center-btn">
+										<a class="main-button icon-button" href="/admission/form">Start</a>
+									</div>
+								</h1>
+								<!-- End of single service area -->
+							</div>
+						</div>
+						<!-- End of col-sm-12 -->
+						<!-- End of row -->
+					</div>
+					<!-- End of Container -->
+				</section>
+
+				<section></section>
+			</t>
+		</template>
+		<!-- /admission/form -->
+		<template id="form">
+			<t t-call="website.layout">
+				<t t-set="title">Admission | Personal Information</t>
+				<div id="wrap">
+					<div class="container oe_admission">
+						<br/>
+						<div class="container oe_website_sale">
+							<t t-call="uni_admission.form_wizard">
+								<t t-set="step" t-value="10"></t>
+							</t>
+						</div>
+						<br/>
+						<h1 class="mb32" style="color:#2e6da4;">Application Form</h1>
+						<h2 class="mb32" style="color:#2e6da4;">Personal Information</h2>
+						<div class="row">
+							<div class="col-md-8 col-sm-9 oe_cart">
+								<form method="POST" action="/admission/form" enctype="multipart/form-data">
+									<div t-if="has_errors" class="form-group">
+										<div class="alert alert-danger" role="alert">
+											<strong>Oops,</strong> an error occurred while processing your request. Please try again!
+
+
+										</div>
+									</div>
+									<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+									<div class="form-group">
+										<label>Name (in English)</label>
+										<label>
+											<h3 style="color:red;">*</h3>
+										</label>
+										<div class="row">
+											<div class="col-md-3">
+												<input t-att-value="student.fourth_name_en" type="text" class="form-control" placeholder="Forth Name EN" name="fourth_name_en" id="fourth_name_en" required="required"/>
+											</div>
+											<div class="col-md-3">
+												<input t-att-value="student.last_name_en" type="text" class="form-control" placeholder="Third Name EN" name="last_name_en" id="last_name_en" required="required"/>
+											</div>
+											<div class="col-md-3">
+												<input t-att-value="student.middle_name_en" type="text" class="form-control" placeholder="Second Name EN" name="middle_name_en" id="middle_name_en" required="required"/>
+											</div>
+											<div class="col-md-3">
+												<input t-att-value="student.first_name_en" type="text" class="form-control" name="first_name_en" id="first_name_en" placeholder="First Name EN" required="required"/>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-md-6">
+												<div >
+													<label for="nationality">Nationality</label>
+													<label>
+														<h3 style="color:red;">*</h3>
+													</label>
+													<select class="form-control" name="nationality_id" id="nationality" required="required">
+														<t t-foreach="countries" t-as="country">
+															<t t-if="country.id == student.nationality_id.id">
+																<option t-att-value="country.id" selected="selected">
+																	<t t-esc="country.name"/>
+																</option>
+															</t>
+															<t t-else="">
+																<option t-att-value="country.id">
+																	<t t-esc="country.name"/>
+																</option>
+															</t>
+														</t>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<label for="gender">Gender</label>
+												<label>
+													<h3 style="color:red;">*</h3>
+												</label>
+												<select class="form-control" name="gender" id="gender" required="required">
+													<t t-foreach="gender_list" t-as="gender">
+														<t t-if="gender[0] == student.gender">
+															<option t-att-value="gender[0]" selected="selected">
+																<t t-esc="gender[1]"/>
+															</option>
+														</t>
+														<t t-else="">
+															<option t-att-value="gender[0]">
+																<t t-esc="gender[1]"/>
+															</option>
+														</t>
+													</t>
+												</select>
+											</div>
+											
+											<div class="col-md-6">
+												<label for="national_id" style="padding-top:10px;">National ID</label>
+												<label>
+													<h3 style="color:red;">*</h3>
+												</label>
+												<input t-att-value="student.national_id" type="text" class="form-control" name="national_id" id="national_id"/>
+												<br></br>
+												<div class="center-block">
+													<label for="student_id_img">Upload National ID Image</label>
+													<input t-att-src="student.student_national_id_img" type="file" id="student_id_img" name="student_id_img"/>
+													<br></br><br></br>
+													<div style="Background-color:#ADD8E6; color:#2e6da4 ;padding:10px" class="panel panel-info">
+														<div class="panel-heading">
+															<span>
+																<i>Notice :</i>																The maximum file size allowed is 8MB. Only accepts JPG, JPEG and PNG formats.
+
+
+															</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-md-6">
+												<label for="birth_date">Birth Date</label>
+												<label>
+													<h3 style="color:red;">*</h3>
+												</label>
+												<input t-att-value="student.birth_date" type="date" t-att-max="max_date" class="form-control" name="birth_date" id="birth_date" required="required"/>
+											</div>
+											<div class="col-md-6">
+												<label for="place_of_birth">Place of Birth</label>
+												<label>
+													<h3 style="color:red;">*</h3>
+												</label>
+												<input t-att-value="student.place_of_birth" type="text" class="form-control" name="place_of_birth" id="place_of_birth" required="required"/>
+											</div>
+											<div class="col-md-6">
+												<label for="religion">Religion</label>
+												<label>
+													<h3 style="color:red;">*</h3>
+												</label>
+												<select class="form-control" name="religion" id="religion">
+													<t t-foreach="religion" t-as="religion">
+														<option t-att-value="religion[0]">
+															<t t-esc="religion[1]"/>
+														</option>
+													</t>
+												</select>
+											</div>
+											<div class="col-md-6">
+												<label for="with_special_needs">Matrial Status</label>
+												<label style="color:red;">
+													<h3 style="color:red;">*</h3>
+												</label>
+												<t t-if="not with_special_needs">
+													<select class="form-control" name="martial_status" id="martial_status">
+														<t t-foreach="martial_status" t-as="martial_status">
+															<option t-att-value="martial_status[0]">
+																<t t-esc="martial_status[1]"/>
+															</option>
+														</t>
+													</select>
+												</t>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-md-6" style='float:left'>
+												<label for="phone">Telephone</label>
+												<label>
+													<h3 style="color:red;">*</h3>
+												</label>
+												<input t-att-value="student.user_id.phone" type="tel" class="form-control" name="phone" id="phone" placeholder="e.g. +249 xx axx xxxx" required="required"/>
+											</div>
+											<div class="col-md-6" style='float:right'>
+												<label for="mobile">Mobile</label>
+												<label>
+													<h3 style="color:red;">*</h3>
+												</label>
+												<input t-att-value="student.mobile" type="tel" class="form-control" name="mobile" id="mobile" placeholder="e.g. +249 xx axx xxxx" required="required"/>
+											</div>
+											<div class="col-md-6" style='float:right'>
+												<label for="email">Email</label>
+												<br></br>
+												<input t-att-value="student.user_id.email" type="email" class="form-control" name="email" id="email" placeholder="e.g. email@example.com"/>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-md-6">
+												<label for="state">State</label>
+												<label>
+													<h3 style="color:red;">*</h3>
+												</label>
+												<select class="form-control" name="state_id" id="state" required="required">
+													<t t-foreach="states" t-as="state">
+														<t t-if="state.id == student.user_id.state_id.id">
+															<option t-att-value="state.id" selected="selected">
+																<t t-esc="state.name"/>
+															</option>
+														</t>
+														<t t-else="">
+															<option t-att-value="state.id">
+																<t t-esc="state.name"/>
+															</option>
+														</t>
+													</t>
+												</select>
+											</div>
+											<div class="col-md-6">
+												<label for="city">City</label>
+												<label>
+													<h3 style="color:red;">*</h3>
+												</label>
+												<input t-att-value="student.user_id.city" class="form-control" name="city" id="city" placeholder="e.g. Omdurman" required="required"/>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="address">Address</label>
+										<label>
+											<h3 style="color:red;">*</h3>
+										</label>
+										<input t-att-value="student.address" class="form-control" name="address" id="address" required="required"/>
+									</div>
+									<div class="clearfix" />
+									<br></br>
+									<br></br>
+									<div style="Background-color:#ADD8E6; color:#2e6da4 ;padding:10px" class="panel panel-info">
+										<div class="panel-heading">
+											<i>Notice : </i> Any field contain
+											<label style="color:red;">												*											</label> That mean its Mandatory field
+
+
+										</div>
+									</div>
+									<br/>
+									<button type="submit" class="btn btn-primary pull-right mb32">
+										<!-- <span class="hidden-xs">Continue</span> -->
+										<span class="visible-xs-inline">Continue</span>
+									</button>
+									<div class="oe_structure"></div>
+									<div class="clearfix" />
+								</form>
+							</div>
+							<t t-call="uni_admission.student_info"/>
+						</div>
+					</div>
+				</div>
+			</t>
+		</template>
+		<template id="school_certificate">
+			<t t-call="website.layout">
+				<t t-set="title">School | Certificate</t>
+				<div id="wrap">
+					<div class="container oe_admission">
+						<br/>
+						<div class="container oe_website_sale">
+							<t t-call="uni_admission.form_wizard">
+								<t t-set="step" t-value="20"></t>
+							</t>
+						</div>
+						<br/><br/>
+						<h2 class="mb32" style="color:#2e6da4;">School Certificate</h2>
+						<div class="row">
+							<div class="col-md-8 col-sm-9 oe_cart">
+								<form method="POST" action="/school/certificate" enctype="multipart/form-data">
+									<div t-if="has_errors" class="form-group">
+										<div class="alert alert-danger" role="alert">
+											<strong>Oops,</strong> an error occurred while processing your request. Please try again!
+										</div>
+									</div>
+									<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+									<h2 class="mb32" style="color:#2e6da4;">Secondary School Certificate :</h2>
+									<div class="row">
+										<div class="col-md-10">
+											<label for="secondary_school">Name of Secondary School</label>
+											<input t-att-value="student.secondary_school" class="form-control" name="secondary_school" id="address" readonly="readonly"/>
+										</div>
+										<div class="clearfix" />
+										<br/><br/>
+										<div class="col-md-5" style='float:left'>
+											<label for="examination_date">Examination Date</label>
+											<input t-att-value="student.examination_date" type="date" class="form-control" name="examination_date" id="examination_date" required="required"/>
+										</div>
+										<div class="col-md-5" style='float:left'>
+											<label for="certificate_date">Date of Certificate</label>
+											<input t-att-value="student.certificate_date" type="date" class="form-control" name="certificate_date" id="certificate_date" required="required"/>
+										</div>
+										<div class="col-md-10">
+											<label for="result_secondary_school">Result of Secondary School Certificate</label>
+											<label>
+												<h3 style="color:red;">*</h3>
+											</label>
+											<br/>
+											<!-- <select class="form-control" name="result_secondary_school" id="result_secondary_school" required="required">
+												<t t-foreach="secondary_school_type" t-as="school_type">
+													<option t-att-value="school_type[0]">
+														<t t-esc="school_type[1]"/>
+													</option>
+												</t>
+											</select> -->
+										</div>
+										<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th class="text-left">Subject</th>
+										<th class="text-left">Degree</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<input  type="text" class="form-control" name="first_sub"  id="first_sub" required="required"/>
+										</td>
+										<td>
+											<input type="text" class="form-control"  name="first_deg"  id="first_deg"  required="required"/>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input  type="text" class="form-control" name="sec_sub" id="sec_sub" required="required"/>
+										</td>
+										<td>
+											<input type="text" class="form-control" name="sec_deg" id="sec_deg" required="required"/>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input  type="text" class="form-control" name="third_sub" id="third_sub"  required="required"/>
+										</td>
+										<td>
+											<input type="text" class="form-control" name="third_deg" id="third_deg" required="required"/>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input  type="text" class="form-control" name="for_sub" id="for_sub" required="required"/>
+										</td>
+										<td>
+											<input type="text" class="form-control" name="for_deg" id="for_deg" required="required"/>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input  type="text" class="form-control" name="fif_sub" id="fif_sub" required="required"/>
+										</td>
+										<td>
+											<input type="text" class="form-control" name="fif_deg" id="fif_deg" required="required"/>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input  type="text" class="form-control" name="six_sub" id="six_sub" required="required"/>
+										</td>
+										<td>
+											<input type="text" class="form-control" name="six_deg" id="six_deg" required="required"/>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input  type="text" class="form-control" name="sev_sub" id="sev_sub" required="required"/>
+										</td>
+										<td>
+											<input type="text" class="form-control" name="sev_deg" id="sev_deg" required="required"/>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+									</div>
+									<div class="clearfix" />
+									<div class="form-group">
+										<a class="btn btn-default pull-left mb32" href="/admission/form">
+											<!-- <span class="hidden-xs">Back</span> -->
+											<span class="visible-xs-inline">Back</span>
+										</a>
+										<button type="submit" class="btn btn-primary pull-right mb32">
+											<!-- <span class="hidden-xs">Continue</span> -->
+											<span class="visible-xs-inline">Continue</span>
+										</button>
+									</div>
+									<div class="oe_structure"></div>
+									<div class="clearfix" />
+								</form>
+							</div>
+							<t t-call="uni_admission.student_info"/>
+						</div>
+					</div>
+				</div>
+			</t>
+
+		</template>
+		<!-- /admission/form/family -->
+		<template id="form_family">
+			<t t-call="website.layout">
+				<t t-set="title">Admission | Family Background</t>
+				<div id="wrap">
+					<div class="container oe_admission">
+						<br/>
+						<div class="container oe_website_sale">
+							<t t-call="uni_admission.form_wizard">
+								<t t-set="step" t-value="20"></t>
+							</t>
+						</div>
+						<br/><br/>
+						<h2 class="mb32" style="color:#2e6da4;">Family Background</h2>
+						<div class="row">
+							<div class="col-md-8 col-sm-9 oe_cart">
+								<form method="POST" action="/admission/form/family" enctype="multipart/form-data">
+									<div t-if="has_errors" class="form-group">
+										<div class="alert alert-danger" role="alert">
+											<strong>Oops,</strong> an error occurred while processing your request. Please try again!
+
+
+										</div>
+									</div>
+									<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+									<h3 style="color:#2e6da4;">Guardian's Information</h3>
+									<div class="clearfix" />
+									<div>
+										<div class="col-md-6">
+											<label for="guardian_name">Guardian Name</label>
+											<label>
+												<h3 style="color:red;">*</h3>
+											</label>
+											<input t-att-value="student.guardian_name" type="text" class="form-control" name="guardian_name" id="guardian_name" required="required"/>
+										</div>
+										<div class="col-md-6" style="float:right">
+											<label for="guardian_relation">Relation to Student</label>
+											<label>
+												<h3 style="color:red;">*</h3>
+											</label>
+											<input t-att-value="student.guardian_relation" type="text" class="form-control" name="guardian_relation" id="guardian_relation" required="required"/>
+										</div>
+										<div class="col-md-6">
+											<label for="guardian_nationality_id">Guardian Nationality ID</label>
+											<label>
+												<h3 style="color:red;">*</h3>
+											</label>
+											<input t-att-value="student.guardian_nationality_id" type="text" class="form-control" name="guardian_nationality_id" id="guardian_nationality_id" required="required"/>
+										</div>
+									</div>
+									<div class="center-block">
+										<div class="form-group" style="padding-top:60px">
+											<label for="nationality_id_photo">Upload Nationality ID Image</label>
+
+											<input t-att-value="student.guardian_national_id_img" type="file" id="nationality_id_photo" name="nationality_id_photo"/>
+											<br></br>
+											<div style="Background-color:#ADD8E6; color:#2e6da4 ;padding:10px" class="panel panel-info">
+												<div class="panel-heading">
+													<span>
+														<i>Notice :</i>																The maximum file size allowed is 8MB. Only accepts JPG, JPEG and PNG formats.
+													</span>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-md-6">
+												<label for="guardian_phone">Guardian Phone</label>
+												<label style="color:red;">
+													<h3 style="color:red;">*</h3>
+												</label>
+												<input t-att-value="student.guardian_phone" type="tel" placeholder="e.g. +249 xx axx xxxx" class="form-control" name="guardian_phone" id="guardian_phone" required="required"/>
+											</div>
+											<div class="col-md-6">
+												<label for="guardian_job">Guardian Job</label>
+												<label style="color:red;">
+													<h3 style="color:red;">*</h3>
+												</label>
+												<input t-att-value="student.guardian_job" type="text" class="form-control" name="guardian_job" id="guardian_job" required="required"/>
+											</div>
+											<div class="col-md-6">
+												<label for="guardian_phone">Guardian Education Level</label>
+												<label style="color:red;">
+													<h3 style="color:red;">*</h3>
+												</label>
+												<select class="form-control" name="guardian_education_level" id="guardian_education_level" required="required">
+													<t t-foreach="guardian_education_level" t-as="education_level">
+														<option t-att-value="education_level[0]">
+															<t t-esc="education_level[1]"/>
+														</option>
+													</t>
+												</select>
+											</div>
+											<div class="col-md-6">
+												<label for="guardian_address">Guardian Address</label>
+												<label style="color:red;">
+													<h3 style="color:red;">*</h3>
+												</label>
+												<input t-att-value="student.guardian_address" class="form-control" name="guardian_address" id="guardian_address" required="required"/>
+											</div>
+											<div class="col-md-7">
+												<label for="guardian_email">Guardian Email</label>
+												<label style="color:red;">
+													<h3 style="color:red;">*</h3>
+												</label>
+												<input t-att-value="student.guardian_email" class="form-control" name="guardian_email" id="guardian_email" required="required"/>
+											</div>
+											<div class="clearfix" />
+											<div class="col-md-6" style="float:right">
+												<label for="kin_emergency">Next of Kin (in case of emergency)</label>
+												<label style="color:red;">
+													<h3 style="color:red;">*</h3>
+												</label>
+												<input t-att-value="student.kin_emergency" class="form-control" name="kin_emergency" id="kin_emergency" required="required"/>
+											</div>
+											<div class="col-md-6" style="float:left">
+												<label for="kin_ph_emergency">Phone</label>
+												<label style="color:red;">
+													<h3 style="color:red;">*</h3>
+												</label>
+												<input t-att-value="student.kin_ph_emergency" placeholder="e.g. +249 xx axx xxxx" class="form-control" name="kin_ph_emergency" id="kin_ph_emergency" required="required"/>
+											</div>
+
+										</div>
+									</div>
+									<h3 style="color:#2e6da4;">Mother's Information</h3>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-md-6">
+												<label for="mother_name">Mother Name</label>
+												<label style="color:red;">
+													<h3 style="color:red;">*</h3>
+												</label>
+												<input t-att-value="student.mother_name" type="text" class="form-control" name="mother_name" id="mother_name" required="required"/>
+											</div>
+											<div class="col-md-6">
+												<label for="mother_education_level">Mother Education Level</label>
+												<label style="color:red;">
+													<h3 style="color:red;">*</h3>
+												</label>
+												<select class="form-control" name="mother_education_level" id="mother_education_level" required="required">
+													<t t-foreach="mother_education_level" t-as="education_level">
+														<option t-att-value="education_level[0]">
+															<t t-esc="education_level[1]"/>
+														</option>
+													</t>
+												</select>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-md-6">
+												<label for="mother_job">Mother Job</label>
+												<label style="color:red;">
+													<h3 style="color:red;">*</h3>
+												</label>
+												<input t-att-value="student.mother_job" type="text" class="form-control" name="mother_job" id="mother_job" required="required"/>
+											</div>
+										</div>
+									</div>
+									<br></br>
+									<br></br>
+									<br/>
+									
+									<div class="clearfix" />
+									<div class="form-group">
+										<a class="btn btn-default pull-left mb32" href="/shool/certificate">
+											<!-- <span class="hidden-xs">Back</span> -->
+											<span class="visible-xs-inline">Back</span>
+										</a>
+										<button type="submit" class="btn btn-primary pull-right mb32">
+											<!-- <span class="hidden-xs">Continue</span> -->
+											<span class="visible-xs-inline">Continue</span>
+										</button>
+									</div>
+									<div class="oe_structure"></div>
+									<div class="clearfix" />
+								</form>
+							</div>
+							<t t-call="uni_admission.student_info"/>
+						</div>
+					</div>
+				</div>
+			</t>
+		</template>
+
+		<!-- /admission/form/
+		 -->
+		<template id="form_photo">
+			<t t-call="website.layout">
+				<t t-set="title">Admission | Photo</t>
+				<div id="wrap">
+					<div class="container oe_admission">
+						<div class="oe_structure">
+							<div class="container">
+								<t t-call="uni_admission.form_wizard">
+									<t t-set="step" t-value="40"></t>
+								</t>
+							</div>
+							<br/><br/>
+							<h2 class="mb32" style="color:#2e6da4;">Personal Photo</h2>
+							<div class="row">
+								<div class="col-md-8 col-sm-9 oe_cart">
+									<form method="POST" action="/admission/form/photo" enctype="multipart/form-data">
+										<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+										<div t-if="has_errors" class="form-group">
+											<div class="alert alert-danger" role="alert">
+												<strong>Oops,</strong> an error occurred while processing your request. Please try again!
+
+
+											</div>
+										</div>
+										<div class="center-block">
+											<img id="image_preview" t-att-src="'data:image/png;base64,{}'.format(student.user_id.image_medium)" alt="Your profile photo" class="img-thumbnail center-block" style="width:128px;height:128px"/>
+											<div class="form-group" style="padding-top:60px">
+												<label for="image_upload">Upload new photo</label>
+												<input type="file" id="image_upload" name="image"/>
+												<p style="Background-color:#ADD8E6; color:#2e6da4 ;padding:10px" class="help-block">The maximum file size allowed is 8MB. Only accepts JPG, JPEG and PNG formats.</p>
+												<label for="certify">I certify the validity of this data, I also undertake to abide by the laws of the country, the law of the university, the rules and regulations relating to conduct, the general appearance, and the housing regulations and regulations of the National Student Fund</label>
+												<input type="checkbox" name="certify" id="certify" required="required"/>
+
+											</div>
+										</div>
+										<div class="clearfix" />
+										<div class="form-group">
+											<a class="btn btn-default pull-left mb32" href="/admission/form/family">
+												<!-- <span class="hidden-xs">Back</span> -->
+												<span class="visible-xs-inline">Back</span>
+											</a>
+											<button type="submit" class="btn btn-primary pull-right mb32">
+												<!-- <span class="hidden-xs">Continue</span> -->
+												<span class="visible-xs-inline">Continue</span>
+											</button>
+										</div>
+										<div class="oe_structure"></div>
+										<div class="clearfix" />
+									</form>
+								</div>
+								<t t-call="uni_admission.student_info"/>
+							</div>
+						
+						</div>
+					</div>
+				</div>
+			</t>
+		</template>
+		<!-- /admission/form/success -->
+		<template id="form_success">
+			<t t-call="website.layout">
+				<t t-set="title">Admission | Success</t>
+				<div id="wrap">
+					<div class="container oe_admission">
+						<div class="oe_structure">
+							<div class="container">
+								<t t-call="uni_admission.form_wizard">
+									<t t-set="step" t-value="50"></t>
+								</t>
+								<h2 class="mb32" style="color:#2e6da4;">Done</h2>
+								<div class="row">
+									<div class="col-md-8 col-sm-9 oe_cart">
+										<div class="well well-lg">Thank you! All done.</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</t>
+		</template>
+		<!-- /registration/form/success -->
+		<template id="reg_form_success">
+			<t t-call="website.layout">
+				<t t-set="title">Registration | Success</t>
+				<div id="wrap">
+					<div class="container oe_admission">
+						<div class="oe_structure">
+							<div class="container">
+								<t t-call="uni_admission.reg_form_wizard">
+									<t t-set="step" t-value="50"></t>
+								</t>
+								<h2 class="mb32" style="color:#2e6da4;">Done</h2>
+								<div class="row">
+									<div class="col-md-8 col-sm-9 oe_cart">
+										<div class="well well-lg">Thank you! All done.</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</t>
+		</template>
+		<!-- /done -->
+		<template id="form_done">
+			<t t-call="website.layout">
+				<t t-set="title">Admission | Done</t>
+				<div class="container oe_admission">
+					<div class="col-md-8 col-sm-9 oe_cart">
+						<t t-call="uni_admission.form_wizard">
+							<t t-set="step" t-value="50"></t>
+						</t>
+						<h1 class="mb32" style="color:#2e6da4;">Application Form</h1>
+						<br/><br/><br/><br/><br/>
+						<div class="oe_structure">
+							<div class="container">	You've already submitted Form, thank you!</div>
+						</div>
+						<br/><br/>
+						<div class="clearfix" />
+						<t t-if="admission_reg">
+							<div class="form-group">
+								<h5>
+									<div class="center-btn" >
+										<a class="main-button icon-button" href="/personal/info">Fill Registration Form</a>
+									</div>
+								</h5>
+							</div>
+						</t>
+					</div>
+
+				</div>
+			</t>
+		</template>
+		<!-- personal/info -->
+		<template id="personal_info">
+			<t t-call="website.layout">
+				<t t-set="title">Registration | Personal Information</t>
+				<div id="wrap">
+					<div class="container oe_admission">
+						<br/>
+						<t t-call="uni_admission.reg_form_wizard">
+							<t t-set="step" t-value="10"></t>
+						</t>
+						<br/><br/>
+						<h1 class="mb32" style="color:#2e6da4;">Registration Form</h1>
+						<div class="row">
+							<div class="col-md-8 col-sm-9 oe_cart">
+								<form method="POST" action="/personal/info" enctype="multipart/form-data">
+									<div t-if="has_errors" class="form-group">
+										<div class="alert alert-danger" role="alert">
+											<strong>Oops,</strong> an error occurred while processing your request. Please try again!
+
+
+										</div>
+									</div>
+									<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+									<h3 style="color:#2e6da4;">Personal Information</h3>
+									<div class="form-group">
+										<label>Name (in English)</label>
+										<div class="row">
+											<div class="col-md-3">
+												<input t-att-value="student.fourth_name_en" type="text" class="form-control" placeholder="Forth Name EN" name="fourth_name_en" id="fourth_name_en" readonly="readonly"/>
+											</div>
+											<div class="col-md-3">
+												<input t-att-value="student.last_name_en" type="text" class="form-control" placeholder="Third Name EN" name="last_name_en" id="last_name_en" readonly="readonly"/>
+											</div>
+											<div class="col-md-3">
+												<input t-att-value="student.middle_name_en" type="text" class="form-control" placeholder="Second Name EN" name="middle_name_en" id="middle_name_en" readonly="readonly"/>
+											</div>
+											<div class="col-md-3">
+												<input t-att-value="student.first_name_en" type="text" class="form-control" name="first_name_en" id="first_name_en" placeholder="First Name EN" readonly="readonly"/>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-md-6">
+												<div >
+													<label for="nationality">Nationality</label>
+													<input t-att-value="student.nationality_id.name" type="text" class="form-control" name="nationality" id="nationality" readonly="readonly"/>
+												</div>
+											</div>
+											<div class="col-md-6">
+												<label for="gender">Gender</label>
+												<input t-att-value="student.gender" type="text" class="form-control" name="gender" id="gender" readonly="readonly"/>
+											</div>
+											
+											<div class="col-md-6">
+												<label for="national_id" style="padding-top:10px;">National ID</label>
+												<input t-att-value="student.national_id" type="text" class="form-control" name="national_id" id="national_id" readonly="readonly"/>
+												<br></br>
+												
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-md-6">
+												<label for="birth_date">Birth Date</label>
+												<input t-att-value="student.birth_date" type="date" t-att-max="max_date" class="form-control" name="birth_date" id="birth_date" readonly="readonly"/>
+											</div>
+											<div class="col-md-6">
+												<label for="place_of_birth">Place of Birth</label>
+												<input t-att-value="student.place_of_birth" type="text" class="form-control" name="place_of_birth" id="place_of_birth" readonly="readonly"/>
+											</div>
+											<div class="col-md-6">
+												<label for="religion">Religion</label>
+												<input t-att-value="student.religion" type="text" class="form-control" name="religion" id="religion" readonly="readonly"/>
+											</div>
+											<div class="col-md-6">
+												<label for="with_special_needs">Matrial Status</label>
+												<t t-if="not with_special_needs">
+													<input t-att-value="student.martial_status" type="text" class="form-control" name="religion" id="with_special_needs" readonly="readonly"/>
+												</t>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-md-6" style='float:left'>
+												<label for="phone">Telephone</label>
+												<input t-att-value="student.user_id.phone" type="tel" class="form-control" name="phone" id="phone" placeholder="e.g. +249 xx axx xxxx" readonly="readonly"/>
+											</div>
+											<div class="col-md-6" style='float:right'>
+												<label for="mobile">Mobile</label>
+												<input t-att-value="student.mobile" type="tel" class="form-control" name="mobile" id="mobile" placeholder="e.g. +249 xx axx xxxx" readonly="readonly"/>
+											</div>
+											<div class="col-md-6" style='float:right'>
+												<label for="email">Email</label>
+												<br></br>
+												<input t-att-value="student.user_id.email" type="email" class="form-control" name="email" id="email" placeholder="e.g. email@example.com" readonly="readonly"/>
+											</div>
+										</div>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-md-6">
+												<label for="state">State</label>
+												<input t-att-value="student.state_id.name" type="text" class="form-control" name="religion" id="state" required="state" readonly="readonly"/>
+											</div>
+											<div class="col-md-6">
+												<label for="city">City</label>
+												<input t-att-value="student.user_id.city" class="form-control" name="city" id="city" placeholder="e.g. Omdurman" required="required" readonly="readonly"/>
+											</div>
+										</div>
+									</div>
+									<div class="clearfix" />
+									<div class="form-group">
+										<label for="address">Address</label>
+										<input t-att-value="student.address" class="form-control" name="address" id="address" readonly="readonly"/>
+									</div>
+									
+									<button type="submit" class="btn btn-primary pull-right mb32">
+										<!-- <span class="hidden-xs">Continue</span> -->
+										<span class="visible-xs-inline">Continue</span>
+									</button>
+									<div class="oe_structure"></div>
+									<div class="clearfix" />
+								</form>
+							</div>
+							<t t-call="uni_admission.student_info"/>
+						</div>
+					</div>
+				</div>
+			</t>
+
+		</template>
+		<!--/registration/form -->
+		<template id="registration_form">
+			<t t-call="website.layout">
+				<t t-set="title">Registration | Information</t>
+				<div id="wrap">
+					<div class="container oe_admission">
+						<br/>
+						<t t-call="uni_admission.reg_form_wizard">
+							<t t-set="step" t-value="10"></t>
+						</t>
+						<br/><br/><br/><br/>
+						
+						<div class="row">
+							<div class="col-md-8 col-sm-9 oe_cart">
+								<form method="POST" action="/registration/form" enctype="multipart/form-data">
+									<div t-if="has_errors" class="form-group">
+										<div class="alert alert-danger" role="alert">
+											<strong>Oops,</strong> an error occurred while processing your request. Please try again!
+
+
+										</div>
+									</div>
+									<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+									<h3 style="color:#2e6da4;">Relative's Information</h3>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-md-5">
+												<label for="relative_name">Relative Name</label>
+												<label style="color:red;">
+													<h3 style="color:red;">*</h3>
+												</label>
+												<input t-att-value="student.relative_name" type="text" class="form-control" name="relative_name" id="relative_name" required="required"/>
+											</div>
+											<div class="col-md-5">
+												<label for="relative_phone">Relative Phone</label>
+												<label style="color:red;">
+													<h3 style="color:red;">*</h3>
+												</label>
+												<input t-att-value="student.relative_phone" type="tel" placeholder="e.g. +249 xx axx xxxx" class="form-control" name="relative_phone" id="relative_phone" required="required"/>
+											</div>
+											<div class="col-md-10">
+												<label for="relative_address">Relative Address</label>
+												<label style="color:red;">
+													<h3 style="color:red;">*</h3>
+												</label>
+												<input t-att-value="student.relative_address" class="form-control" name="relative_address" id="relative_address" required="required"/>
+											</div>
+										</div>
+									</div>
+
+									<div class="clearfix" />
+									
+									<h2 class="mb32" style="color:#2e6da4;">Health Information</h2>
+									<div class="clearfix" />
+									<div>
+										<div class="col-md-6">
+											<label for="blood_group">Boold Group</label>
+											
+											<select class="form-control" name="blood_group" id="blood_group">
+											<t t-foreach="blood_group" t-as="number">
+												<option t-att-value="number[0]">
+													<t t-esc="number[0]"/>
+												</option>
+											</t>
+										</select>
+										</div>
+										<div class="col-md-6">
+											<label for="blood_image">Blood Image</label>
+											<input t-att-src="student.blood_image" type="file" id="blood_image" name="blood_image"/>
+											<br></br><br></br>
+											<p style="Background-color:#ADD8E6; color:#2e6da4 ;padding:10px" class="help-block">The maximum file size allowed is 8MB. Only accepts JPG, JPEG and PNG formats.</p>
+										</div><br/>
+										<div class="col-md-6" style="float:left">
+											<label for="chronic_dsease">Chronic Disease</label>
+											
+											<input t-att-value="student.chronic_dsease" type="text" class="form-control" name="chronic_dsease" id="chronic_dsease" />
+										</div>
+										<div class="col-md-6" style="float:left">
+											<label for="allergies_disea">Allergies Disease</label>
+											
+											<input t-att-value="student.allergies_disea" type="text" class="form-control" name="allergies_disea" id="allergies_disea" />
+										</div>
+										<div class="col-md-6">
+											<label for="other_dsease">Any other health Problem</label>
+											
+											<input t-att-value="student.other_dsease" type="text" class="form-control" name="other_dsease" id="other_dsease" />
+										</div>
+									</div>
+									<div class="clearfix" />
+									<br/><br/>
+									<h2 class="mb32" style="color:#2e6da4;">Academic Information</h2>
+									<div class="clearfix" />
+									<div>
+										<div class="col-md-6" style="float:left">
+											<label for="certificate_type_id">Type of Secoundary School Certificate</label>
+											<label>
+												<h3 style="color:red;">*</h3>
+											</label>
+											<input t-att-value="student.certificate_type_id.name" type="text" class="form-control" name="certificate_type_id" id="certificate_type_id" readonly="readonly"/>
+										</div>
+										<div class="col-md-6" style="float:right">
+											<label for="secondary_school">Name of Secoundary School</label>
+											<label>
+												<h3 style="color:red;">*</h3>
+											</label>
+											<input t-att-value="student.secondary_school" type="text" class="form-control" name="secondary_school" id="secondary_school" readonly="readonly"/>
+										</div>
+										<div class="col-md-6" style="float:left">
+											<label for="certificate_date">Date of Certificate</label>
+											<label>
+												<h3 style="color:red;">*</h3>
+											</label>
+											<input t-att-value="student.certificate_date" type="date" class="form-control" name="certificate_date" id="certificate_date" readonly="readonly"/>
+										</div>
+										<div class="col-md-6" style="float:right">
+											<label for="examination_date">Examination Date</label>
+											<label>
+												<h3 style="color:red;">*</h3>
+											</label>
+											<input t-att-value="student.examination_date" type="date" class="form-control" name="examination_date" id="examination_date" readonly="readonly"/>
+										</div>
+									</div>
+									<div class="clearfix" />
+									<br/><br/>
+									<h2 class="mb32" style="color:#2e6da4;">Admission Type</h2>
+									<div class="clearfix" />
+
+									<div class="col-md-6">
+										<label for="type_admission">Admission Type</label>
+										<label>
+											<h3 style="color:red;">*</h3>
+										</label>
+										<select class="form-control" name="type_admission" id="type_admission" required="required">
+											<t t-foreach="admission_list" t-as="type">
+												<t t-if="type[0] == student.type_admission">
+													<option t-att-value="type[0]" selected="selected">
+														<t t-esc="type[1]"/>
+													</option>
+												</t>
+												<t t-else="">
+													<option t-att-value="type[0]">
+														<t t-esc="type[1]"/>
+													</option>
+												</t>
+											</t>
+										</select>
+									</div>
+									<div class="clearfix" />
+									<br/>
+									<div class="col-md-10">
+										<label for="is_previouse_admitt">Have you previously been admitted to any other university ?</label>
+										<label>
+											<h3 style="color:red;">*</h3>
+										</label>
+										<select class="form-control" name="is_previouse_admitt" id="is_previouse_admitt" required="required">
+											<t t-foreach="is_previouse_admitt" t-as="number">
+												<option t-att-value="number[0]">
+													<t t-esc="number[1]"/>
+												</option>
+											</t>
+										</select>
+									</div>
+
+									<div class="clearfix" />
+									<br/>
+									<div class="col-md-5" style="float:left">
+										<label for="reasons">If answer is yes, why did you leave it ?</label>
+										
+										<select class="form-control" name="reasons" id="reasons">
+											<t t-foreach="reasons" t-as="number">
+												<option t-att-value="number[0]">
+													<t t-esc="number[1]"/>
+												</option>
+											</t>
+										</select>
+									</div>
+
+									<div class="col-md-5" style="float:right">
+										<label for="other">other</label>
+										<input t-att-value="student.other" type="text" class="form-control" name="other" id="other"/>
+									</div>
+									
+									<div class="col-md-6">
+										<label>Number of Siblings at Nile University</label>
+										<label style="color:red;">
+											<h3 style="color:red;">*</h3>
+										</label>
+										<input t-att-value="student.sibling_in_nile" type="number" class="form-control"  name="sibling_in_nile" id="sibling_in_nile" required="required"/>
+									</div>									
+									<div class="clearfix" />
+									<br></br>
+									<br></br>
+									<div style="Background-color:#ADD8E6; color:#2e6da4 ;padding:10px" class="panel panel-info">
+										<div class="panel-heading">
+											<i>Notice : </i> Any field contain
+											<label style="color:red;">												*											</label> That mean its Mandatory field
+
+
+										</div>
+									</div>
+									<br/>
+									<div class="form-group">
+										<a class="btn btn-default pull-left mb32" href="/personal/info">
+												<span class="visible-xs-inline">Back</span>
+											</a>
+										<button type="submit" class="btn btn-primary pull-right mb32">
+											<span class="visible-xs-inline">Continue</span>
+										</button>
+									</div>
+									<div class="oe_structure"></div>
+									<div class="clearfix" />
+								</form>
+							</div>
+							<t t-call="uni_admission.student_info"/>
+						</div>
+					</div>
+				</div>
+			</t>
+		</template>
+		<!-- <template id="admission_info">
+			<t t-call="website.layout">
+				<t t-set="title">Admission | Information</t>
+				<div id="wrap">
+					<div class="container oe_admission">
+						<br/>
+						<t t-call="uni_admission.reg_form_wizard">
+							<t t-set="step" t-value="10"></t>
+						</t>
+						<br/><br/><br/><br/>
+						
+						<div class="row">
+							<div class="col-md-8 col-sm-9 oe_cart">
+								<form method="POST" action="/admission/info/form" enctype="multipart/form-data">
+									<div t-if="has_errors" class="form-group">
+										<div class="alert alert-danger" role="alert">
+											<strong>Oops,</strong> an error occurred while processing your request. Please try again!
+
+
+										</div>
+									</div>
+									<input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+									<h3 style="color:#2e6da4;">A Information</h3>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-md-5">
+												<label for="relative_name">Relative Name</label>
+												<label style="color:red;">
+													<h3 style="color:red;">*</h3>
+												</label>
+												<input t-att-value="student.relative_name" type="text" class="form-control" name="relative_name" id="relative_name" required="required"/>
+											</div>
+											<div class="col-md-5">
+												<label for="relative_phone">Relative Phone</label>
+												<label style="color:red;">
+													<h3 style="color:red;">*</h3>
+												</label>
+												<input t-att-value="student.relative_phone" type="tel" placeholder="e.g. +249 xx axx xxxx" class="form-control" name="relative_phone" id="relative_phone" required="required"/>
+											</div>
+											<div class="col-md-10">
+												<label for="relative_address">Relative Address</label>
+												<label style="color:red;">
+													<h3 style="color:red;">*</h3>
+												</label>
+												<input t-att-value="student.relative_address" class="form-control" name="relative_address" id="relative_address" required="required"/>
+											</div>
+										</div>
+									</div>
+
+									<div class="clearfix" />
+									
+									<h2 class="mb32" style="color:#2e6da4;">Health Information</h2>
+									<div class="clearfix" />
+									<div>
+										<div class="col-md-6">
+											<label for="blood_group">Boold Group</label>
+											
+											<select class="form-control" name="blood_group" id="blood_group">
+											<t t-foreach="blood_group" t-as="number">
+												<option t-att-value="number[0]">
+													<t t-esc="number[0]"/>
+												</option>
+											</t>
+										</select>
+										</div>
+										<div class="col-md-6">
+											<label for="blood_image">Blood Image</label>
+											<input t-att-src="student.blood_image" type="file" id="blood_image" name="blood_image"/>
+											<br></br><br></br>
+											<p style="Background-color:#ADD8E6; color:#2e6da4 ;padding:10px" class="help-block">The maximum file size allowed is 8MB. Only accepts JPG, JPEG and PNG formats.</p>
+										</div><br/>
+
+										<div class="col-md-6" style="float:left">
+											<label for="allergies_disea">Allergies Disease</label>
+											
+											<input t-att-value="student.allergies_disea" type="text" class="form-control" name="allergies_disea" id="allergies_disea"/>
+										</div>
+										<div class="col-md-6" style="float:left">
+											<label for="chronic_dsease">Chronic Disease</label>
+											
+											<input t-att-value="student.chronic_dsease" type="text" class="form-control" name="chronic_dsease" id="chronic_dsease" />
+										</div>
+										<div class="col-md-6">
+											<label for="other_dsease">Any other health Problem</label>
+											
+											<input t-att-value="student.other_dsease" type="text" class="form-control" name="other_dsease" id="other_dsease" />
+										</div>
+									</div>
+									<div class="clearfix" />
+									<br/><br/>
+									<h2 class="mb32" style="color:#2e6da4;">Academic Information</h2>
+									<div class="clearfix" />
+									<div>
+										<div class="col-md-6" style="float:left">
+											<label for="certificate_type_id">Type of Secoundary School Certificate</label>
+											<label>
+												<h3 style="color:red;">*</h3>
+											</label>
+											<input t-att-value="student.certificate_type_id.name" type="text" class="form-control" name="certificate_type_id" id="certificate_type_id" readonly="readonly"/>
+										</div>
+										<div class="col-md-6" style="float:right">
+											<label for="secondary_school">Name of Secoundary School</label>
+											<label>
+												<h3 style="color:red;">*</h3>
+											</label>
+											<input t-att-value="student.secondary_school" type="text" class="form-control" name="secondary_school" id="secondary_school" readonly="readonly"/>
+										</div>
+										<div class="col-md-6" style="float:left">
+											<label for="certificate_date">Date of Certificate</label>
+											<label>
+												<h3 style="color:red;">*</h3>
+											</label>
+											<input t-att-value="student.certificate_date" type="date" class="form-control" name="certificate_date" id="certificate_date" readonly="readonly"/>
+										</div>
+										<div class="col-md-6" style="float:right">
+											<label for="examination_date">Examination Date</label>
+											<label>
+												<h3 style="color:red;">*</h3>
+											</label>
+											<input t-att-value="student.examination_date" type="date" class="form-control" name="examination_date" id="examination_date" readonly="readonly"/>
+										</div>
+									</div>
+									<div class="clearfix" />
+									<br/><br/>
+									<h2 class="mb32" style="color:#2e6da4;">Admission Type</h2>
+									<div class="clearfix" />
+
+									<div class="col-md-6">
+										<label for="type_admission">Admission Type</label>
+										<label>
+											<h3 style="color:red;">*</h3>
+										</label>
+										<select class="form-control" name="type_admission" id="type_admission" required="required">
+											<t t-foreach="admission_list" t-as="type">
+												<t t-if="type[0] == student.type_admission">
+													<option t-att-value="type[0]" selected="selected">
+														<t t-esc="type[1]"/>
+													</option>
+												</t>
+												<t t-else="">
+													<option t-att-value="type[0]">
+														<t t-esc="type[1]"/>
+													</option>
+												</t>
+											</t>
+										</select>
+									</div>
+									<div class="clearfix" />
+									<br/>
+									<div class="col-md-10">
+										<label for="is_previouse_admitt">Have you previously been admitted to any other university ?</label>
+										<label>
+											<h3 style="color:red;">*</h3>
+										</label>
+										<select class="form-control" name="is_previouse_admitt" id="is_previouse_admitt" required="required">
+											<t t-foreach="is_previouse_admitt" t-as="number">
+												<option t-att-value="number[0]">
+													<t t-esc="number[1]"/>
+												</option>
+											</t>
+										</select>
+									</div>
+
+									<div class="clearfix" />
+									<br/>
+									<div class="col-md-5" style="float:left">
+										<label for="reasons">If answer is yes, why did you leave it ?</label>
+										
+										<select class="form-control" name="reasons" id="reasons">
+											<t t-foreach="reasons" t-as="number">
+												<option t-att-value="number[0]">
+													<t t-esc="number[1]"/>
+												</option>
+											</t>
+										</select>
+									</div>
+
+									<div class="col-md-5" style="float:right">
+										<label for="other">other</label>
+										<input t-att-value="student.other" type="text" class="form-control" name="other" id="other"/>
+									</div>
+									
+									<div class="col-md-6">
+										<label>Number of Siblings at Nile University</label>
+										<label style="color:red;">
+											<h3 style="color:red;">*</h3>
+										</label>
+										<input t-att-value="student.sibling_in_nile" type="number" class="form-control"  name="sibling_in_nile" id="sibling_in_nile" required="required"/>
+									</div>									
+									<div class="clearfix" />
+									<br></br>
+									<br></br>
+									<div style="Background-color:#ADD8E6; color:#2e6da4 ;padding:10px" class="panel panel-info">
+										<div class="panel-heading">
+											<i>Notice : </i> Any field contain
+											<label style="color:red;">												*											</label> That mean its Mandatory field
+
+
+										</div>
+									</div>
+									<br/>
+									<div class="form-group">
+										<a class="btn btn-default pull-left mb32" href="/personal/info">
+												<span class="visible-xs-inline">Back</span>
+											</a>
+										<button type="submit" class="btn btn-primary pull-right mb32">
+											<span class="visible-xs-inline">Continue</span>
+										</button>
+									</div>
+									<div class="oe_structure"></div>
+									<div class="clearfix" />
+								</form>
+							</div>
+							<t t-call="uni_admission.student_info"/>
+						</div>
+					</div>
+				</div>
+			</t>
+		</template> -->
+		<!-- /registration/form/success -->
+		<template id="reg_form_success">
+			<t t-call="website.layout">
+				<t t-set="title">Registration | Success</t>
+				<div id="wrap">
+					<div class="container oe_admission">
+						<div class="oe_structure">
+							<div class="container">
+								<t t-call="uni_admission.reg_form_wizard">
+									<t t-set="step" t-value="50"></t>
+								</t>
+								<h2 class="mb32" style="color:#2e6da4;">Done</h2>
+								<div class="row">
+									<div class="col-md-8 col-sm-9 oe_cart">
+										<div class="well well-lg">Thank you! All done.</div>
+									</div>
+								</div>
+							</div>
+							
+						</div>
+					</div>
+				</div>
+			</t>
+		</template>
+		<!-- Student information -->
+		<template id="student_info">
+			<div class="col-lg-3 col-lg-offset-1 col-sm-3 col-md-3 text-muted" id="right_column">
+				<div class="panel panel-info">
+					<table style="margin-left:50px;border: 1px solid #ADD8E6;width:300px">
+						<thead>
+							<th style="Background-color:#ADD8E6; color:#2e6da4;padding:10px">
+								<div class="panel-heading">Admission Information</div>
+							</th>
+						</thead>
+						<tbody>
+							<tr></tr>
+							<tr>
+								<td style="padding:10px">
+									<div class="panel-body">
+							<ul class="list-unstyled mb32">
+								<li>
+									<label>
+										<i class="fa fa-user" style="color:#2e6da4;"></i>
+										<strong> Name: </strong>
+									</label>
+									<span t-field="student.name"></span>
+								</li>
+								<li>
+									<label>
+										<i class="fa fa-home" style="color:#2e6da4;"></i>
+										<strong> Faculty: </strong>
+									</label>
+									<span t-field="student.faculty_id"></span>
+								</li>
+								<li>
+									<label>
+										<i class="fa fa-sitemap" style="color:#2e6da4;"></i>
+										<strong> Department: </strong>
+									</label>
+									<span t-field="student.department_id"></span>
+								</li>
+								<li>
+									<label>
+										<i class="fa fa-tag" style="color:#2e6da4;"></i>
+										<strong> University ID: </strong>
+									</label>
+									<span t-field="student.university_id"></span>
+								</li>
+							</ul>
+									</div>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</template>
+		<!-- wizard -->
+		<template id="form_wizard">
+			<ul class="wizard pull-right">
+				<li t-att-class="(step==10 and 'text-primary') or 'text-muted'" id="step10">
+					<t t-if="step&gt;10 and step&lt;50">
+						<a href="/admission/form" class="text-success">Personal
+							<span class="custom_navbar"></span>
+						</a>
+					</t>
+					<t t-if="not (step&gt;10 and step&lt;50)">Personal
+						<span class="custom_navbar"></span>
+					</t>
+				</li>
+				<li t-att-class="(step==20 and 'text-primary') or 'text-muted'" id="step20">
+					<t t-if="step&gt;20 and step&lt;50">
+						<a href="/admission/form" class="text-success">Academic
+							<span class="custom_navbar"></span>
+						</a>
+					</t>
+					<t t-if="not (step&gt;20 and step&lt;50)">Academic
+						<span class="custom_navbar"></span>
+					</t>
+				</li>
+				<li t-att-class="(step==30 and 'text-primary') or 'text-muted'" id="step30">
+					<t t-if="step&gt;30 and step&lt;50">
+						<a href="/admission/form/family" class="text-success">Family
+							<span class="custom_navbar"></span>
+						</a>
+					</t>
+					<t t-if="not (step&gt;30 and step&lt;50)">Family
+						<span class="custom_navbar"></span>
+					</t>
+				</li>
+				<li t-att-class="(step==40 and 'text-primary') or 'text-muted'" id="step40">
+					<t t-if="step&gt;40 and step&lt;50">
+						<a href="/admission/form/photo" class="text-success">Photo
+							<span class="custom_navbar"></span>
+						</a>
+					</t>
+					<t t-if="not (step&gt;40 and step&lt;50)">Photo
+						<span class="custom_navbar"></span>
+					</t>
+				</li>
+				<li t-att-class="(step==50 and 'text-primary') or 'text-muted'" id="step50">Done
+					<span class="custom_navbar"></span>
+				</li>
+			</ul>
+		</template>
+		<!-- wizard -->
+		<template id="reg_form_wizard">
+			<ul class="wizard pull-right">
+				<li t-att-class="(step==10 and 'text-primary') or 'text-muted'" id="step10">
+					<t t-if="step&gt;10 and step&lt;50">
+						<a href="/registration/form" class="text-success">Filling Form
+							<span class="custom_navbar"></span>
+						</a>
+					</t>
+					<t t-if="not (step&gt;10 and step&lt;50)">Filling Form
+						<span class="custom_navbar"></span>
+					</t>
+				</li>
+				<li t-att-class="(step==50 and 'text-primary') or 'text-muted'" id="step50">Done
+					<span class="custom_navbar"></span>
+				</li>
+			</ul>
+		</template>
+	</data>
+</odoo>

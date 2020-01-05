@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+	<!-- <record id="bank_wizard_view_form" model="ir.ui.view">
+		<field name="name">bank.wizard.form</field>
+		<field name="model">bank.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Migration">
+				<footer>
+					<button name="process_migrate" string="Migrate" type="object" default_focus="1" class="oe_highlight" />
+					<button string="Cancel" class="btn-default" special="cancel"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+	<act_window id="action_bank_migration_wizard" name="Migrate" res_model="bank.wizard"
+	 src_model="res.bank.migration" view_mode="form" multi="True" target="new" key2="client_action_multi" /> -->
+
+	<!-- <record id="migration_migration_wizard_view_form" model="ir.ui.view">
+		<field name="name">migration.wizard.form</field>
+		<field name="model">migration.migration.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Migration">
+				<footer>
+					<button name="process_migrate" string="Migrate" type="object" default_focus="1" class="oe_highlight" />
+					<button string="Cancel" class="btn-default" special="cancel"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+	<act_window id="action_mig_migration_wizard" name="Migrate" res_model="migration.migration.wizard" 
+	src_model="migration.migration" view_mode="form" multi="True" target="new" key2="client_action_multi" /> -->
+
+	<record id="acc_migration_wizard_view_form" model="ir.ui.view">
+		<field name="name">acc.bank.wizard.form</field>
+		<field name="model">acc.bank.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Migration">
+				<footer>
+					<button name="process_migrate" string="Migrate" type="object" default_focus="1" class="oe_highlight" />
+					<button string="Cancel" class="btn-default" special="cancel"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+	<act_window id="action_acc_migration_wizard" name="Migrate" res_model="acc.bank.wizard" 
+	src_model="bank.migration" view_mode="form" multi="True" target="new" key2="client_action_multi" />
+
+	<record id="contype_migration_wizard_view_form" model="ir.ui.view">
+		<field name="name">contype.wizard.form</field>
+		<field name="model">contype.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Migration">
+				<footer>
+					<button name="process_migrate" string="Migrate" type="object" default_focus="1" class="oe_highlight" />
+					<button string="Cancel" class="btn-default" special="cancel"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+	<act_window id="action_contype_migration_wizard" name="Migrate" res_model="contype.wizard" 
+	src_model="contype.migration" view_mode="form" multi="True" target="new" key2="client_action_multi" />
+
+	<!-- <record id="ins_migration_wizard_view_form" model="ir.ui.view">
+		<field name="name">ins.wizard.form</field>
+		<field name="model">ins.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Migration">
+				<footer>
+					<button name="process_migrate" string="Migrate" type="object" default_focus="1" class="oe_highlight" />
+					<button string="Cancel" class="btn-default" special="cancel"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+	<act_window id="action_ins_migration_wizard" name="Migrate" res_model="ins.wizard" 
+	src_model="insurance.migration" view_mode="form" multi="True" target="new" key2="client_action_multi" /> -->
+
+	<!-- migration -->
+	<!-- <record id="migration_wizard_view_form" model="ir.ui.view">
+		<field name="name">migration.wizard.form</field>
+		<field name="model">migration.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Migration">
+				<footer>
+					<button name="process_migrate" string="Migrate" type="object" default_focus="1" class="oe_highlight" />
+					<button string="Cancel" class="btn-default" special="cancel"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+	<act_window id="action_migration_wizard" name="Migrate" res_model="migration.wizard" src_model="hr.migration" view_mode="form" multi="True" target="new" key2="client_action_multi" /> -->
+
+	<!-- department migration -->
+	<!-- <record id="dept_migration_wizard_view_form" model="ir.ui.view">
+		<field name="name">dept.migration.wizard.form</field>
+		<field name="model">dept.migration.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Migration">
+				<footer>
+					<button name="process_migrate" string="Migrate" type="object" default_focus="1" class="oe_highlight" />
+					<button string="Cancel" class="btn-default" special="cancel"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+	<act_window id="action_dept_migration_wizard" name="Migrate" res_model="dept.migration.wizard" src_model="hr.dept.migration" view_mode="form" multi="True" target="new" key2="client_action_multi" /> -->
+
+	<!-- goal migration -->
+	<!-- <record id="goal_migration_wizard_view_form" model="ir.ui.view">
+		<field name="name">goal.migration.wizard.form</field>
+		<field name="model">goal.migration.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Migration">
+				<footer>
+					<button name="process_migrate" string="Migrate" type="object" default_focus="1" class="oe_highlight" />
+					<button string="Cancel" class="btn-default" special="cancel"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+	<act_window id="action_goal_migration_wizard" name="Migrate" res_model="goal.migration.wizard" src_model="hr.goal.migration" view_mode="form" multi="True" target="new" key2="client_action_multi" />
+ -->
+
+	<!-- task migration -->
+	<!-- <record id="task_migration_wizard_view_form" model="ir.ui.view">
+		<field name="name">task.migration.wizard.form</field>
+		<field name="model">task.migration.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Migration">
+				<footer>
+					<button name="task_process_migrate" string="Migrate" type="object" default_focus="1" class="oe_highlight" />
+					<button string="Cancel" class="btn-default" special="cancel"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+	<act_window id="action_task_migration_wizard" name="Migrate" res_model="task.migration.wizard" src_model="hr.task.migration" view_mode="form" multi="True" target="new" key2="client_action_multi" />
+ -->
+
+</odoo>

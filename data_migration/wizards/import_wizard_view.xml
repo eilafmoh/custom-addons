@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="view_import_wizard" model="ir.ui.view">
+			<field name="name">import.wizard.form</field>
+			<field name="model">import.wizard</field>
+			<field name="arch" type="xml">
+				<form string="Import Data">
+					<group col="4">
+						<field name="complex_id"/>
+					</group>
+					<footer>
+						<button string="Import" name="process_import" type="object" class="btn-primary"/>
+						<button string="Cancel" class="btn-secondary" special="cancel"/>
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_import_wizard" model="ir.actions.act_window">
+			<field name="name">Import Data</field>
+			<field name="res_model">import.wizard</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" ref="view_import_wizard"/>
+			<field name="target">new</field>
+		</record>
+
+		<menuitem id="menu_migration_wizard" name="Migration process" parent="menu_migration_cat" action="action_import_wizard" sequence=""/>
+
+
+		<!-- check wizard -->
+
+		<record id="view_import_check_wizard" model="ir.ui.view">
+			<field name="name">check.wizard.form</field>
+			<field name="model">check.wizard</field>
+			<field name="arch" type="xml">
+				<form string="Import Checks">
+					<footer>
+						<button string="Import" name="process_import_check" type="object" class="btn-primary"/>
+						<button string="Cancel" class="btn-secondary" special="cancel"/>
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="action_import_check_wizard" model="ir.actions.act_window">
+			<field name="name">Import Checks</field>
+			<field name="res_model">check.wizard</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" ref="view_import_check_wizard"/>
+			<field name="target">new</field>
+		</record>
+
+		<menuitem id="menu_migration_check_wizard" name="Migration Check" parent="menu_migration_cat" action="action_import_check_wizard" sequence=""/>
+
+	</data>
+</odoo>

@@ -1,0 +1,290 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* migration
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-10-07 21:51+0000\n"
+"PO-Revision-Date: 2019-10-07 21:51+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: migration
+#: model:ir.ui.view,arch_db:migration.dept_migration_wizard_view_form
+#: model:ir.ui.view,arch_db:migration.migration_wizard_view_form
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: migration
+#: selection:hr.migration,state:0
+msgid "Candidate"
+msgstr "Candidate"
+
+#. module: migration
+#: selection:hr.migration,religion:0
+msgid "Christian"
+msgstr "Christian"
+
+#. module: migration
+#: model:ir.actions.act_window,help:migration.hr_dept_migration_action
+#: model:ir.actions.act_window,help:migration.hr_migration_action
+msgid "Click on import button to import new employees."
+msgstr "Click on import button to import new employees."
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_hr_dept_migration_code
+msgid "Code"
+msgstr "الكود"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_hr_migration_address_id
+msgid "Company"
+msgstr "الشركة"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_dept_migration_wizard_create_uid
+#: model:ir.model.fields,field_description:migration.field_hr_dept_migration_create_uid
+#: model:ir.model.fields,field_description:migration.field_hr_migration_create_uid
+#: model:ir.model.fields,field_description:migration.field_migration_wizard_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_dept_migration_wizard_create_date
+#: model:ir.model.fields,field_description:migration.field_hr_dept_migration_create_date
+#: model:ir.model.fields,field_description:migration.field_hr_migration_create_date
+#: model:ir.model.fields,field_description:migration.field_migration_wizard_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_hr_migration_birthday
+msgid "Date of Birth"
+msgstr "تاريخ الميلاد"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_hr_migration_department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: migration
+#: model:ir.model,name:migration.model_dept_migration_wizard
+msgid "Dept Migration Wizard"
+msgstr "إدخال الاقسام"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_dept_migration_wizard_display_name
+#: model:ir.model.fields,field_description:migration.field_hr_dept_migration_display_name
+#: model:ir.model.fields,field_description:migration.field_hr_migration_display_name
+#: model:ir.model.fields,field_description:migration.field_migration_wizard_display_name
+msgid "Display Name"
+msgstr "الاسم المعروض"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_hr_migration_email
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_hr_migration_emp_code
+msgid "Employee Code"
+msgstr "رقم الموظف"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_hr_migration_first_name
+#: model:ir.ui.view,arch_db:migration.hr_migration_view_form
+msgid "First Name"
+msgstr "الاسم الاول"
+
+#. module: migration
+#: model:ir.model,name:migration.model_hr_dept_migration
+msgid "HR DEPT Migration"
+msgstr "إدخال الاقسام"
+
+#. module: migration
+#: model:ir.ui.view,arch_db:migration.hr_dept_migration_view_form
+msgid "HR Dept Migration"
+msgstr "إدخال الاقسام"
+
+#. module: migration
+#: model:ir.actions.act_window,name:migration.hr_dept_migration_action
+#: model:ir.ui.menu,name:migration.menu_hr_dept_migration
+#: model:ir.ui.view,arch_db:migration.hr_dept_migration_view_tree
+msgid "HR Deptartment Migration"
+msgstr "إدخال الاقسام"
+
+#. module: migration
+#: model:ir.actions.act_window,name:migration.hr_migration_action
+#: model:ir.model,name:migration.model_hr_migration
+#: model:ir.ui.menu,name:migration.menu_hr_migration
+#: model:ir.ui.view,arch_db:migration.hr_migration_view_form
+#: model:ir.ui.view,arch_db:migration.hr_migration_view_tree
+msgid "HR Migration"
+msgstr "إدخال الموظفين"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_dept_migration_wizard_id
+#: model:ir.model.fields,field_description:migration.field_hr_dept_migration_id
+#: model:ir.model.fields,field_description:migration.field_hr_migration_id
+#: model:ir.model.fields,field_description:migration.field_migration_wizard_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: migration
+#: selection:hr.migration,state:0
+msgid "In Experiment"
+msgstr "In Experiment"
+
+#. module: migration
+#: selection:hr.migration,state:0
+msgid "In Service"
+msgstr "In Service"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_hr_migration_job_join_date
+msgid "Job Join Date"
+msgstr "تاريخ الالتحاق بالوظيفة"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_dept_migration_wizard___last_update
+#: model:ir.model.fields,field_description:migration.field_hr_dept_migration___last_update
+#: model:ir.model.fields,field_description:migration.field_hr_migration___last_update
+#: model:ir.model.fields,field_description:migration.field_migration_wizard___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_hr_migration_last_name
+#: model:ir.ui.view,arch_db:migration.hr_migration_view_form
+msgid "Last Name"
+msgstr "الاسم الاخير"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_dept_migration_wizard_write_uid
+#: model:ir.model.fields,field_description:migration.field_hr_dept_migration_write_uid
+#: model:ir.model.fields,field_description:migration.field_hr_migration_write_uid
+#: model:ir.model.fields,field_description:migration.field_migration_wizard_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_dept_migration_wizard_write_date
+#: model:ir.model.fields,field_description:migration.field_hr_dept_migration_write_date
+#: model:ir.model.fields,field_description:migration.field_hr_migration_write_date
+#: model:ir.model.fields,field_description:migration.field_migration_wizard_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_hr_migration_marital
+msgid "Marital Status"
+msgstr "الحالة الاجتماعية"
+
+#. module: migration
+#: selection:hr.migration,marital:0
+msgid "Married"
+msgstr "Married"
+
+#. module: migration
+#: model:ir.actions.act_window,name:migration.action_dept_migration_wizard
+#: model:ir.actions.act_window,name:migration.action_migration_wizard
+#: model:ir.ui.view,arch_db:migration.dept_migration_wizard_view_form
+#: model:ir.ui.view,arch_db:migration.migration_wizard_view_form
+msgid "Migrate"
+msgstr "إدخال"
+
+#. module: migration
+#: model:ir.ui.menu,name:migration.menu_hr_migration_view
+#: model:ir.ui.view,arch_db:migration.dept_migration_wizard_view_form
+#: model:ir.ui.view,arch_db:migration.migration_wizard_view_form
+msgid "Migration"
+msgstr "الإدخال"
+
+#. module: migration
+#: model:ir.model,name:migration.model_migration_wizard
+msgid "Migration Wizard"
+msgstr "Migration Wizard"
+
+#. module: migration
+#: selection:hr.migration,religion:0
+msgid "Muslim"
+msgstr "Muslim"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_hr_dept_migration_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_hr_migration_country_id
+msgid "Nationality (Country)"
+msgstr "الجنسية (البلد)"
+
+#. module: migration
+#: selection:hr.migration,religion:0
+msgid "Other"
+msgstr "Other"
+
+#. module: migration
+#: selection:hr.migration,state:0
+msgid "Out of Service"
+msgstr "Out of Service"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_hr_dept_migration_parent
+msgid "Parent"
+msgstr "الأصل"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_hr_migration_religion
+msgid "Religion"
+msgstr "الديانة"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_hr_migration_sinid_date
+msgid "SIN Date"
+msgstr "تاريخ التأمين الإجتماعي"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_hr_migration_second_name
+#: model:ir.ui.view,arch_db:migration.hr_migration_view_form
+msgid "Second Name"
+msgstr "الاسم الثاني"
+
+#. module: migration
+#: selection:hr.migration,marital:0
+msgid "Single"
+msgstr "Single"
+
+#. module: migration
+#: model:ir.model.fields,help:migration.field_hr_migration_sinid_date
+msgid "Social Insurance Date"
+msgstr "تاريخ التأمين الاجتماعي"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_hr_migration_state
+msgid "State"
+msgstr "المحافظة"
+
+#. module: migration
+#: selection:hr.migration,state:0
+msgid "Temporary suspension"
+msgstr "Temporary suspension"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_hr_migration_third_name
+#: model:ir.ui.view,arch_db:migration.hr_migration_view_form
+msgid "Third Name"
+msgstr "الاسم الثالث"
+
+#. module: migration
+#: model:ir.model.fields,field_description:migration.field_hr_migration_mobile_phone
+msgid "Work Mobile"
+msgstr "محمول العمل"
+

@@ -1,0 +1,29 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data noupdate='1'>
+		<record id="ir_seq_type_hr_end_service" model="ir.sequence">
+            <field name="name">End Employee Service</field>
+            <field name="code">end.service.employee.seq</field>
+            <field name="prefix">No</field>
+            <field name="padding">5</field>
+        </record>
+
+		<record id="ir_seq_type_hr_final_sattelment" model="ir.sequence">
+			<field name="name">Finall sattelment</field>
+			<field name="code">end.service.final.sattelment.seq</field>
+			<field name="prefix"># Fs</field>
+			<field name="padding">4</field>
+		</record>
+		
+		<record id="ir_hr_final_sattelment" model="ir.sequence">
+			<field name="name">End Employee Service</field>
+			<field name="code">end.service.employee.seq</field>
+			<field name="prefix"># No</field>
+			<field name="padding">4</field>
+			<field name="number_increment">1</field>
+			<field name="number_next_actual">1</field>
+			<field name="implementation">standard</field>
+		</record>
+		
+	</data>
+</openerp>

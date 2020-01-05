@@ -1,0 +1,61 @@
+<odoo>
+	<data>
+		<!-- uni.faculty.department.program -->
+		<record id="uni_faculty_department_program_view_form" model="ir.ui.view">
+			<field name="name">uni.faculty.department.program.form</field>
+			<field name="model">uni.faculty.department.program</field>
+			<field name="arch" type="xml">
+				<form string="Programs">
+					<sheet>
+						<group>
+							<field name="name"/>
+							<field name="code"/>
+							<field name="faculty_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+							<field name="department_id" options="{'no_create': True}"/>
+						</group>
+						<button type="object" name="generate" string="Generate Progarm Details" class="btn-primary"/>
+						<notebook>
+							<page string="Program Details">
+								<field name="program_line_ids">
+									<tree>
+										<field name="faculty_id" invisible="1" options="{'no_create': True}"/>
+										<field name="level_id" options="{'no_create': True}"/>
+										<field name="semester_id" options="{'no_create': True}"/>
+										<field name="specialization_id" options="{'no_create': True}"  invisible="1"/>
+										<field name="subject_id" options="{'no_create': True}"/>
+										<field name="credit_hours"/>
+									</tree>
+								</field>
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<!-- uni.faculty.department.program tree view -->
+		<record id="uni_faculty_department_program_view_tree" model="ir.ui.view">
+			<field name="name">uni.faculty.department.program.view.tree</field>
+			<field name="model">uni.faculty.department.program</field>
+			<field name="arch" type="xml">
+				<tree string="Programs">
+					<field name="name"/>
+					<field name="code"/>
+					<field name="faculty_id" groups="base.group_multi_company"/>
+					<field name="department_id"/>
+				</tree>
+			</field>
+		</record>
+		<!-- uni.faculty.department.program action -->
+		<record id="uni_faculty_department_programs_list_action" model="ir.actions.act_window">
+			<field name="name">Programs</field>
+			<field name="res_model">uni.faculty.department.program</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new program</p>
+			</field>
+		</record>
+		<!-- Programs left menu -->
+		<menuitem id="uni_core_department_programs_menu" name="Programs" parent="uni_core_configurations_view_menu" action="uni_faculty_department_programs_list_action"/>
+	</data>
+</odoo>

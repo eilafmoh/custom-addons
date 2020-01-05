@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>  
+       <menuitem action="hr.open_module_tree_department" id="hr.menu_hr_department_tree" 
+        parent="hr.menu_human_resources_configuration" sequence="1" groups="hr.group_hr_user"/>
+
+        <record id="view_department_form" model="ir.ui.view">
+            <field name="name">Department</field>
+            <field name="model">hr.department</field>
+            <field name="inherit_id" ref="hr.view_department_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='parent_id']" position="after">
+                    <field name="category_id"/>
+                </xpath>
+                <field name="company_id"  position="attributes">
+                    <attribute name="string">Program</attribute>
+                </field>
+
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="view_department_tree">
+            <field name="name">view.department.tree.inherit</field>
+            <field name="model">hr.department</field>
+            <field name="inherit_id" ref="hr.view_department_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='manager_id']" position="after">
+                    <field name="category_id"/>
+                </xpath>
+                <xpath expr="//field[@name='company_id']" position="replace">
+                </xpath>
+                <xpath expr="//field[@name='parent_id']" position="after">
+                    <field name="company_id"/>
+                </xpath>
+            </field>
+        </record>
+            
+</odoo>

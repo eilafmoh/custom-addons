@@ -1,0 +1,121 @@
+<odoo>
+    <record id="view_hr_deduction_form" model="ir.ui.view">
+        <field name="name">hr.deduction.form</field>
+        <field name="model">hr.deduction</field>
+          <field name="arch" type="xml">
+            <form string="Deduction" version="7.0">
+                  <header>
+                    <button name="action_done" type="object" string="Done" states="approve" class="oe_highlight"/>
+                      <button name="action_approve" type="object" string="Approve" states="draft" class="oe_highlight"/>
+
+                    <button name="action_set_to_draft" type="object" string="Set To Draft" states="approve" class="oe_highlight"/>
+                    <button name="action_refuse" type="object" string="Refuse" states="draft" class="oe_highlight"/>
+
+                    <field name="state" widget="statusbar"/>
+                  </header>
+                <sheet>
+                    <div class="oe_title">
+                        <label for="name" class="oe_edit_only"/>
+                        <h1><field name="name" class="oe_inline" /> </h1>
+                    </div>
+                        <group>
+                          <field name="date" readonly='1'/>
+                        </group>
+                        <group>
+                            <field name="employee_id"/>
+                        </group>
+                        <group col='4'>
+                            <field name="company_id" />
+                            <field name="department_id" />
+                            <field name="job_id" />
+                            <field name="parent_id" readonly="1"/>
+                        </group>
+                        <group col='4'>
+                          <field name="deducted_by" widget="radio" attrs="{'readonly':[('state', '!=', 'draft')]}"/>
+                          <field name="amount" attrs="{'required': [('deducted_by', '!=', 'hours')],'invisible': [('deducted_by', '=', 'hours')], 'readonly':[('state', '!=', 'draft')]}" />
+                          <field name="hours_ded" attrs="{'required': [('deducted_by', '=', 'hours')],'invisible': [('deducted_by', '!=', 'hours')],'readonly':[('state', '!=', 'draft')]}"/>
+                          <field name="de_amount" attrs="{'invisible':[('deducted_by', '=', 'amount')]}" />
+                        </group>
+                  <notebook>
+                  <page string="Notes">
+                      <group>           
+                            <field name="description" colspan="4" nolabel="1" attrs="{'readonly':[('state', '=', 'done')]}"/>
+                        </group>
+                      </page>
+                </notebook>
+            </sheet>
+            <div class="oe_chatter">
+                <field name="message_follower_ids" widget="mail_followers"/>
+                <field name="message_ids" widget="mail_thread"/>
+            </div>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_hr_deduction_tree" model="ir.ui.view">
+        <field name="name">hr.deduction.tree</field>
+        <field name="model">hr.deduction</field>
+        <field name="arch" type="xml">
+            <tree string="Deduction ">
+                <field name="name"/>
+                <field name="date"/>
+                <field name="state"/>
+
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="action_hr_deduction">
+        <field name="name">Absence Discount</field>
+        <field name="res_model">hr.deduction</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_hr_deduction_tree"/>
+
+    </record>
+
+    <record id="hr_payslip_ded_form_inherit_view" model="ir.ui.view">
+        <field name="name">hr.payslip.inherit.form</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page" position="after">
+                <page string="DED">
+                    <button name="get_ded" string="Update Deduction" type="object"/>
+                    <field name="ded_ids">
+                        <tree>
+                            <field name="name"/>
+                            <field name="amount"/>
+                            <field name="date"/>
+                        </tree> 
+                        
+                    </field>
+                    <group class="oe_subtotal_footer oe_right">
+                        <field name="total_amount_ded"/>
+                    </group>
+                </page>
+            </xpath>
+            <field name="credit_note"  position="attributes">
+                  <attribute name="invisible">1</attribute>
+              </field> 
+        </field>
+    </record>
+
+   <!--  <record id="hr_rule_ded" model="hr.salary.rule">
+        <field name="name">Absence</field>
+        <field name="sequence" eval="100"/>
+        <field name="code">ABS</field>
+        <field name="category_id" ref="hr_payroll.DED"/>
+        <field name="condition_select">none</field>
+        <field name="amount_select">code</field>
+        <field name="amount_python_compute">result = -payslip.total_amount_ded</field>
+    </record> -->
+
+   <menuitem 
+    id="menu_hr_deduction_request" 
+    parent="hr_custom.proccess_sub_menu" 
+    action="action_hr_deduction"
+     groups="hr.group_hr_manager"
+     sequence="2"/>
+
+</odoo>

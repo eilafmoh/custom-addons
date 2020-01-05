@@ -1,0 +1,19 @@
+<odoo>
+	<data>
+		<!-- <record id="hr_config_settings_form_inh" model="ir.ui.view">
+			<field name="name">Settings</field>
+			<field name="model">hr.config.settings</field>
+			<field name="inherit_id" ref="hr_custom.hr_config_settings_form" />
+			<field name="arch" type="xml">
+				<xpath expr="//form" position="inside">
+					<group string="Incentive">
+						<field name="company_id" invisible="1"/>
+						<field name="company_currency_id" invisible="1"/>
+						<field name="incentive_double_validation" widget="radio"/>
+						<field name="incentive_double_validation_amount" attrs="{'invisible': [('incentive_double_validation', '=', 'one_step')]}"/>
+					</group>
+				</xpath>
+			</field>
+		</record> -->
+	</data>
+</odoo>

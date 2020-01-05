@@ -1,0 +1,581 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* hr_end_of_service
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-12-14 09:13+0000\n"
+"PO-Revision-Date: 2017-12-14 09:13+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_covenant_amount
+msgid "Amount"
+msgstr "المبلغ"
+
+#. module: hr_end_of_service
+#: model:ir.model,name:hr_end_of_service.model_employee_exit_form
+msgid "Appraisal Interview"
+msgstr "Appraisal Interview"
+
+#. module: hr_end_of_service
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_employee_sattelment_form
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_end_of_service_form
+msgid "Approve"
+msgstr "تصديق"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,help:hr_end_of_service.field_hr_end_of_service_emp_salary
+msgid "Basic Salary of the employee"
+msgstr "الراتب الأساسي للموظف"
+
+#. module: hr_end_of_service
+#: code:addons/hr_end_of_service/models/hr_end_service.py:188
+#, python-format
+msgid "Check the Finice Department and Employee loan"
+msgstr "الرجاء مراجعة الإدارة المالية وسلفيات الموظف"
+
+#. module: hr_end_of_service
+#: code:addons/hr_end_of_service/models/hr_end_service.py:173
+#, python-format
+msgid "Check the HR Department covenant and company Covenant"
+msgstr "الرجاء مراجعة العهد مع الموظف"
+
+#. module: hr_end_of_service
+#: model:ir.actions.act_window,help:hr_end_of_service.action_end_of_employee_service
+#: model:ir.actions.act_window,help:hr_end_of_service.action_hr_employee_sattelment
+msgid "Click to Requset New employee to be employeed."
+msgstr "قم بالضغط لإنشاء طلب توظيف جديد"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_company_covenant
+msgid "Company Covenant"
+msgstr "عهد المؤسسة"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_contract_id
+msgid "Contract"
+msgstr "العقد "
+
+#. module: hr_end_of_service
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_employee_sattelment_form
+msgid "Copmute Target"
+msgstr "Copmute Target"
+
+#. module: hr_end_of_service
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_end_of_service_form
+msgid "Covenant Details"
+msgstr "تفاصيل العهد"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_covenant_create_uid
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_final_sattelment_create_uid
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_covenant_create_date
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_final_sattelment_create_date
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_final_sattelment_current_salary
+msgid "Current Month Salary"
+msgstr "المرتب الشهري"
+
+#. module: hr_end_of_service
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_end_of_service_form
+msgid "D Approve"
+msgstr "موافقة الإدارة"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_final_sattelment_date
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_date
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_final_sattelment_annual_leave
+msgid "Days Annual Leave"
+msgstr "ايام الاجازة السنوية"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_department_id
+msgid "Department"
+msgstr "القسم"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_dep_manager_confirm_date
+msgid "Department manager Confirm"
+msgstr "بإنتظار موافقة مدير الادارة"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_covenant_display_name
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_final_sattelment_display_name
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: hr_end_of_service
+#: selection:employee.final.sattelment,state:0
+#: selection:hr.end.of.service,state:0
+msgid "Done"
+msgstr "مكتملة"
+
+#. module: hr_end_of_service
+#: selection:employee.covenant,state:0
+#: selection:employee.final.sattelment,state:0
+#: selection:hr.end.of.service,state:0
+msgid "Draft"
+msgstr "مبدئية"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_it_email
+msgid "E-mail"
+msgstr "البريد الإلكتروني"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_emp_card
+msgid "Employee Card"
+msgstr "بطاقة الموظف"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_emp_confirm_date
+msgid "Employee Confirm"
+msgstr "موافقة الموظف"
+
+#. module: hr_end_of_service
+#: model:ir.actions.act_window,name:hr_end_of_service.action_custom_contract
+#: model:ir.model,name:hr_end_of_service.model_hr_contract
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_covenant_contract_id
+msgid "Employee Contract"
+msgstr "عقود الموظف"
+
+#. module: hr_end_of_service
+#: model:ir.ui.menu,name:hr_end_of_service.menu_hr_end_of_service
+#: model:ir.ui.view,arch_db:hr_end_of_service.tree_employee_request_view
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_employee_sattelment_tree
+msgid "Employee End of Service"
+msgstr "إنهاء الخدمة"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_contract_covenant_id
+msgid "Employee Exit"
+msgstr "إستقالة"
+
+#. module: hr_end_of_service
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_end_of_service_form
+msgid "Employee Exit interview"
+msgstr "مقابلة الإستقالة"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_emp_exit_interview
+msgid "Employee Exit survey"
+msgstr "إستبيان الإستقالة"
+
+#. module: hr_end_of_service
+#: model:ir.ui.menu,name:hr_end_of_service.menu_final_sattelment
+msgid "Employee Final Sattelment"
+msgstr "تسويات الموظفين"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_emp_loan
+msgid "Employee Loan"
+msgstr "سلفية الموظف"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_final_sattelment_employee_id
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_employee_id
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_employee_sattelment_form
+msgid "Employee Name"
+msgstr " الموظف"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_emp_salary
+msgid "Employee Salary"
+msgstr "راتب الموظف"
+
+#. module: hr_end_of_service
+#: model:ir.model,name:hr_end_of_service.model_employee_covenant
+msgid "Employee covenant from company"
+msgstr "عهد الموظف من المؤسسة"
+
+#. module: hr_end_of_service
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_employee_sattelment_form
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_end_of_service_form
+msgid "Employee end of service Process"
+msgstr "عمليه نهاية خدمة الموظف"
+
+#. module: hr_end_of_service
+#: model:ir.model,name:hr_end_of_service.model_hr_end_of_service
+msgid "Employee end of service process"
+msgstr "عملية نهاية خدمة الموظف"
+
+#. module: hr_end_of_service
+#: model:ir.model,name:hr_end_of_service.model_employee_final_sattelment
+msgid "Employee finial sattelment process"
+msgstr "التسويات النهائية للموظف"
+
+#. module: hr_end_of_service
+#: model:ir.actions.act_window,name:hr_end_of_service.action_end_of_employee_service
+msgid "End of Service Employee"
+msgstr "طلب نهاية الخدمة"
+
+#. module: hr_end_of_service
+#: selection:hr.end.of.service,exit_type:0
+msgid "End of contract"
+msgstr "إنهاء العقد"
+
+#. module: hr_end_of_service
+#: model:ir.ui.menu,name:hr_end_of_service.menu_end_of_employee_service
+msgid "End sevice Requset"
+msgstr "طلب نهاية خدمة"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_progress_bar
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_employee_sattelment_form
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_end_of_service_form
+msgid "Exit Progress"
+msgstr "تقدم العملية"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_exit_reson
+msgid "Exit Reson"
+msgstr "الأسباب"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_exit_servey
+msgid "Exit Survey"
+msgstr "إستبانه نهاية الخدمة"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_exit_type
+msgid "Exit Type"
+msgstr "نوع الإنهاء"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_experince_certificate
+msgid "Experince Certificate"
+msgstr "شهادة الخبرة"
+
+#. module: hr_end_of_service
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_end_of_service_form
+msgid "Extra info"
+msgstr "معلومات إضافية"
+
+#. module: hr_end_of_service
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_end_of_service_form
+msgid "Finice Approve"
+msgstr "موافقة الإدارة المالية"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_finice_department
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_end_of_service_form
+msgid "Finice Department"
+msgstr "الإدارة المالية"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_gm_confirm_date
+msgid "General Manager Confirm"
+msgstr "موافقة المدير العام"
+
+#. module: hr_end_of_service
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_end_of_service_form
+msgid "Genral Manger Approve"
+msgstr "موافقة المدير العام"
+
+#. module: hr_end_of_service
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_end_of_service_form
+msgid "HR Approve"
+msgstr "موافقة الموارد البشرية"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_hr_department
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_end_of_service_form
+msgid "HR Department"
+msgstr "إدارة الموارد البشرية"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_hr_manager_confirm_date
+msgid "HR Manager Confirm"
+msgstr "موافقة مدير إدارة الموارد البشرية"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_covenant_id
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_final_sattelment_id
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_it_department
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_end_of_service_form
+msgid "IT Department"
+msgstr "إدارة تقنية المعلومات"
+
+#. module: hr_end_of_service
+#: selection:employee.final.sattelment,state:0
+msgid "In Progress"
+msgstr "جاري التقدم"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_job_title
+msgid "Job Position"
+msgstr "الوظيفة"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_it_laptop
+msgid "Laptop"
+msgstr "اللابتوب"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_covenant___last_update
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_final_sattelment___last_update
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service___last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_covenant_write_uid
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_final_sattelment_write_uid
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_covenant_write_date
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_final_sattelment_write_date
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_final_sattelment_last_date
+msgid "Last Work Date"
+msgstr "اخر يوم عمل"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_last_day_of_work
+msgid "Last day of work"
+msgstr "اخر يوم عمل"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,help:hr_end_of_service.field_hr_end_of_service_contract_id
+msgid "Latest contract of the employee"
+msgstr "اخر عقد للموظفين"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_final_sattelment_legal_leave
+msgid "Legal Leave"
+msgstr "الإجازات القانونية"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_finice_old_loan
+msgid "Long Term Loan"
+msgstr "القروض طويلة الأجل"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_user_id
+msgid "Made By"
+msgstr "تم الإجراء عن طريق"
+
+#. module: hr_end_of_service
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_end_of_service_form
+msgid "Make done"
+msgstr "منتهى"
+
+#. module: hr_end_of_service
+#: code:addons/hr_end_of_service/models/hr_end_service.py:173
+#: code:addons/hr_end_of_service/models/hr_end_service.py:188
+#, python-format
+msgid "Make sure is that employee has no covenant"
+msgstr "رجاء قم بالتأكد من عهد الموظف"
+
+#. module: hr_end_of_service
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_end_of_service_form
+msgid "Make with employee"
+msgstr "جعل مع الموظف"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_parent_id
+msgid "Manager"
+msgstr "المدير"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_covenant_name
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_final_sattelment_name
+msgid "Name"
+msgstr "الاسم"
+
+#. module: hr_end_of_service
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_employee_sattelment_form
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_end_of_service_form
+msgid "Note"
+msgstr "ملاحظات"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_covenant_number
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_name
+msgid "Number"
+msgstr "عدد"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_finice_check_list_other
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_hr_check_list_other
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_it_check_list_other
+msgid "Other"
+msgstr "اخرى"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_datails
+msgid "Other Details"
+msgstr "تفاصيل اخرى"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_final_sattelment_over_time
+msgid "Over Time"
+msgstr "زمن إضافي"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_final_sattelment_public_holiday
+msgid "Public Holiday"
+msgstr "إجازات عامة"
+
+#. module: hr_end_of_service
+#: selection:employee.covenant,state:0
+msgid "Received"
+msgstr "تم الإستلام"
+
+#. module: hr_end_of_service
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_end_of_service_form
+msgid "Refuse"
+msgstr "رفض"
+
+#. module: hr_end_of_service
+#: selection:hr.end.of.service,state:0
+msgid "Refused"
+msgstr "تم الرفض"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_reject_status
+msgid "Reject status"
+msgstr "حالة الرفض"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_final_sattelment_remaining_days
+msgid "Remining Days"
+msgstr "الأيام المتبقية"
+
+#. module: hr_end_of_service
+#: model:ir.ui.view,arch_db:hr_end_of_service.view_hr_end_of_service_form
+msgid "Requset info"
+msgstr "Requset info"
+
+#. module: hr_end_of_service
+#: selection:hr.end.of.service,exit_type:0
+msgid "Resignation"
+msgstr "إستقالة"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_it_sim
+msgid "SIM Card"
+msgstr "شريحة الهاتف"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_covenant_state
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_final_sattelment_state
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_state
+msgid "State"
+msgstr "الحالة"
+
+#. module: hr_end_of_service
+#: selection:hr.end.of.service,exit_type:0
+msgid "Termination"
+msgstr "نهاية خدمة"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_hr_uniform
+msgid "The Uniform"
+msgstr "الزي"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,help:hr_end_of_service.field_employee_final_sattelment_employee_id
+#: model:ir.model.fields,help:hr_end_of_service.field_hr_end_of_service_employee_id
+msgid "The employee"
+msgstr "الموظف"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_finice_loan
+msgid "The loan"
+msgstr "السلفيات"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_final_sattelment_employee_salary
+msgid "Total Paysllip"
+msgstr "اجمالي المدفوعات"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_final_sattelment_total_amount
+msgid "Total amount"
+msgstr "اجمالي المبالغ"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_final_sattelment_unpaid_leave
+msgid "Unpaid Leave"
+msgstr "الإجازات غير المدفوعة"
+
+#. module: hr_end_of_service
+#: selection:hr.end.of.service,state:0
+msgid "Waiting Depart Manager"
+msgstr "في إنتظار مدير الإدارة"
+
+#. module: hr_end_of_service
+#: selection:hr.end.of.service,state:0
+msgid "Waiting General Manager"
+msgstr "فى إنتظار المدير العام"
+
+#. module: hr_end_of_service
+#: selection:hr.end.of.service,state:0
+msgid "Waiting HR Manager"
+msgstr "في إنتظار الموارد البشرية"
+
+#. module: hr_end_of_service
+#: selection:hr.end.of.service,state:0
+msgid "Waiting finice Manager"
+msgstr "في إنتظار الإدارة المالية"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_final_sattelment_current_month_salary
+msgid "With current month Salary ?"
+msgstr "متضمنة مرتب الشهر الحالي"
+
+#. module: hr_end_of_service
+#: selection:employee.covenant,state:0
+msgid "With employee"
+msgstr "مع الموظف"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_hr_end_of_service_emp_convenant
+msgid "covenant Details"
+msgstr "تفاصيل العهد"
+
+#. module: hr_end_of_service
+#: model:ir.actions.act_window,name:hr_end_of_service.action_hr_employee_sattelment
+msgid "employee final sattelment"
+msgstr "التسويات النهائية"
+
+#. module: hr_end_of_service
+#: model:ir.model.fields,field_description:hr_end_of_service.field_employee_final_sattelment_salary_per_day
+msgid "salary per day"
+msgstr "مرتب اليوم"
+

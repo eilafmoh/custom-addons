@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="oncreadit_check_report">
+            <t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <t t-call="web.internal_layout">
+                        <t t-foreach="docs" t-as="o">
+                            <div class="page">
+                                <table class="table table-bordered">
+                                    <tr>
+                                        <td class="text-center">
+                                            <strong>Customer name</strong>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-field="o.partner_id.name"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <strong> Periods</strong>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-field="o.periods"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <strong>Amount Total</strong>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-field="o.amount"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">
+                                            <strong>Amount Posted</strong>
+                                        </td>
+                                        <td class="text-center">
+                                            <span t-field="o.amount_posted"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                                <br><br></br></br>
+                                <strong><center> Payed Checks <br></br></center></strong><hr/>
+
+                                <table class="table table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Due Date</th>
+                                            <th class="text-left">Description</th>
+                                            <th class="text-left">Amount</th>
+                                            <th class="text-left">Check Number</th>
+                                            <th class="text-left">Bank Name</th>
+                                            <th class="text-left">Analytic Account</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="invoice_tbody">
+                                        <tr t-foreach="o.check_lines" t-as="line">
+                                            <t t-if="line.move_check">
+                                                <td>
+                                                    <span t-field="line.date"/>
+                                                </td>
+                                                <td>
+                                                    <span t-field="line.due_date"/>
+                                                </td>
+                                                <td>
+                                                    <span t-field="line.description"/>
+                                                </td>
+                                                <td>
+                                                    <span t-field="line.amount" />
+                                                </td>
+                                                <td >
+                                                    <span t-field="line.check_number"/>
+                                                </td>
+                                                <td >
+                                                    <span t-field="line.journal_id"/>
+                                                </td>
+                                                <td>
+                                                    <span t-field="line.analytic_id" />
+                                                </td>
+                                            </t>
+                                        </tr>
+                                        <tr >
+                                            <td>
+                                                <strong>Total Posted</strong>
+                                            </td>
+                                            <td></td><td></td>
+                                            <td class="border-black">
+                                                <strong><span t-field="o.amount_posted"/></strong>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <strong><center> Residual Checks <br></br></center></strong><hr/>
+
+                                <table class="table table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Due Date</th>
+                                            <th class="text-left">Description</th>
+                                            <th class="text-left">Amount</th>
+                                            <th class="text-left">Check Number</th>
+                                            <th class="text-left">Bank Name</th>
+                                            <th class="text-left">Analytic Account</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <t t-foreach="o.check_lines" t-as="l">
+                                            <tr>
+                                                <t t-if="not l.move_check">
+                                                    <td>
+                                                        <span t-field="l.date"/>
+                                                    </td>
+                                                    <td>
+                                                        <span t-field="l.due_date"/>
+                                                    </td>
+                                                    <td>
+                                                        <span t-field="l.description"/>
+                                                    </td>
+                                                    <td>
+                                                        <span t-field="l.amount" />
+                                                    </td>
+                                                    <td >
+                                                        <span t-field="l.check_number"/>
+                                                    </td>
+                                                    <td >
+                                                        <span t-field="l.journal_id"/>
+                                                    </td>
+                                                    <td>
+                                                        <span t-field="l.analytic_id" />
+                                                    </td>
+                                                </t>
+                                            </tr>
+                                        </t>
+                                        <tr >
+                                            <td>
+                                                <strong>Balance</strong>
+                                            </td>
+                                            <td></td><td></td>
+                                            <td class="border-black">
+                                                <strong><span t-field="o.amount_due"/></strong>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+
+                                <br></br><br></br>
+                                <div class="col-xs-4 pull-right">
+                                    <tr class="border-black">
+                                        <td>
+                                            <strong>Financial Manger</strong>
+                                        </td>
+                                        <br></br><br></br><br></br>
+                                        <td class="text-right">
+                                            <strong>________________________</strong>
+                                        </td>
+                                    </tr>
+                                </div>
+                                <tr class="border-black">
+                                    <td>
+                                        <strong>Accountant</strong>
+                                    </td>
+                                    <br></br><br></br><br></br>
+                                    <td class="text-left">
+                                        <strong>________________________</strong>
+                                    </td>
+                                </tr>
+
+                            </div>
+                        </t>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

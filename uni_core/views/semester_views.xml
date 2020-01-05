@@ -1,0 +1,46 @@
+<odoo>
+	<data>
+		<!-- uni.faculty.semester form view -->
+		<record id="uni_semester_view_form" model="ir.ui.view">
+			<field name="name">uni.faculty.semester.view.form</field>
+			<field name="model">uni.faculty.semester</field>
+			<field name="arch" type="xml">
+				<form string="Semesters">
+					<sheet>
+						<group colspan="4">
+							<group col="2">
+								<field name="name"/>
+								<field name="order"/>
+							</group>
+							<group col="2">
+								<field name="faculty_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+							</group>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<!-- uni.faculty.semester tree view -->
+		<record id="uni_semester_view_tree" model="ir.ui.view">
+			<field name="name">uni.faculty.semester.view.tree</field>
+			<field name="model">uni.faculty.semester</field>
+			<field name="arch" type="xml">
+				<tree string="Semesters">
+					<field name="name"/>
+					<field name="order"/>
+				</tree>
+			</field>
+		</record>
+		<record id="uni_core_semesters_list_action" model="ir.actions.act_window">
+			<field name="name">Semesters</field>
+			<field name="res_model">uni.faculty.semester</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new semester</p>
+			</field>
+		</record>
+		<!-- semesters left menu -->
+		<menuitem id="uni_core_semesters_menu" name="Semesters" parent="uni_core_configurations_view_menu" action="uni_core_semesters_list_action"/>
+	</data>
+</odoo>

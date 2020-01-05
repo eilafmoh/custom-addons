@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="general_report">
+		<t t-call="report.internal_layout">
+			<div class="page">
+				<style>				th{					border-style: dashed;					border-width: 1px;					border-color: black;        	         }        	        td{	        	        border-style: dashed;border-width: 1px;border-color: black;	        	        font-family: 'Abel';	        	        color:#43698d        	         }        	        .table_header{        	       		border-style: dashed;        	       		border-width: 1px;        	       		border-color: black;        	       		background-color: #e0eaf6;        	         }        	        .table_custom{        	       		border-style: dashed;        	       		border-width: 1px;        	       		border-color: black;        	       		background-color: #B7FDBD;        	       		margin-top:10px;        	         }        	        tbody{        	        	background-color:#ededed;	        	        border-style: dashed;	        	        border-width: 1px;	        	        border-color: black;        	         }		             </style>
+				<div class="page-header">
+					<center>
+						<h2>        						General Report        					</h2>
+					</center>
+				</div>
+				<table class ="col-xs-12 table_custom">
+					<thead class="table_header">
+						<tr style="border-style: dashed;border-width: 1px;border-color: black;">
+							<th>
+								<center>										Collage									</center>
+							</th>
+							<th>
+								<center>									Total Student's									</center>
+							</th>
+							<th>
+								<center>										Registerd									</center>
+							</th>
+							<th>
+								<center>										Registerd Percentage									</center>
+							</th>
+							<th>
+								<center>										Un Registerd									</center>
+							</th>
+							<th>
+								<center>										Un registerd Percentage									</center>
+							</th>
+						</tr>
+					</thead>
+					<tbody t-foreach="registration_details" t-as="line">
+						<tr style="border-style: dashed;border-width: 1px;border-color: black;">
+							<td>
+								<center>
+									<span t-esc="line['collage']"/>
+								</center>
+							</td>
+							<td>
+								<center>
+									<span t-esc="line['all']"/>
+								</center>
+							</td>
+							<td class="top_space">
+								<center>
+									<span t-esc="line['registerd']"/>
+								</center>
+							</td>
+							<td>
+								<center>
+									<span t-esc="line['registerd_percentage']"/>
+								</center>
+							</td>
+							<td>
+								<center>
+									<span t-esc="line['unregisterd']"/>
+								</center>
+							</td>
+							<td>
+								<center>
+									<span t-esc="line['unregisterd_percentage']"/>
+								</center>
+							</td>
+						</tr>
+					</tbody>
+					<thead class="table_header" t-foreach="totals" t-as="total">
+						<tr style="border-style: dashed;border-width: 1px;border-color: black;">
+							<th>
+								<center>Total</center>
+							</th>
+							<th>
+								<center>
+									<span t-esc="total['all']"/>
+								</center>
+							</th>
+							<th>
+								<center>
+									<span t-esc="total['registerd']"/>
+								</center>
+							</th>
+							<th>
+								<center>
+									<span t-esc="total['registerd_percentage']"/>
+								</center>
+							</th>
+							<th>
+								<center>
+									<span t-esc="total['unregisterd']"/>
+								</center>
+							</th>
+							<th>
+								<center>
+									<span t-esc="total['unregisterd_percentage']"/>
+								</center>
+							</th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+		</t>
+	</template>
+</odoo>

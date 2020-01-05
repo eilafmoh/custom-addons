@@ -1,0 +1,1602 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* account_voucher_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-03-01 18:04+0000\n"
+"PO-Revision-Date: 2019-03-01 18:04+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,help:account_voucher_custom.field_oncreadit_check__state
+msgid " * The 'Draft' status is used when a user is encoding a new and unconfirmed on credit checks. 					\n"
+"* The 'open' when voucher is in open status,on credit check has aserial number. 					\n"
+"* The 'paid' status is used when all check lines are paid 					\n"
+"* The 'Cancelled' status is used when user cancel on credit check."
+msgstr ""
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_line_tree
+msgid "#Ref"
+msgstr "المتسلسل"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.on_credit_check_form
+msgid "(update)"
+msgstr "تعديل"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_report
+msgid "<strong class=\"text-center\">Accountant</strong>"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_report
+msgid "<strong class=\"text-center\">Financial Manger</strong>"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_report_template
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_report_template2
+msgid "<strong style=\"float:left\">Amount</strong>"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_report_template
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_report_template2
+msgid "<strong style=\"float:left\">Payment Form</strong>"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_report_template
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_report_template2
+msgid "<strong style=\"float:right\">  استلمت من السيد / السيدة</strong>"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_report_template
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_report_template2
+msgid "<strong style=\"float:right\"> بشيك رقم  </strong>"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_report_template
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_report_template2
+msgid "<strong style=\"float:right\">التاريخ </strong>"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_report_template
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_report_template2
+msgid "<strong style=\"float:right\">مبلغا وقدره </strong>"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_report_template
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_report_template2
+msgid "<strong style=\"float:right\">وذلك عبارة عن قيمة تنفيذ  </strong> \n"
+"\n"
+"                                    <strong style=\"float:right;margin-right:10px\"> للقطعة رقم </strong>"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_report_template
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_report_template2
+msgid "<strong style=\"float:right;float:left\"> Bank  </strong>"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_report_template
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_report_template2
+msgid "<strong style=\"float:right;margin-right:120px\">مخطط</strong>"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_report_template
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_report_template2
+msgid "<strong style=\"float:right;margin-right:150px\">بتاريخ</strong>"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_report_template
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_report_template2
+msgid "<strong style=\"float:right;margin-right:20px\">   Date</strong>\n"
+"                                    <strong style=\"float:right;margin-right:170px\"> على بنك </strong>"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.oncreadit_check_report
+msgid "<strong> Periods</strong>"
+msgstr "<strong> الفترات</strong>"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.oncreadit_check_report
+msgid "<strong>Accountant</strong>"
+msgstr "<strong>المحاسب</strong>"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_report
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.oncreadit_check_report
+msgid "<strong>Amount Posted</strong>"
+msgstr "<strong>المبلغ المدفوع</strong>"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_report
+msgid "<strong>Amount Residual</strong>"
+msgstr "<strong>المبلغ المتبقي</strong>"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_report
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.oncreadit_check_report
+msgid "<strong>Amount Total</strong>"
+msgstr "<strong>المبلغ الكلي</strong>"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_report
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.oncreadit_check_report
+msgid "<strong>Balance</strong>"
+msgstr "<strong>المتبقي</strong>"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_report
+msgid "<strong>Complex</strong>"
+msgstr "<strong>المخطط</strong>"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_report
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.oncreadit_check_report
+msgid "<strong>Customer name</strong>"
+msgstr "<strong>العميل</strong>"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.oncreadit_check_report
+msgid "<strong>Financial Manger</strong>"
+msgstr "<strong>المدير المالي</strong>"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_report
+msgid "<strong>Realstate</strong>"
+msgstr "<strong>العقار</strong>"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.oncreadit_check_report
+msgid "<strong>Total Posted</strong>"
+msgstr "<strong>إجمالي المدفوع</strong>"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_report
+msgid "<strong>Totals</strong>"
+msgstr "<strong>الإجمالي</strong>"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_report
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.oncreadit_check_report
+msgid "<strong>________________________</strong>"
+msgstr "<strong>________________________</strong>"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__account_id
+msgid "Account"
+msgstr "الحساب"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__message_needaction
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__message_needaction
+msgid "Action Needed"
+msgstr "الإجراء المطلوب"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_form
+msgid "Add Amount and check Nubmer"
+msgstr "إضافة المبلغ ورقم الشيك"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_form
+msgid "Add Rack Number"
+msgstr "إضافة رقم الحافظة"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_form
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.on_credit_check_form
+msgid "Add check Description"
+msgstr "إضافة وصف الشيك"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__advance_amount
+msgid "Advance amount"
+msgstr "المقدم"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__serial_amount
+#: model:ir.model.fields,field_description:account_voucher_custom.field_payment_report_action__amount
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_check_action__amount
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_customer_check_action__amount
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_report
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.oncreadit_check_report
+msgid "Amount"
+msgstr "القيمة"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/collection.py:134
+#, python-format
+msgid "Amount\n"
+"checks amount and total amount are not equal . please review them again ^__^"
+msgstr "مجموع مبالغ الشيكات والمبلغ الكلي غير متساويين ،، الرجاء عمل مراجعة سريعة لمبالغ الشيكات"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/oncreadit_check.py:124
+#, python-format
+msgid "Amount \n"
+" checks amount and total amount are not equal . please review them again ^__^"
+msgstr "مبلغ الشيك والمبلغ الكلي غير متساويين ،،، الرجاء مراجعتهم مرة آخرى ^__^"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__amount_due
+msgid "Amount Due"
+msgstr "القيمة المستحقة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__amount_due
+msgid "Amount Due "
+msgstr "المبلغ المتبقي"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__amount_posted
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__amount_posted
+msgid "Amount Posted"
+msgstr "المبلغ المدفوع"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_number__amount_per_month
+msgid "Amount per Month"
+msgstr "القسط الشهري"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check_line__analytic_id
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.oncreadit_check_report
+msgid "Analytic Account"
+msgstr "الحساب التحليلي"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.on_credit_check_form
+msgid "Are you sure you want to cancel this receipt?"
+msgstr "هل ترغب حقاً في إلغاء هذا الإيصال؟"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__message_attachment_count
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__message_attachment_count
+msgid "Attachment Count"
+msgstr "عدد المرفقات"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_report
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.oncreadit_check_report
+msgid "Bank Name"
+msgstr "اسم البنك"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__amount_base_currency
+msgid "Base Currency Amount"
+msgstr "المبلغ بالعملة المحلية"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__broker_account
+msgid "Broker account"
+msgstr "الحساب الوسيط"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.check_Date_edit_form_view
+msgid "By choise status you will be aple to change check status"
+msgstr "بالضغط على هذا الخيار يمكنك تعديل حالة الشيك"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.check_Date_edit_form_view
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.check_action_form
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.check_number_form
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.check_undeliver_report_form_view
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.check_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.marge_customer_form
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.on_credit_check_form
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_action_form_view
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.post_check_form_view
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.post_customer_check_form_view
+msgid "Cancel"
+msgstr "إلغاء"
+
+#. module: account_voucher_custom
+#: selection:customer.check,state:0
+#: selection:oncreadit.check,state:0
+msgid "Cancelled"
+msgstr "ملغية"
+
+#. module: account_voucher_custom
+#: model:ir.ui.menu,name:account_voucher_custom.check_collection_menu
+#: model:ir.ui.menu,name:account_voucher_custom.collection_management_root
+msgid "Cashier Management"
+msgstr "إدارة الخزنة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_payment_report_action__total
+msgid "Check Amount"
+msgstr "مبلغ القسط / الشيك"
+
+#. module: account_voucher_custom
+#: model:ir.ui.menu,name:account_voucher_custom.check_revise_menu
+msgid "Check Edition"
+msgstr "تعديل الشيكات"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_account_move__check_line_id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_account_move__on_creadit_check_line
+msgid "Check Line"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_edit__check_lines
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_edit__check_lines2
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__check_lines
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__check_lines
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_form
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.on_credit_check_form
+msgid "Check Lines"
+msgstr "الشيكات"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/oncreadit_check.py:113
+#, python-format
+msgid "Check Lines \n"
+" Please add some checks then try validate again ^__^"
+msgstr " الرجاء اضافة الشيكات ومحاولة التحقق مرة آخرى"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/collection.py:131
+#, python-format
+msgid "Check Lines \n"
+"Please add some checks then try validate again ^__^"
+msgstr "الرجاء إدخال شيكات ومن ثم معاودة المحاولة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__check_number
+#: model:ir.model.fields,field_description:account_voucher_custom.field_payment_report_action__check_no
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_check_action__name
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_customer_check_action__name
+#: model:ir.model.fields,help:account_voucher_custom.field_customer_check_line__check_number
+#: model:ir.model.fields,help:account_voucher_custom.field_oncreadit_check_line__check_number
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.check_number_form
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_report
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.oncreadit_check_report
+msgid "Check Number"
+msgstr "رقم الشيك"
+
+#. module: account_voucher_custom
+#: model:ir.ui.menu,name:account_voucher_custom.check_wizard_menu
+msgid "Check Posting"
+msgstr "تمرير الشيكات"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/oncreadit_check.py:234
+#: code:addons/account_voucher_custom/models/oncreadit_check.py:238
+#, python-format
+msgid "Check State \n"
+" Please press validate button that appears on the top left ^_^ ."
+msgstr "الرجاء الضغط على زر التحقق الذي يظهر اقصي الشمال"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.check_action_form
+msgid "Check action"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model:ir.model,name:account_voucher_custom.model_post_check_action
+msgid "Check posting"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model:ir.actions.act_window,name:account_voucher_custom.check_undeliver_report_action
+msgid "Check that are  passed Due Date"
+msgstr "الشيكات التى تجاوزت تاريخ الإستحقاق"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,help:account_voucher_custom.field_customer_check__with_equal_periods
+#: model:ir.model.fields,help:account_voucher_custom.field_oncreadit_check__with_equal_periods
+msgid "Check this box to let odoo creat your checks."
+msgstr "قم بالضغط على هذا الزر لجعل النظام يقوم بإنشاء شيكاتك"
+
+#. module: account_voucher_custom
+#: model:ir.actions.act_window,name:account_voucher_custom.check_wizard_action
+msgid "Check wizard"
+msgstr "معالج الشيكات"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__name
+msgid "Checks Name"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__company_id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_customer_check_action__company_id
+msgid "Company"
+msgstr "المؤسسة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__company_currency_id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_customer_check_action__company_currency_id
+msgid "Company Currency"
+msgstr "عملة المؤسسة"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.on_credit_check_form
+msgid "Creat Checks"
+msgstr "إنشاء الشيكات"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.check_number_form
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_form
+msgid "Create Checks"
+msgstr "إنشاء الشيكات"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_form
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.on_credit_check_form
+msgid "Create Move"
+msgstr "إنشاء المعاملة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_action__create_uid
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_edit__create_uid
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_number__create_uid
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_undeliver_wizard__create_uid
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_wizard__create_uid
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__create_uid
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__create_uid
+#: model:ir.model.fields,field_description:account_voucher_custom.field_marge_customers__create_uid
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__create_uid
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check_line__create_uid
+#: model:ir.model.fields,field_description:account_voucher_custom.field_payment_report_action__create_uid
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_check_action__create_uid
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_customer_check_action__create_uid
+msgid "Created by"
+msgstr "أنشئ بواسطة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_action__create_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_edit__create_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_number__create_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_undeliver_wizard__create_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_wizard__create_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__create_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__create_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_marge_customers__create_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__create_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check_line__create_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_payment_report_action__create_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_check_action__create_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_customer_check_action__create_date
+msgid "Created on"
+msgstr "أنشئ في"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__currency_id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__currency_id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_customer_check_action__currency_id
+msgid "Currency"
+msgstr "العملة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__partner_id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_marge_customers__partner_id
+msgid "Customer"
+msgstr "العميل"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_number__customer_bank_account
+msgid "Customer Bank Account"
+msgstr "بنك العميل"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__customer_bank_name
+#: model:ir.model.fields,field_description:account_voucher_custom.field_marge_customers__bank_name
+msgid "Customer Bank Name"
+msgstr "بنك العميل"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/collection.py:149
+#, python-format
+msgid "Customer Bank Name\n"
+"You did't entered Customer Bank Name.can you add it please ^__^"
+msgstr "هلا تفضلت بإدخال بنك العميل"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_number__customer_check_id
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_line_form
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_tree
+msgid "Customer Check"
+msgstr "سجل تحصيل العميل"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_marge_customers__customer_check
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_line_tree
+msgid "Customer Checks"
+msgstr "سجل تحصيل العميل"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__customer_bank
+msgid "Customer bank Name"
+msgstr "بنك العميل"
+
+#. module: account_voucher_custom
+#: model:ir.actions.act_window,name:account_voucher_custom.customer_check_action
+#: model:ir.actions.act_window,name:account_voucher_custom.customer_check_action_main
+#: model:ir.actions.act_window,name:account_voucher_custom.customer_check_action_test
+#: model:ir.ui.menu,name:account_voucher_custom.customer_check_menu
+msgid "Customer check"
+msgstr "سجل تحصيل العميل"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_edit__partner_id
+msgid "Customer checks"
+msgstr "سجل تحصيل العميل"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/wizard/check_posting.py:63
+#, python-format
+msgid "Customers Checks"
+msgstr "سجل تحصيل العميل"
+
+#. module: account_voucher_custom
+#: selection:check.edit,selection:0
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_number__date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_number__start_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check_line__date
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_report
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.oncreadit_check_report
+msgid "Date"
+msgstr "التاريخ"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__description
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_customer_check_action__description
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_report
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.oncreadit_check_report
+msgid "Description"
+msgstr "الوصف"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__differance
+msgid "Diffrance"
+msgstr "الفروقات"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_action__display_name
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_edit__display_name
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_number__display_name
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_undeliver_wizard__display_name
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_wizard__display_name
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__display_name
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__display_name
+#: model:ir.model.fields,field_description:account_voucher_custom.field_marge_customers__display_name
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__display_name
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check_line__display_name
+#: model:ir.model.fields,field_description:account_voucher_custom.field_payment_report_action__display_name
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_check_action__display_name
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_customer_check_action__display_name
+#: model:ir.model.fields,field_description:account_voucher_custom.field_report_account_voucher_custom_report_undeliver_qweb__display_name
+msgid "Display Name"
+msgstr "اسم العرض"
+
+#. module: account_voucher_custom
+#: selection:customer.check,state:0
+#: selection:oncreadit.check,state:0
+msgid "Draft"
+msgstr "مبدئية"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__due_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check_line__due_date
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_report
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.oncreadit_check_report
+msgid "Due Date"
+msgstr "تاريخ الاستحقاق"
+
+#. module: account_voucher_custom
+#: model:ir.actions.act_window,name:account_voucher_custom.check_edit_action
+msgid "Edit check status or check due Date"
+msgstr "تعديل حالة الشيك أو تاريخ إستحقاق الشيك"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.check_Date_edit_form_view
+msgid "Edit checks"
+msgstr "تعديل الشيكات"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.check_Date_edit_form_view
+msgid "Edit type"
+msgstr "نوع التعديل"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__account_move_line_ids
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__move_id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__account_move_line_ids
+msgid "Entries"
+msgstr "المعاملات"
+
+#. module: account_voucher_custom
+#: selection:customer.check,periods:0
+#: selection:oncreadit.check,periods:0
+msgid "Every Sex monthes"
+msgstr "ستة أشهر"
+
+#. module: account_voucher_custom
+#: selection:customer.check,periods:0
+#: selection:oncreadit.check,periods:0
+msgid "Every Three monthes"
+msgstr "ثلاثة أشهر"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/collection.py:111
+#: code:addons/account_voucher_custom/models/oncreadit_check.py:92
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_number__check_number
+#: model:ir.model.fields,field_description:account_voucher_custom.field_marge_customers__check_number
+#, python-format
+msgid "First Check Number"
+msgstr "رقم أول شيك"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_marge_customers__date
+msgid "First check Date"
+msgstr "تاريخ أول شيك"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_marge_customers__first_is_advance
+msgid "First is advance ?"
+msgstr "اول شيك هو المقدم"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__message_follower_ids
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__message_follower_ids
+msgid "Followers"
+msgstr "المتابعون"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__message_channel_ids
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__message_channel_ids
+msgid "Followers (Channels)"
+msgstr "المتابعون (القنوات)"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__message_partner_ids
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__message_partner_ids
+msgid "Followers (Partners)"
+msgstr "المتابعون (الشركاء)"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_form
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.on_credit_check_form
+msgid "Frist batch number"
+msgstr "رقم أول حزمة"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.check_wizard_form_view
+msgid "Get checks"
+msgstr "جلب الشيكات"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_action__id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_edit__id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_number__id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_undeliver_wizard__id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_wizard__id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_marge_customers__id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check_line__id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_payment_report_action__id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_check_action__id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_customer_check_action__id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_report_account_voucher_custom_report_undeliver_qweb__id
+msgid "ID"
+msgstr "المعرف"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,help:account_voucher_custom.field_customer_check__message_unread
+#: model:ir.model.fields,help:account_voucher_custom.field_oncreadit_check__message_unread
+msgid "If checked new messages require your attention."
+msgstr "إذا حددته، سيتم إخطارك بالرسائل الجديدة."
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,help:account_voucher_custom.field_customer_check__message_needaction
+#: model:ir.model.fields,help:account_voucher_custom.field_oncreadit_check__message_needaction
+msgid "If checked, new messages require your attention."
+msgstr "إذا حددته، سيتم إخطارك بالرسائل الجديدة."
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,help:account_voucher_custom.field_customer_check__message_has_error
+#: model:ir.model.fields,help:account_voucher_custom.field_oncreadit_check__message_has_error
+msgid "If checked, some messages have a delivery error."
+msgstr "إذا تم تحديده ، فإن بعض الرسائل بها خطأ في التسليم."
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.check_undeliver_report_form_view
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.check_wizard_form_view
+msgid "In Out Checks"
+msgstr "الشيكات الصادرة"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/collection.py:103
+#, python-format
+msgid "Incorrect Number of Month\n"
+"The value of Number of Investment must be more than 0."
+msgstr ""
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/oncreadit_check.py:81
+#, python-format
+msgid "Incorrect Number of Month \n"
+" The value of Number of Investment must be more than 0."
+msgstr ""
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/collection.py:101
+#, python-format
+msgid "Incorrect amount\n"
+"There is now residual amount to create checks."
+msgstr "ايوجد مبلغ متبقي لأنشاء الشيكات"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/oncreadit_check.py:78
+#, python-format
+msgid "Incorrect amount \n"
+" The value of  Amount must be more than zero."
+msgstr "المبلغ يجب أن يكون اكبر من الصفر"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/account_voucher.py:16
+#, python-format
+msgid "Incorrect state"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_number__investment
+msgid "Investment"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__voucher_id
+msgid "Invoice"
+msgstr "فاتورة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__message_is_follower
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__message_is_follower
+msgid "Is Follower"
+msgstr "متابع"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/action_post_check.py:56
+#: code:addons/account_voucher_custom/models/action_post_check.py:231
+#, python-format
+msgid "It seems that amount you want to pay is more than check amount ,, can you please post current check and register partial payment on next check *_^"
+msgstr "يبدو أن المبلغ الذى تود دفعه أكبر من مبلغ القسط / الشيك .. يمكنك تسديد القسط أو الشيك ومن ثم إدراج المبلغ المتبقى فى القسط / الشيك اللاحق"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/wizard/marge_customer.py:39
+#, python-format
+msgid "It seems that there is check already represent group"
+msgstr "يبدو ان احد سجلات التحصيل يمثل حزمة"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/wizard/marge_customer.py:36
+#, python-format
+msgid "It seems that there is cheks not equal to other group"
+msgstr "يبدو ان هنالك عدد شيكات لاتساوى عدد شيكات الحزمة"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/wizard/check_posting.py:73
+#, python-format
+msgid "It seems that there is no in checks in this period"
+msgstr "يبدو عدم وجود شيكات فى هذه الفترة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_action__journal_id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_number__journal_id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__journal_id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__journal_id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check_line__journal_id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_check_action__journal_id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_customer_check_action__journal_id
+msgid "Journal"
+msgstr "دفتر اليومية"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__move_ids
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check_line__move_ids
+msgid "Journal Enteries"
+msgstr "قيود اليومية"
+
+#. module: account_voucher_custom
+#: model:ir.model,name:account_voucher_custom.model_account_move
+msgid "Journal Entries"
+msgstr "قيود اليومية"
+
+#. module: account_voucher_custom
+#: model:ir.model,name:account_voucher_custom.model_account_move_line
+msgid "Journal Item"
+msgstr "عنصر يومية"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_action____last_update
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_edit____last_update
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_number____last_update
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_undeliver_wizard____last_update
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_wizard____last_update
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check____last_update
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line____last_update
+#: model:ir.model.fields,field_description:account_voucher_custom.field_marge_customers____last_update
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check____last_update
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check_line____last_update
+#: model:ir.model.fields,field_description:account_voucher_custom.field_payment_report_action____last_update
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_check_action____last_update
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_customer_check_action____last_update
+#: model:ir.model.fields,field_description:account_voucher_custom.field_report_account_voucher_custom_report_undeliver_qweb____last_update
+msgid "Last Modified on"
+msgstr "آخر تعديل في"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_action__write_uid
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_edit__write_uid
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_number__write_uid
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_undeliver_wizard__write_uid
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_wizard__write_uid
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__write_uid
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__write_uid
+#: model:ir.model.fields,field_description:account_voucher_custom.field_marge_customers__write_uid
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__write_uid
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check_line__write_uid
+#: model:ir.model.fields,field_description:account_voucher_custom.field_payment_report_action__write_uid
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_check_action__write_uid
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_customer_check_action__write_uid
+msgid "Last Updated by"
+msgstr "آخر تحديث بواسطة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_action__write_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_edit__write_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_number__write_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_undeliver_wizard__write_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_wizard__write_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__write_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__write_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_marge_customers__write_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__write_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check_line__write_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_payment_report_action__write_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_check_action__write_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_customer_check_action__write_date
+msgid "Last Updated on"
+msgstr "آخر تحديث في"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__last_batch_number
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__last_batch_number
+msgid "Last batch Number"
+msgstr "رقم اخر شيك"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__line_id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check_line__line_id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_check_action__line_id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_customer_check_action__line_id
+msgid "Line"
+msgstr "بند"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__message_main_attachment_id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__message_main_attachment_id
+msgid "Main Attachment"
+msgstr "المرفق الرئيسي"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.marge_customer_form
+msgid "Marge Customer"
+msgstr "دمج سجلات التحصيل"
+
+#. module: account_voucher_custom
+#: model:ir.actions.act_window,name:account_voucher_custom.marge_customer_action
+#: model:ir.ui.menu,name:account_voucher_custom.marge_customer_menu
+msgid "Marge Customers"
+msgstr "دمج سجلات التحصيل"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_form
+msgid "Marge Information"
+msgstr "بيانات الدمج"
+
+#. module: account_voucher_custom
+#: model:ir.model,name:account_voucher_custom.model_marge_customers
+msgid "Marge customer checks and create batches"
+msgstr ""
+
+#. module: account_voucher_custom
+#: selection:customer.check,state:0
+msgid "Marged"
+msgstr "مدموج"
+
+#. module: account_voucher_custom
+#: selection:customer.check.line,check_status:0
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_form
+#: selection:oncreadit.check.line,check_status:0
+msgid "Merge"
+msgstr "مدموجة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__message_has_error
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__message_has_error
+msgid "Message Delivery error"
+msgstr "خطأ في تسليم الرسائل"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__message_ids
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__message_ids
+msgid "Messages"
+msgstr "الرسائل"
+
+#. module: account_voucher_custom
+#: selection:customer.check,periods:0
+#: selection:oncreadit.check,periods:0
+msgid "Monthley"
+msgstr "شهري"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__serilaization
+msgid "More Help ?"
+msgstr "مساعدة اكثر ؟"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_edit__new_date
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.check_Date_edit_form_view
+msgid "New Date"
+msgstr "التاريخ الجديد"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_edit__new_status
+msgid "New check status"
+msgstr "حالة الشيك الجديدة"
+
+#. module: account_voucher_custom
+#: selection:customer.check.line,check_status:0
+#: selection:oncreadit.check.line,check_status:0
+msgid "Not Arrive"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_number__num_of_monthes
+msgid "Number Of Monthes"
+msgstr "المدة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__message_needaction_counter
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__message_needaction_counter
+msgid "Number of Actions"
+msgstr "عدد الإجراءات"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__monthes
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__monthes
+msgid "Number of Investment"
+msgstr "عدد الأقساط"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__message_has_error_counter
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__message_has_error_counter
+msgid "Number of error"
+msgstr "عدد الاخطاء"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,help:account_voucher_custom.field_customer_check__message_needaction_counter
+#: model:ir.model.fields,help:account_voucher_custom.field_oncreadit_check__message_needaction_counter
+msgid "Number of messages which requires an action"
+msgstr "عدد الرسائل التي تتطلب اجراء"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,help:account_voucher_custom.field_customer_check__message_has_error_counter
+#: model:ir.model.fields,help:account_voucher_custom.field_oncreadit_check__message_has_error_counter
+msgid "Number of messages with delivery error"
+msgstr "عدد الرسائل مع خطأ في التسليم"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,help:account_voucher_custom.field_customer_check__message_unread_counter
+#: model:ir.model.fields,help:account_voucher_custom.field_oncreadit_check__message_unread_counter
+msgid "Number of unread messages"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/account_voucher.py:46
+#: code:addons/account_voucher_custom/models/collection.py:294
+#: code:addons/account_voucher_custom/models/oncreadit_check.py:240
+#: model:ir.actions.act_window,name:account_voucher_custom.on_credit_check_action
+#: model:ir.ui.menu,name:account_voucher_custom.on_credit_check_menu
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.on_credit_check_form
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.on_credit_check_tree
+#, python-format
+msgid "On Credit Checks"
+msgstr "الشيكات الصادرة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_account_move_line__onc_check_id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_number__onc_check_id
+msgid "Onc Check"
+msgstr "الشيكات الصادرة"
+
+#. module: account_voucher_custom
+#: selection:customer.check,state:0
+#: selection:oncreadit.check,state:0
+msgid "Open"
+msgstr "قيد التحصيل"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_form
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.on_credit_check_form
+msgid "Other Info"
+msgstr "معلومات أخرى"
+
+#. module: account_voucher_custom
+#: selection:customer.check,state:0
+#: selection:customer.check.line,check_status:0
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_form
+#: selection:oncreadit.check,state:0
+#: selection:oncreadit.check.line,check_status:0
+msgid "Paid"
+msgstr "مدفوع"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__paid_amount
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check_line__paid_amount
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_report
+msgid "Paid Amount"
+msgstr "المبلغ المدفوع"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__check_line_id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__check_line_id
+msgid "Parent Line"
+msgstr "الحزمة الأم"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__partner_id
+msgid "Partner"
+msgstr "الشريك"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_report
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.oncreadit_check_report
+msgid "Payed Checks <br/>"
+msgstr "الشيكات المدفوعة <br/>"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_account_move__payment_id
+msgid "Payment"
+msgstr "دفع"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/collection.py:315
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_action_form_view
+#, python-format
+msgid "Payment Report"
+msgstr "تقرير المدفوعات"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_payment_report_action__payment_no
+msgid "Payments"
+msgstr "المدفوعات"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__periods
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__periods
+msgid "Period"
+msgstr "المدة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_marge_customers__period
+msgid "Period On Monthes"
+msgstr "المدة"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/collection.py:185
+#: code:addons/account_voucher_custom/models/oncreadit_check.py:183
+#, python-format
+msgid "Please add some checks then try again ^__^"
+msgstr "الرجاء إدخال الشيكات"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/action_post_check.py:184
+#, python-format
+msgid "Please contact System administrator."
+msgstr ""
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/collection.py:292
+#, python-format
+msgid "Please press validate button that appears on the top left ^_^ ."
+msgstr "الرجاء التحقق من سجل التحصيل"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/account_voucher.py:17
+#, python-format
+msgid "Please valiDate voucher first"
+msgstr "الرجاء التحقق من السند اولا"
+
+#. module: account_voucher_custom
+#: model:ir.actions.act_window,name:account_voucher_custom.post_check_action
+#: model:ir.actions.act_window,name:account_voucher_custom.post_customer_check_action
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.post_check_form_view
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.post_customer_check_form_view
+msgid "Post Check"
+msgstr "تمرير الشيكات"
+
+#. module: account_voucher_custom
+#: model:ir.actions.act_window,name:account_voucher_custom.action_check_action
+msgid "Post check's"
+msgstr "تمرير الشيكات"
+
+#. module: account_voucher_custom
+#: model:ir.actions.act_window,name:account_voucher_custom.action_check_action_test
+msgid "Post check's  (out check)"
+msgstr "تمرير الشيكات ( الصادرة )"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__move_check
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check_line__move_check
+msgid "Posted"
+msgstr "مُتحصل"
+
+#. module: account_voucher_custom
+#: model:ir.actions.report,name:account_voucher_custom.payment_moves_report
+#: model:ir.actions.report,name:account_voucher_custom.payment_report
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_form
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_action_form_view
+msgid "Print Payment"
+msgstr "طباعة الدفعية"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.check_undeliver_report_form_view
+msgid "Print checks"
+msgstr "طباعة الشيكات"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_line_tree
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_revise_tree
+msgid "Rack"
+msgstr "الحافظة"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/collection.py:147
+#, python-format
+msgid "Rack\n"
+"You did't entered Rack Number.can you add it please ^__^"
+msgstr "الرجاء إدخال رقم الحافظة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__rak_number
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__rack
+msgid "Rack Nmubers"
+msgstr "رقم الحافظة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_number__rack
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__rack
+#: model:ir.model.fields,field_description:account_voucher_custom.field_marge_customers__rack_number
+#: model:ir.model.fields,help:account_voucher_custom.field_customer_check__rak_number
+#: model:ir.model.fields,help:account_voucher_custom.field_customer_check_line__rack
+msgid "Rack Number"
+msgstr "رقم الحافظة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__check_number
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check_line__check_number
+#: model:ir.model.fields,help:account_voucher_custom.field_customer_check__name
+#: model:ir.model.fields,help:account_voucher_custom.field_oncreadit_check__name
+#: model:ir.model.fields,help:account_voucher_custom.field_post_check_action__name
+#: model:ir.model.fields,help:account_voucher_custom.field_post_customer_check_action__name
+msgid "Reference"
+msgstr "المرجع"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__related_lines
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__related_lines
+msgid "Related Lines"
+msgstr "الشيكات المتعلقة بالحزمة "
+
+#. module: account_voucher_custom
+#: model:ir.ui.menu,name:account_voucher_custom.report_menu
+msgid "Reports"
+msgstr "التقارير"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__amount
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_report
+msgid "Residual Amount"
+msgstr "المبلغ المتبقى"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_report
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.oncreadit_check_report
+msgid "Residual Checks <br/>"
+msgstr "الشيكات المتبقية <br/>"
+
+#. module: account_voucher_custom
+#: selection:check.edit,new_status:0
+#: selection:customer.check.line,check_status:0
+#: selection:oncreadit.check.line,check_status:0
+msgid "Revise"
+msgstr "مرتد"
+
+#. module: account_voucher_custom
+#: model:ir.ui.menu,name:account_voucher_custom.revise_check_menu
+msgid "Revise Check"
+msgstr "الشيكات المرتدة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__revise_reson
+msgid "Revise Reason"
+msgstr "سبب الرجوع"
+
+#. module: account_voucher_custom
+#: model:ir.ui.menu,name:account_voucher_custom.check_undelever_report_menu
+msgid "Revise Report"
+msgstr "تقرير الشيكات المرتدة"
+
+#. module: account_voucher_custom
+#: model:ir.actions.act_window,name:account_voucher_custom.customer_check_revise
+msgid "Revise check"
+msgstr "الشيكات المرتدة"
+
+#. module: account_voucher_custom
+#: selection:check.edit,new_status:0
+#: selection:customer.check.line,check_status:0
+#: selection:oncreadit.check.line,check_status:0
+msgid "Schedule"
+msgstr "مجدول"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_edit__selection
+msgid "Selection"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__name
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__name
+msgid "Sequance"
+msgstr "متسلسل"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/wizard/check_action.py:69
+#, python-format
+msgid "Sorry this check is already paid ! "
+msgstr "عفوا !! هذا الشيك مدفوع مسبقا"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__start_date
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__start_date
+msgid "Start Date"
+msgstr "تاريخ البدء"
+
+#. module: account_voucher_custom
+#: selection:check.edit,selection:0
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__state
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__state
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_report
+msgid "Status"
+msgstr "الحالة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_edit__revise_reson
+msgid "The reson of revise"
+msgstr "سبب الرجوع"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/action_post_check.py:180
+#, python-format
+msgid "This Check has parent group please check it first."
+msgstr "هذا الشيك يتبع لحزمة ،، الرجاء مراجعة الحزمة اولا"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.check_undeliver_report_form_view
+msgid "This report show all Revise check"
+msgstr "التقرير يوضح كل الشيكات المرتدة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__amount
+msgid "Total Amount"
+msgstr "المبلغ الكلي"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__total_amount
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__amount
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check_line__amount
+msgid "Total amount"
+msgstr "المبلغ الكلي"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__reference
+msgid "Transaction Reference"
+msgstr "مستند العملية"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,help:account_voucher_custom.field_oncreadit_check__reference
+msgid "Transaction reference"
+msgstr "مستند العملية"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_check_number__type
+msgid "Type"
+msgstr "النوع"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.check_Date_edit_form_view
+msgid "Un Delivered Checks"
+msgstr "الشيكات التى لم تقدم للتحصيل"
+
+#. module: account_voucher_custom
+#: model:ir.model,name:account_voucher_custom.model_report_account_voucher_custom_report_undeliver_qweb
+msgid "Undeliverd Checks/installment"
+msgstr "الاقساط/الشيكات الغير مستلمة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__message_unread
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__message_unread
+msgid "Unread Messages"
+msgstr "الرسائل الجديدة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__message_unread_counter
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__message_unread_counter
+msgid "Unread Messages Counter"
+msgstr "عدد الرسائل الجديدة"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_form
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.on_credit_check_form
+msgid "Validate"
+msgstr "اعتماد"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__partner_id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_check_action__partner_id
+msgid "Vendor"
+msgstr "المورّد"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__invoice_id
+msgid "Voucher"
+msgstr "قيد"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__website_message_ids
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__website_message_ids
+msgid "Website Messages"
+msgstr "رسائل الموقع"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,help:account_voucher_custom.field_customer_check__website_message_ids
+#: model:ir.model.fields,help:account_voucher_custom.field_oncreadit_check__website_message_ids
+msgid "Website communication history"
+msgstr "سجل تواصل الموقع"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__with_equal_periods
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check__with_equal_periods
+msgid "With Equal Periods"
+msgstr "بفترات متساوية"
+
+#. module: account_voucher_custom
+#: selection:customer.check,periods:0
+#: selection:oncreadit.check,periods:0
+msgid "Year"
+msgstr "سنة"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/collection.py:196
+#, python-format
+msgid "You did't entered Amount.can you add it please ^__^"
+msgstr "الرجاء إدخال مبلغ الشيك"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/collection.py:198
+#, python-format
+msgid "You did't entered Check Number.can you add it please ^__^"
+msgstr "الرجاء إدخال رقم اول شيك"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/wizard/marge_customer.py:26
+#, python-format
+msgid "You must choose more than 1 customer check to process."
+msgstr "يجب إختيار أكثر من عميل لإجراء عملية الدمج"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__active
+msgid "active"
+msgstr "نشط"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_line_tree
+msgid "amount"
+msgstr "المبلغ"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_form
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.on_credit_check_form
+msgid "check Lines"
+msgstr "تفاصيل الشيكات"
+
+#. module: account_voucher_custom
+#: model:ir.model,name:account_voucher_custom.model_check_number
+msgid "check Number"
+msgstr "رقم الشيك"
+
+#. module: account_voucher_custom
+#: model:ir.model,name:account_voucher_custom.model_check_edit
+msgid "check edition"
+msgstr "تعديل الشيك"
+
+#. module: account_voucher_custom
+#: model:ir.model,name:account_voucher_custom.model_check_action
+msgid "check posting"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__check_status
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check_line__check_status
+msgid "check state"
+msgstr "حالة الشيك"
+
+#. module: account_voucher_custom
+#: model:ir.actions.act_window,name:account_voucher_custom.check_number_action
+msgid "check.number"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.check_action_form
+msgid "confirm"
+msgstr "موافقة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_payment_report_action__partner_id
+#: model:ir.model.fields,field_description:account_voucher_custom.field_post_customer_check_action__partner_id
+msgid "customer"
+msgstr "العميل"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_graph_view
+msgid "customer check"
+msgstr "شيكات  العملاء"
+
+#. module: account_voucher_custom
+#: model:ir.model,name:account_voucher_custom.model_customer_check_line
+msgid "customer checks details"
+msgstr "تفاصيل شيكات العميل"
+
+#. module: account_voucher_custom
+#: model:ir.model,name:account_voucher_custom.model_customer_check
+msgid "customers checks"
+msgstr "سجل تحصيل العميل"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_oncreadit_check_line__description
+msgid "description"
+msgstr "وصف الشيك"
+
+#. module: account_voucher_custom
+#: model:ir.model,name:account_voucher_custom.model_check_wizard
+msgid "emaar check migration"
+msgstr ""
+
+#. module: account_voucher_custom
+#: selection:check.number,type:0
+msgid "in"
+msgstr "الشيكات الواردة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_payment_report_action__line_id
+msgid "line"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model:ir.model,name:account_voucher_custom.model_oncreadit_check
+msgid "on creadit Checks "
+msgstr "الشيكات الآجلة"
+
+#. module: account_voucher_custom
+#: model:ir.model,name:account_voucher_custom.model_oncreadit_check_line
+msgid "on creadit checks details"
+msgstr "تفاصيل الشيكات الآجلة"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.check_Date_edit_form_view
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.check_number_form
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.check_undeliver_report_form_view
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.check_wizard_form_view
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.marge_customer_form
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_action_form_view
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.post_check_form_view
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.post_customer_check_form_view
+msgid "or"
+msgstr "أو"
+
+#. module: account_voucher_custom
+#: selection:check.number,type:0
+msgid "out"
+msgstr "الشيكات الصادرة"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check__paid_amount
+msgid "paid amount"
+msgstr "المبلغ المدفوع"
+
+#. module: account_voucher_custom
+#: model:ir.model,name:account_voucher_custom.model_payment_report_action
+msgid "payment report action"
+msgstr ""
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/collection.py:105
+#, python-format
+msgid "period not selected\n"
+"please select one type of periods"
+msgstr "الرجاء إختيار عدد الأشهر"
+
+#. module: account_voucher_custom
+#: code:addons/account_voucher_custom/models/oncreadit_check.py:84
+#, python-format
+msgid "period not selected \n"
+" please select one type of periods"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model:ir.model,name:account_voucher_custom.model_post_customer_check_action
+msgid "posting customer check"
+msgstr ""
+
+#. module: account_voucher_custom
+#: model:ir.actions.report,name:account_voucher_custom.report_hotel_pos_order
+#: model:ir.actions.report,name:account_voucher_custom.report_oncreadit
+msgid "print Check"
+msgstr "طباعة سجل التحصيل"
+
+#. module: account_voucher_custom
+#: model:ir.model.fields,field_description:account_voucher_custom.field_customer_check_line__state
+msgid "state"
+msgstr "الحالة"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_revise_tree
+msgid "total"
+msgstr "المبلغ الكلي"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_line_tree
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.customer_check_revise_tree
+msgid "total amount"
+msgstr "المبلغ الكلي"
+
+#. module: account_voucher_custom
+#: model:ir.model,name:account_voucher_custom.model_check_undeliver_wizard
+msgid "un deliverd checks"
+msgstr "الشيكات الغير مستلمة"
+
+#. module: account_voucher_custom
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_report_template
+#: model_terms:ir.ui.view,arch_db:account_voucher_custom.payment_report_template2
+msgid "سند قبض"
+msgstr "سند قبض"

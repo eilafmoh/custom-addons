@@ -1,0 +1,102 @@
+<odoo>
+	<data>
+		<!-- Inherit Form view -->
+		<record id="uni_admission_student_form_view" model="ir.ui.view">
+			<field name="name">uni.student.form</field>
+			<field name="model">uni.student</field>
+			<field name="inherit_id" ref="uni_core.uni_student_view_form"/>
+			<field name="arch" type="xml">
+				<xpath expr="//page[@name='medical']" position="after">
+					<page string="Fees" name="fees">
+						<field name="fees_ids">
+							<tree decoration-success="paid == True" decoration-danger="move_ids and paid != True" editable="bottom">
+								<field name="state" invisible="1"/>
+								<field name="level_id" options="{'no_create': True}"/>
+								<field name="semester_id" options="{'no_create': True}" />
+								<field name="registration_fees" attrs="{'readonly':[('paid','=',True)]}"/>
+								<field name="study_fees"/>
+								<field name="other_fees" widget="many2many_tags" attrs="{'readonly':[('paid','=',True)]}"/>
+								<field name="discount"/>
+								<field name="other_discount"  widget="many2many_tags" attrs="{'readonly':[('paid','=',True)]}"/>
+								<field name="total_discount"/>
+								<field name="sub_total"/>
+								<field name="paid_amount"/>
+								<field name="residual_amount"/>
+								<field name="move_ids" invisible='1'/>
+								<field name="paid"/>
+								<button name="create_invoice" string="Create Invoice" type="object" attrs="{'invisible':[('state', '!=', 'draft')]}"/>
+								<button name="create_payment" icon="fa-chevron-circle-right" string="Create Payment" type="object" attrs="{'invisible':[('paid', '=', True)]}"/>
+
+							</tree>
+						</field>
+						<!--field name="account_id" groups="account.group_account_user"/-->
+						<group class="oe_subtotal_footer oe_right">
+							<field name="amount_sub_total"/>
+							<field name="discount"/>
+							<field name="amount_total" class="oe_subtotal_footer_separator"/>
+						</group>
+					</page>
+				</xpath>
+
+				<xpath expr="//field[@name='guardian_nationality_id']" position="after">
+					<field name="guardian_national_id_img"/>
+				</xpath>
+				<xpath expr="//field[@name='national_id']" position="after">
+					<field name="student_national_id_img" />
+				</xpath>
+
+				<xpath expr="//page[@name='family']" position="after">
+					<page string="Academic " name='other'>
+						<group col="4">
+							<field name="certificate_type_id"/>
+							<field name="secondary_school"/>
+						
+							<field name="examination_date"/>
+							<field name="certificate_date"/>
+						</group>
+						<group col='2'>
+							<field name="result_secondary_school" widget='many2many_tags'/>
+						</group>
+
+					</page>
+				</xpath>
+
+				<xpath expr="//page[@name='family']" position="after">
+					<page string="Admission">
+						<group col="4">
+							<field name="admission_rec" options="{'no_create': True}" readonly="1"/>
+							<field name="batch_id" options="{'no_create': True}"/>
+						</group>
+					</page>
+					
+				</xpath>
+				<xpath expr="//group[@name='med']" position="after">
+					<page string="Medical">
+						<group col="2">
+							<field name="allergies_disea"/>
+							<field name="chronic_dsease"/>
+							<field name="other_dsease"/>
+						</group>
+					</page>
+					
+				</xpath>
+				<xpath expr="//page[@name='fees']" position="after">
+					<page string="Payments Details">
+						<field name="fees_payment_ids">
+							<tree editable="bottom">
+								<field name="level_id" options="{'no_create': True}"/>
+								<field name="semester_id" options="{'no_create': True}" />
+								<field name="amount" />
+								<field name="payment_type"/>
+								<field name="check_number"/>
+								<field name="account_number"/>
+								<field name="currency_id"/>
+								<field name="payment_date"/>
+							</tree>
+						</field>
+					</page>
+				</xpath>
+			</field>
+		</record>
+	</data>
+</odoo>

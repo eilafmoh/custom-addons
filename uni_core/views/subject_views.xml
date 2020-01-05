@@ -1,0 +1,81 @@
+<odoo>
+	<data>
+		<!-- uni.faculty.subject form view -->
+		<record id="uni_faculty_subject_view_form" model="ir.ui.view">
+			<field name="name">uni.faculty.subject.view.form</field>
+			<field name="model">uni.faculty.subject</field>
+			<field name="arch" type="xml">
+				<form string="Subjects">
+					<sheet>
+						<group>
+							<field name="name"/>
+							<field name="code"/>
+							<field name="faculty_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+						</group>
+						<notebook>
+							<page string="Subject Details">
+								<field name="subject_line_ids" />
+							</page>
+						</notebook>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<!-- uni.faculty.subject tree view -->
+		<record id="uni_faculty_subject_view_tree" model="ir.ui.view">
+			<field name="name">uni.faculty.subject.view.tree</field>
+			<field name="model">uni.faculty.subject</field>
+			<field name="arch" type="xml">
+				<tree string="Subjects">
+					<field name="name"/>
+					<field name="code"/>
+					<field name="faculty_id" groups="base.group_multi_company"/>
+				</tree>
+			</field>
+		</record>
+		<record id="uni_faculty_subjects_list_action" model="ir.actions.act_window">
+			<field name="name">Subjects</field>
+			<field name="res_model">uni.faculty.subject</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new subject</p>
+			</field>
+		</record>
+		<!-- subjects left menu -->
+		<menuitem id="uni_core_subjects_menu" name="Subjects" parent="uni_core_configurations_view_menu" action="uni_faculty_subjects_list_action"/>
+		<!-- ############################################################### -->
+		<!--  Subject lines  -->
+		<!-- ############################################################### -->
+		<record id="uni_faculty_subject_line_view_form" model="ir.ui.view">
+			<field name="name">uni.faculty.subject.line.form</field>
+			<field name="model">uni.faculty.subject.line</field>
+			<field name="arch" type="xml">
+				<form string="Subject Details">
+					<sheet>
+						<group>
+							<field name="subject_id" invisible="1"/>
+							<field name="faculty_id" invisible="1"/>
+							<field name="level_id" options="{'no_create': True}"/>
+							<field name="semester_id" options="{'no_create': True}"/>
+							<field name="specialization_id" options="{'no_create': True}"  invisible="1"/>
+							<field name="credit_hours"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<record id="uni_faculty_subject_line_view_tree" model="ir.ui.view">
+			<field name="name">uni.faculty.subject.line.tree</field>
+			<field name="model">uni.faculty.subject.line</field>
+			<field name="arch" type="xml">
+				<tree string="Subject Details">
+					<field name="level_id"/>
+					<field name="semester_id"/>
+					<field name="specialization_id"  invisible="1"/>
+					<field name="credit_hours"/>
+				</tree>
+			</field>
+		</record>
+	</data>
+</odoo>

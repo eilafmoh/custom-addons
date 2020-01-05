@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="on_credit_check_form" model="ir.ui.view">
+			<field name="name">On Credit Checks</field>
+			<field name="model">oncreadit.check</field>
+			<field name="arch" type="xml">
+				<form>
+					<header>
+						<button name="draft_on_credit" string="Validate" states="draft" class="oe_highlight" type="object"/>
+						<button name="cancel_voucher" string="Cancel" states="draft" confirm="Are you sure you want to cancel this receipt?"/>
+						<field name="state" widget="statusbar" statusbar_visible="draft,open,paid,cancel" statusbar_colors='{"draft":"blue"}'/>
+					</header>
+					<sheet string="On Credit Checks">
+						<div class="oe_title">
+							<h1>
+								<field name="name" class="oe_inline" attrs="{'invisible': [('state', '=', 'draft')]}" readonly="1"/>
+							</h1>
+						</div>
+						<group col="4">
+							<field name="date" />
+							<field name="reference"/>
+						</group>
+
+						<group col="4">
+							<field name="journal_id"/>
+							<field name="broker_account"/>
+						</group>
+
+						<group col="4">
+							<field name="partner_id" colspan="2"/>
+							<field name="amount" />
+						</group>
+						<group col="4">
+							<field name="with_equal_periods" />
+							<field name="periods" widget="radio" attrs="{'invisible':[('with_equal_periods', '=', False)]}"/>
+						</group>
+						<group col="4">
+							<field name="monthes" attrs="{'invisible':[('with_equal_periods', '=', False)]}"/>
+							<field name="start_date" attrs="{'invisible':[('with_equal_periods', '=', False)]}"/>
+						</group>
+						<group>
+							<button name="create_check" icon="fa-arrow-circle-right" type="object" class="oe_highlight" string="Creat Checks" attrs="{'invisible':['|',('with_equal_periods', '=', False),('state','!=','draft')]}"/>
+						</group>
+
+						<group col="3">
+							<field name="last_batch_number" string="Frist batch number"/>
+							<button name="check_description" string="Add check Description" type="object" class="oe_highlight" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+						</group>
+
+						<group>
+							<notebook>
+								<page string="Check Lines">
+									<field name="check_lines" attrs="{'readonly':[('state','!=','draft')]}">
+										<tree string="check Lines" editable="bottom" decoration-success="check_status =='paid'" decoration-primary="check_status == 'schedule'" decoration-danger="check_status =='revise'" decoration-muted="check_status =='merge'">
+											<field name="date"/>
+											<field name="due_date"/>
+											<field name="description"/>
+											<field name="amount"/>
+											<field name="paid_amount"/>
+											<field name="check_number"/>
+											<field name="journal_id"/>
+											<field name="move_ids"/>
+											<field name="move_check"/>
+											<field name="check_status"/>
+											<button name="create_move" attrs="{'invisible':['|',('move_check','!=',False)]}" icon="fa-arrow-circle-right" string="Create Move" type="object" />
+										</tree>
+									</field>
+
+									<group class="oe_subtotal_footer oe_right" colspan="2" name="summation">
+
+										<group>
+											<field name="amount_posted" widget='monetary'/>
+											<field name="amount_due" widget='monetary'/>
+										</group>
+										<group>
+											<button name="button_dummy" string="(update)" type="object" class="oe_edit_only oe_link"/>
+										</group>
+									</group>
+								</page>
+								<page string="Other Info">
+									<field name="invoice_id"/>
+									<field name="voucher_id"/>
+									<field name="account_move_line_ids"/>
+								</page>
+							</notebook>
+						</group>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="on_credit_check_tree" model="ir.ui.view">
+			<field name="name">On Credit Checks</field>
+			<field name="model">oncreadit.check</field>
+			<field name="priority">4</field>
+			<field name="arch" type="xml">
+				<tree string="On Credit Checks" colors="grey:state=='cancel';blue:state in 'open';green:state in 'paid'">
+					<field name="date" />
+					<field name="partner_id"/>
+					<field name="amount" />
+					<field name="amount_posted"/>
+					<field name="amount_due"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+		
+
+		<record id="on_credit_check_action" model="ir.actions.act_window">
+			<field name="name">On Credit Checks</field>
+			<field name="res_model">oncreadit.check</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		
+
+		<menuitem action="on_credit_check_action" icon="STOCK_JUSTIFY_FILL" sequence="13" id="on_credit_check_menu" parent="account.menu_finance_payables"/>
+
+		<record id="on_credit_check_line_tree" model="ir.ui.view">
+			<field name="name">On Credit Checks Line</field>
+			<field name="model">oncreadit.check.line</field>
+			<field name="arch" type="xml">
+				<tree decoration-success="check_status =='paid'" decoration-primary="check_status == 'schedule'" decoration-danger="check_status =='revise'" decoration-muted="check_status =='merge'">
+					<field name="date"/>
+					<field name="due_date"/>
+					<field name="amount" sum="Total"/>
+					<field name="paid_amount" sum="Paid"/>
+					<field name="check_number"/>
+					<field name="check_status"/>
+				</tree>
+
+			</field>
+		</record>
+
+		<record id="on_credit_check_line_form" model="ir.ui.view">
+			<field name="name">On Credit Checks Line</field>
+			<field name="model">oncreadit.check.line</field>
+			<field name="arch" type="xml">
+				<form>
+					<sheet>
+						<group col="4">
+							<field name="date"/>
+							<field name="due_date"/>
+							<field name="amount"/>
+							<field name="paid_amount"/>
+							<field name="check_number"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<record id="on_credit_check_line_action" model="ir.actions.act_window">
+			<field name="name">Checks Detail's</field>
+			<field name="res_model">oncreadit.check.line</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem action="on_credit_check_line_action" icon="STOCK_JUSTIFY_FILL" sequence="19" id="on_credit_check_line_menu" parent="account.menu_finance_payables"/>
+
+	</data>
+</odoo>

@@ -1,0 +1,13 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_custody_manager,hr.custody.manager,model_hr_custody,,1,1,1,1
+access_hr_custody_mnger_config,hr.investigation.user.config,model_hr_custody_line,,1,1,1,1
+access_hr_custody_mnger_config,hr.investigation.user.config,model_hr_custody_line,,1,1,1,1
+
+
+access_hr_custody_mnger_asset,hr.investigation.user.asset,account_asset.model_account_asset_asset,,1,1,1,1
+
+access_hr_custody_mnger_deliver,hr.investigation.user.deliver,model_hr_custody_deliver,,1,1,1,1
+
+
+
+

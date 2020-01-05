@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="student_statement_report">
+			<t t-call="web.html_container">
+				<t t-foreach="docs" t-as="o">
+					<t t-call="web.external_layout">
+						<div class="page">
+							<div>
+								<p >
+									<h3 style="margin-left:350px;font-family:Calibri;">Student Payments Statement</h3>
+								</p>
+								<br/>
+								<br/>
+								<p class="text-left">
+									<strong style="float:left">Student Name : </strong>
+									<span style="float:left;margin-left:20px" t-esc="o.coll_name()"></span>
+
+									<strong style="float:left;margin-left:430px"> Date : </strong>
+									<span style="float:left;margin-left:20px" t-esc="o.date"></span>
+									<br/>
+									<br/>
+									<strong style="float:left">Academic Year : </strong>
+									<span style="float:left;margin-left:20px" t-esc="o.year_id.code"></span>
+									<strong style="float:left;margin-left:500px"> Index Number : </strong>
+									<span style="float:left;margin-left:20px" t-esc="o.index_id"></span>			
+								</p>
+							</div>
+							<br/>
+							<br/>
+							<p >
+									<h4 style="margin-left:400px;font-family:Calibri;">Student Fees</h4>
+							</p>
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th class="text-left">Level</th>
+										<th class="text-left">Semester</th>
+										<th class="text-left">Total Amount</th>
+										<th class="text-left">Paid Amount</th>
+										<th class="text-left">Remaining Amount</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr t-foreach="o.fees_ids" t-as="l" t-if="l.paid_amount != 0">
+										<t>
+											<td>
+												<span t-field="l.level_id.name" />
+											</td>
+											<td>
+												<span t-field="l.semester_id.name" />
+											</td>
+											<td>
+												<span t-field="l.sub_total" /> 
+											</td>
+											<td>
+												<span t-field="l.paid_amount" />
+											</td>
+											<td>
+												<span t-esc="l.amount_calc()" />
+											</td>
+										</t>
+									</tr>
+									<tr>
+										<td>
+											<strong>Totals</strong>
+										</td>
+										<td></td>
+										<td></td>
+										<td>
+										</td>
+										<td class="border-black">
+											<strong><span t-esc="o.calc_total_residaul()" /></strong>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<br/><br/>
+							<p >
+									<h4 style="margin-left:400px;font-family:Calibri;">Payments Details</h4>
+							</p>
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th class="text-left">Level</th>
+										<th class="text-left">Semester</th>
+										<th class="text-left">Amount</th>
+										<th class="text-left">Payment Type</th>
+										<th class="text-left">Check Number</th>
+										<th class="text-left">Account Number</th>
+										<th class="text-left">Currency</th>
+										<th class="text-left">Payment Date</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr t-foreach="o.fees_payment_ids" t-as="f">
+										<t>
+											<td>
+												<span t-field="f.level_id.name" />
+											</td>
+											<td>
+												<span t-field="f.semester_id.name" />
+											</td>
+											<td>
+												<span t-field="f.amount" /> 
+											</td>
+											<td>
+												<span t-field="f.payment_type" />
+											</td>
+											<td>
+												<span t-field="f.check_number" />
+											</td>
+											<td>
+												<span t-field="f.account_number" />
+											</td>
+											<td>
+												<span t-field="f.currency_id" />
+											</td>
+											<td>
+												<span t-field="f.payment_date" />
+											</td>
+										</t>
+									</tr>
+									<!-- <tr>
+										<td>
+											<strong>Totals</strong>
+										</td>
+										<td></td>
+										<td></td>
+										<td>
+										</td>
+										<td class="border-black">
+											<strong><span t-esc="o.calc_total_residaul()" /></strong>
+										</td>
+									</tr> -->
+								</tbody>
+							</table>
+						</div>
+					</t>
+				</t>
+			</t>
+		</template>
+	</data>
+</odoo>

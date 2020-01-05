@@ -1,0 +1,28 @@
+<odoo>
+    <data>
+        <delete model="ir.rule" id="hr.hr_dept_comp_rule"/>
+        <delete model="ir.rule" id="hr.hr_job_comp_rule"/>
+
+        <record id="hr_employee_rule_new" model="ir.rule">
+            <field name="name">Employees multi company rule</field>
+            <field name="model_id" ref="model_hr_employee"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">['|',('company_id','=',[user.company_id.id]),('company_id','child_of',[user.company_id.id])]</field>
+        </record>
+
+        <record id="hr_dept_comp_rule_new" model="ir.rule">
+            <field name="name">Department multi company rule</field>
+            <field name="model_id" ref="model_hr_department"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">[(1,'=',1)]</field>
+        </record>
+
+        <record id="hr_job_comp_rule_new" model="ir.rule">
+            <field name="name">Job multi company rule</field>
+            <field name="model_id" ref="model_hr_job"/>
+            <field name="global" eval="True"/>
+            <field name="domain_force">[(1,'=',1)]</field>
+        </record>
+       
+    </data>
+</odoo>

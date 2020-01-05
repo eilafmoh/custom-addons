@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_emaar_migration,data_migration.emaar_migration,model_emaar_migration,,1,1,1,1
+access_emaar_check_migration,check_migration.emaar_migration,model_check_migration,,1,1,1,1

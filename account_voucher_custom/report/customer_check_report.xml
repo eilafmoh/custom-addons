@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<template id="customer_check_report">
+			<t t-call="web.html_container">
+				<t t-foreach="docs" t-as="o">
+					<t t-call="web.external_layout">
+						<div class="page">
+							<table class="table table-bordered">
+								<tr>
+									<td class="text-center">
+										<strong>Customer name</strong>
+									</td>
+									<td class="text-center">
+										<span t-field="o.partner_id.name" />
+									</td>
+								</tr>
+								<tr>
+									<td class="text-center">
+										<strong>Complex</strong>
+									</td>
+									<td class="text-center">
+										<span t-field="o.complex_id.name" />
+									</td>
+								</tr>
+								<tr>
+									<td class="text-center">
+										<strong>Realstate</strong>
+									</td>
+									<td class="text-center">
+										<t t-esc="o.land_id.realestate_num" />
+									</td>
+								</tr>
+								<tr>
+									<td class="text-center">
+										<strong>Amount Total</strong>
+									</td>
+									<td class="text-center">
+										<span t-field="o.total_amount" />
+									</td>
+								</tr>
+								<tr>
+									<td class="text-center">
+										<strong>Amount Posted</strong>
+									</td>
+									<td class="text-center">
+										<t t-esc="o.paid_amount_calc()" />
+									</td>
+								</tr>
+								<tr>
+									<td class="text-center">
+										<strong>Amount Residual</strong>
+									</td>
+									<td class="text-center">
+										<t t-esc="o.residual_amount_calc()" />
+									</td>
+								</tr>
+							</table>
+							<br/>
+							<br/>
+							<strong>
+								<center> Payed Checks <br></br></center>
+							</strong>
+							<hr/>
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th>Date</th>
+										<th>Due Date</th>
+										<th class="text-center">Description</th>
+										<th class="text-center">Check Number</th>
+										<th class="text-center">Bank Name</th>
+										<th class="text-center">Status</th>
+										<th class="text-center">Amount</th>
+										<th class="text-center">Paid Amount</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr t-foreach="o.check_lines" t-as="l">
+										<t t-if="l.check_status=='paid' or l.paid_amount != 0">
+											<td>
+												<span t-field="l.date" />
+											</td>
+											<td>
+												<span t-field="l.due_date" />
+											</td>
+											<td>
+												<span t-field="l.description" />
+											</td>
+											<td>
+												<span t-field="l.check_number" />
+											</td>
+											<td>
+												<span t-field="l.customer_bank" /> 
+											</td>
+											<td>
+												<span t-field="l.check_status" />
+											</td>
+											<td>
+												<span t-field="l.amount" />
+											</td>
+											<td>
+												<span t-field="l.paid_amount" />
+											</td>
+										</t>
+									</tr>
+									<tr>
+										<td>
+											<strong>Totals</strong>
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="border-black">
+											<strong><span t-esc="o.amount_calc()" /></strong>
+										</td>
+										<td class="border-black">
+											<strong><span t-field="o.amount_posted" /></strong>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+							<br/><br/>
+							
+							<strong>
+								<center> Residual Checks <br></br></center>
+							</strong>
+							<hr/>
+							<table class="table table-bordered">
+								<thead>
+									<tr>
+										<th>Date</th>
+										<th>Due Date</th>
+										<th class="text-center">Description</th>
+										<th class="text-center">Check Number</th>
+										<th class="text-center">Bank Name</th>
+										<th class="text-center">Status</th>
+										<th class="text-center">Amount</th>
+										<th class="text-center">Residual Amount</th>
+									</tr>
+								</thead>
+								<tbody>
+									<t t-foreach="o.check_lines" t-as="l">
+										<tr>
+											<t t-if="l.check_status=='schedule' or l.check_status=='revise' or l.paid_amount == 0">
+												<td>
+													<span t-field="l.date" />
+												</td>
+												<td>
+													<span t-field="l.due_date" />
+												</td>
+												<td>
+													<span t-field="l.description" />
+												</td>
+												<td>
+													<span t-field="l.check_number" />
+												</td>
+												<td>
+													<span t-field="l.customer_bank" /> 
+												</td>
+												<td>
+													<span t-field="l.check_status" />
+												</td>
+												<td>
+													<span t-field="l.amount" />
+												</td>
+												<td>
+													<span t-esc="round(l.amount - l.paid_amount , 2)" />
+												</td>
+											</t>
+										</tr>
+									</t>
+									<tr>
+										<td>
+											<strong>Balance</strong>
+										</td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td class="border-black">
+											<strong><span t-esc="o.residual_calc()" /></strong>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<br></br><br></br>
+							<div class="col-xs-4 pull-right">
+								<tr class="border-black">
+									<td>
+										<strong class="text-center">Accountant</strong>
+									</td>
+									<td class="text-right">
+										<strong>________________________</strong>
+									</td>
+								</tr>
+							</div>
+							<div class="col-xs-4 pull-left">
+								<tr class="border-black">
+									<td>
+										<strong class="text-center">Financial Manger</strong>
+									</td>
+									<td class="text-left">
+										<strong>________________________</strong>
+									</td>
+								</tr>
+							</div>
+						</div>
+					</t>
+				</t>
+			</t>
+		</template>
+	</data>
+</odoo>

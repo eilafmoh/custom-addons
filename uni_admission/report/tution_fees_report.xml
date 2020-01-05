@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="tution_fees_report_document">
+		<t t-call="report.html_container">
+			<t t-call="report.internal_layout">
+				<div class="page">
+					<div class="page-header">
+						<center>
+							<h2>
+								<span t-esc="o.name"/>
+							</h2>
+						</center>
+					</div>
+					<div class="row" style="margin-left: 40%;border:4px;">
+						<div class="col-xs-6" t-if="o.year_id">
+							<strong>العام الدراسي : </strong>
+							<span t-esc="o.year_id.code"/>
+						</div>
+						<div class="col-xs-6" t-if="o.certificate_type_id">
+							<strong>نوع الشهادة :  </strong>
+							<span t-esc="o.certificate_type_id.name"/>
+						</div>
+						<div class="col-xs-6" t-if="o.state">
+							<strong>الحالة  :  </strong>
+							<span t-esc="o.state"/>
+						</div>
+					</div>
+					<br/>
+					<div>
+						<table class="table table-condensed table-bordered">
+							<thead >
+								<tr style="background-color:#e6e6e6">
+									<th>
+										<center>										الكلية									</center>
+									</th>
+									<th>
+										<center>									رسوم التسجيل 										</center>
+									</th>
+									<th>
+										<center>										الرسوم الدراسية									</center>
+									</th>
+								</tr>
+							</thead>
+							<tbody t-foreach="o.fees_line_ids" t-as="line">
+								<tr>
+									<td>
+										<center>
+											<span t-esc="line.faculty_id.name"/>
+										</center>
+									</td>
+									<td>
+										<center>
+											<span t-esc="line.registration_fees"/>
+										</center>
+									</td>
+									<td class="top_space">
+										<center>
+											<span t-esc="line.study_fees"/>
+										</center>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<p style="page-break-before:always"/>
+					<div class="page-header">
+						<center>
+							<h2>
+								<span >رسوم الأقسام</span>
+							</h2>
+						</center>
+					</div>
+					<div>
+						<table class="table table-condensed table-bordered">
+							<thead>
+								<tr style="background-color:#e6e6e6">
+									<th>
+										<center>										الكلية									</center>
+									</th>
+									<th>
+										<center>									القسم 										</center>
+									</th>
+									<th>
+										<center>										رسوم التسجيل									</center>
+									</th>
+									<th>
+										<center>										الرسوم الدراسية									</center>
+									</th>
+								</tr>
+							</thead>
+							<tbody t-foreach="o.department_line_ids" t-as="line">
+								<tr>
+									<td>
+										<center>
+											<span t-esc="line.faculty_id.name"/>
+										</center>
+									</td>
+									<td>
+										<center>
+											<span t-esc="line.department_id.name"/>
+										</center>
+									</td>
+									<td>
+										<center>
+											<span t-esc="line.registration_fees"/>
+										</center>
+									</td>
+									<td class="top_space">
+										<center>
+											<span t-esc="line.study_fees"/>
+										</center>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</t>
+		</t>
+	</template>
+	<template id="tution_fees_report">
+		<t t-call="report.html_container">
+			<t t-call="report.internal_layout">
+				<t t-foreach="docs" t-as="o">
+					<t t-call="uni_admission.tution_fees_report_document" t-lang="o.name"/></t>
+			</t>
+		</t>
+	</template>
+</odoo>

@@ -1,0 +1,119 @@
+<odoo>
+	<data noupdate="1">
+		<record id="dept_1" model="uni.faculty.department">
+			<field name="name">قسم اللغة الألمانية</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="branch_id" ref="branch_2"></field>
+		</record>
+		<record id="dept_2" model="uni.faculty.department">
+			<field name="name">قسم اللغة الأنجليزية</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="branch_id" ref="branch_2"></field>
+		</record>
+		<record id="dept_3" model="uni.faculty.department">
+			<field name="name">قسم اللغة الروسية</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="branch_id" ref="branch_2"></field>
+		</record>
+		<record id="dept_4" model="uni.faculty.department">
+			<field name="name">قسم اللغة الصينية</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="branch_id" ref="branch_2"></field>
+		</record>
+		<record id="dept_5" model="uni.faculty.department">
+			<field name="name">قسم اللغة العربية</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="branch_id" ref="branch_2"></field>
+		</record>
+		<record id="dept_6" model="uni.faculty.department">
+			<field name="name">قسم اللغة الفرنسية</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="branch_id" ref="branch_2"></field>
+		</record>
+		<record id="dept_7" model="uni.faculty.department">
+			<field name="name">قسم اللغويات</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="branch_id" ref="branch_2"></field>
+		</record>
+		<record id="dept_8" model="uni.faculty.department">
+			<field name="name">قسم الدراسات الإسلامية</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="branch_id" ref="branch_1"></field>
+		</record>
+		<record id="dept_9" model="uni.faculty.department">
+			<field name="name">قسم الآثار</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="branch_id" ref="branch_1"></field>
+		</record>
+		<record id="dept_10" model="uni.faculty.department">
+			<field name="name">قسم الإعلام</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="branch_id" ref="branch_1"></field>
+		</record>
+		<record id="dept_11" model="uni.faculty.department">
+			<field name="name">قسم التاريخ</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="branch_id" ref="branch_1"></field>
+		</record>
+		<record id="dept_12" model="uni.faculty.department">
+			<field name="name">قسم الفلسفة</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="branch_id" ref="branch_1"></field>
+		</record>
+		<record id="dept_13" model="uni.faculty.department">
+			<field name="name">قسم علم النفس</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="branch_id" ref="branch_1"></field>
+		</record>
+		<record id="dept_14" model="uni.faculty.department">
+			<field name="name">قسم علوم المعلومات و المكتبات</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="branch_id" ref="branch_1"></field>
+		</record>
+		<record id="dept_15" model="uni.faculty.department">
+			<field name="name">قسم الاقتصاد</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas4"></field>
+			<field name="branch_id" ref="branch_1"></field>
+		</record>
+		<record id="dept_16" model="uni.faculty.department">
+			<field name="name">قسم الاجتماع والانثرولوجيا الاجتماعية</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas4"></field>
+			<field name="branch_id" ref="branch_1"></field>
+		</record>
+		<record id="dept_17" model="uni.faculty.department">
+			<field name="name">قسم العلوم السياسية</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas4"></field>
+			<field name="branch_id" ref="branch_1"></field>
+		</record>
+		<record id="dept_18" model="uni.faculty.department">
+			<field name="name">قسم الاقتصاد القياسي والاحصاء الاجتماعي</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas4"></field>
+			<field name="branch_id" ref="branch_1"></field>
+		</record>
+		<!-->                   Engineering Departments                 <-->
+		<record id="dept_eng1" model="uni.faculty.department">
+			<field name="name"> الهندسة الزراعية</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas12"></field>
+		</record>
+		<record id="dept_eng2" model="uni.faculty.department">
+			<field name="name">هندسة النفط</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas12"></field>
+		</record>
+		<record id="dept_eng3" model="uni.faculty.department">
+			<field name="name">الهندسة المدنية</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas12"></field>
+		</record>
+		<record id="dept_eng4" model="uni.faculty.department">
+			<field name="name">هندسة المساحة</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas12"></field>
+		</record>
+		<record id="dept_eng5" model="uni.faculty.department">
+			<field name="name">هندسة الميكانيكا</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas12"></field>
+		</record>
+		<record id="dept_eng6" model="uni.faculty.department">
+			<field name="name">هندسة الكهرباء</field>
+			<field name="faculty_id" ref="base_custom.conf_ncas12"></field>
+		</record>
+	</data>
+</odoo>

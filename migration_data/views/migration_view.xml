@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<record id="migration_form_view" model="ir.ui.view">
+			<field name="name">Migration</field>
+			<field name="model">uni.migration</field>
+			<field name="arch" type="xml">
+				<form string="Student Freezing">
+					<sheet>
+						<group col="4" >
+							<field name="std_reg_no"/>
+							<field name="std_course_id"/>
+							<field name="debit" />
+							<field name="credit"/>
+							<field name="balance"/>
+							<field name="currency_id"/>
+						</group>
+					
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<record id="uni_migration_tree_view" model="ir.ui.view">
+			<field name="name">uni.migration.tree</field>
+			<field name="model">uni.migration</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="std_reg_no"/>
+					<field name="std_course_id"/>
+					<field name="debit" />
+					<field name="credit"/>
+					<field name="balance"/>
+				</tree>
+			</field>
+		</record>
+		<record id="action_uni_migration" model="ir.actions.act_window">
+			<field name="name">Migration Data</field>
+			<field name="res_model">uni.migration</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">                Click to Requset New record.              </p>
+			</field>
+		</record>
+    
+		<menuitem id="uni_migration_menu" name="Migration Data" action="action_uni_migration" sequence="1"/>
+
+		<!-- ***********************************************-->
+
+		<record id="migration_form_view1" model="ir.ui.view">
+			<field name="name">Migration</field>
+			<field name="model">uni.notfound</field>
+			<field name="arch" type="xml">
+				<form string="Student Freezing">
+					<sheet>
+						<group col="4" >
+							<field name="std_reg_no"/>
+							<field name="std_course_id"/>
+							<field name="debit" />
+							<field name="credit"/>
+							<field name="balance"/>
+							<field name="currency_id"/>
+						</group>
+					
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<record id="uni_migration_tree_view1" model="ir.ui.view">
+			<field name="name">uni.notfound.tree</field>
+			<field name="model">uni.notfound</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="std_reg_no"/>
+					<field name="std_course_id"/>
+					<field name="debit" />
+					<field name="credit"/>
+					<field name="balance"/>
+				</tree>
+			</field>
+		</record>
+		<record id="action_uni_migration1" model="ir.actions.act_window">
+			<field name="name">Migration Data</field>
+			<field name="res_model">uni.notfound</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">                Click to Requset New record.              </p>
+			</field>
+		</record>
+    
+		<menuitem id="uni_migration_menu1" name="Not Found Data" action="action_uni_migration1" sequence="1"/>
+
+		<!--**************************************************-->
+		<record id="migration_payable_form_view" model="ir.ui.view">
+			<field name="name">Migration</field>
+			<field name="model">uni.migration.payable</field>
+			<field name="arch" type="xml">
+				<form string="Student Freezing">
+					<sheet>
+						<group col="4" >
+							<field name="partner_name"/>
+							<field name="partner_id"/>
+							<field name="std_reg_no"/>
+							<field name="std_course_id"/>
+							<field name="debit" />
+							<field name="credit"/>
+							<field name="balance"/>
+							<field name="discription"/>
+							<field name="account_id"/>
+							<field name="currency_id"/>
+						</group>
+					
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<record id="uni_migration_payable_tree_view" model="ir.ui.view">
+			<field name="name">uni.migration.payable.tree</field>
+			<field name="model">uni.migration.payable</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="partner_name"/>
+					<field name="std_course_id"/>
+					<field name="debit" />
+					<field name="credit"/>
+					<field name="balance"/>
+				</tree>
+			</field>
+		</record>
+		<record id="action_uni_migration_payable" model="ir.actions.act_window">
+			<field name="name">Migration Data</field>
+			<field name="res_model">uni.migration.payable</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">                Click to Requset New record.              </p>
+			</field>
+		</record>
+    
+		<menuitem id="uni_migration_payable_menu" name="Migration Payable data" action="action_uni_migration_payable" sequence="1"/>
+
+		<!-- ******************************** -->
+
+		<record id="migration_payable_form_view1" model="ir.ui.view">
+			<field name="name">Migration</field>
+			<field name="model">uni.notfound.payable</field>
+			<field name="arch" type="xml">
+				<form string="Student Freezing">
+					<sheet>
+						<group col="4" >
+							<field name="partner_name"/>
+							<field name="partner_id"/>
+							<field name="std_reg_no"/>
+							<field name="std_course_id"/>
+							<field name="debit" />
+							<field name="credit"/>
+							<field name="balance"/>
+							<field name="discription"/>
+							<field name="account_id"/>
+							<field name="currency_id"/>
+						</group>
+					
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<record id="uni_migration_payable_tree_view1" model="ir.ui.view">
+			<field name="name">uni.migration.payable.tree</field>
+			<field name="model">uni.notfound.payable</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="partner_name"/>
+					<field name="std_course_id"/>
+					<field name="debit" />
+					<field name="credit"/>
+					<field name="balance"/>
+				</tree>
+			</field>
+		</record>
+		<record id="action_uni_migration_payable1" model="ir.actions.act_window">
+			<field name="name">Migration Data</field>
+			<field name="res_model">uni.notfound.payable</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">                Click to Requset New record.              </p>
+			</field>
+		</record>
+    
+		<menuitem id="uni_migration_payable_menu1" name="Not Found Payable data" action="action_uni_migration_payable1" sequence="1"/>
+
+
+
+	</data>
+</odoo>

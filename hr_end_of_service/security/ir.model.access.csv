@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_end_of_service_manager,hr.end.of.service,model_hr_end_of_service,hr.group_hr_manager,1,1,1,1
+access_hr_employee_final_sattelment_manager,employee_final_sattelment_manager,model_employee_final_sattelment,hr.group_hr_manager,1,1,1,1
+
+access_hr_end_of_service_manager_c,hr.end.of.service.c,model_hr_end_of_service,hr_end_of_service.end_manager,1,1,1,1
+access_hr_employee_final_sattelment_manager_c,employee_final_sattelment_manager_c,model_employee_final_sattelment,hr_end_of_service.end_manager,1,1,0,1
+
+access_hr_end_of_service_user,hr.end.of.service.user,model_hr_end_of_service,hr_end_of_service.end_user,1,1,1,1
+access_hr_employee_final_sattelment_user,employee_final_sattelment_user,model_employee_final_sattelment,hr_end_of_service.end_user,0,0,0,0
