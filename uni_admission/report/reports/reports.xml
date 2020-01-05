@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<openerp>
+	<data>
+        <report 
+            id="student_statement"
+            string="Student Payment Satement"
+            model="uni.student"
+            report_type="qweb-html"
+            file="uni_core.student_statement_report"
+            name="uni_core.student_statement_report"      
+        />
+    </data>
+</openerp>

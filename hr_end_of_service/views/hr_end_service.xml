@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="view_hr_end_of_service_form" model="ir.ui.view">
+            <field name="name">hr.end.of.service.form</field>
+            <field name="model">hr.end.of.service</field>
+            <field name="arch" type="xml">
+                <form string="Employee end of service Process">
+                    <header>
+                        <button name="action_approve" type="object" string="Confirm" states="draft"/>
+                        <button name="action_department_approve" type="object" string="Approve" states="wait_depart_manager" class="oe_highlight"/>
+                        <button name="action_hr_aprrove" type="object" string="HR Approve" states="wait_hr_manager" class="oe_highlight"/>
+                        <!-- <button name="action_finice_aprrove" type="object" string="Finice Approve" states="wait_finice_manager" class="oe_highlight"/> -->
+                        <button name="action_gm_approve" type="object" string="Genral Manger Approve" states="wait_gm_manager" class="oe_highlight"/>
+                        <!-- <button name="action_depart_maneger_approve" type="object" string="D Approve" states="wait_genral_maneger" class="oe_highlight"/> -->
+                        <button name="action_reject" type="object" string="Refuse" states="wait_depart_manager,wait_hr_manager,wait_gm_manager"/>
+                        <field name="state" widget="statusbar" />
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box oe_right"></div>
+                        <div class="oe_title">
+                            <h4>
+                                <field name="name"/>
+                            </h4>
+                            <h1>
+                                <field name="employee_id" class="oe_inline" required="1" attrs="{'readonly':[('state','not in','draft')]}"/>
+                            </h1>
+                        </div>
+                        <group col="1">
+                            <group col="4">
+                                <field name="date"/>
+                                <field name="user_id" readonly="1"/>
+                                <field name="contract_id" options="{'no_create_edit': True, 'no_open': True}" domain="[('employee_id','=',employee_id),('state','=','open')]"/>
+                            </group>
+                            <group col="4">
+                                <field name="department_id" readonly="1"/>
+                                <field name="job_title" readonly="1"/>
+                            </group>
+                            <group>
+                                <field name="exit_type"/>
+                                <field name="exit_reson"/>
+                                <field name="last_day_of_work" attrs="{'readonly':[('state','!=','draft')]}" required="1"/>
+                            </group>
+                            <!-- <group col="2">
+                                <field name="emp_loans"/>
+                            </group> -->
+                            <h2> Exit Progress</h2>
+                            <group col="2">
+                                <group>
+                                    <field name="emp_confirm_date" attrs="{'invisible':[('state','=','draft')]}"/>
+                                    <field name="dep_manager_confirm_date" attrs="{'invisible':[('state','=','draft')]}"/>
+                                    <field name="hr_manager_confirm_date" attrs="{'invisible':[('state','=','draft')]}"/>
+                                    <!-- <field name="finance_confirm_date" attrs="{'invisible':[('state','=','draft')]}"/> -->
+                                    <field name="gm_confirm_date" attrs="{'invisible':[('state','=','draft')]}"/>
+                                </group>
+                                <group col="2">
+                                    <field name="progress_bar" widget="percentpie"/>
+                                    <field name="final_statment_id" readonly='1' attrs="{'invisible':[('state','!=','done')]}"/>
+                                    
+                                </group>
+                            </group>
+                        </group>
+                        <notebook>
+                         
+                            <!-- <page string="Finice Department" attrs="{'invisible':[('state','not in','wait_finice_manager')]}">
+                                <group>
+                                    <field name="finice_department"/>
+                                </group>
+                                <group>
+                                    <field name="finice_loan"/>
+                                    <field name="finice_old_loan"/>
+                                    <field name="finice_check_list_other"/>
+                                </group>
+                            </page> -->
+                            <page string="HR Department" attrs="{'invisible':[('state','not in','wait_hr_manager')]}">
+                                <group>
+                                    <field name="hr_department"/>
+                                </group>
+                                <group>
+                                    <!-- <field name="it_department"/> -->
+                                    <field name="experince_certificate"/>
+                                </group>
+                            </page>
+                             <page string="Note">
+                                <field name="datails" widget="html" attrs="{'readonly':[('state','=','done')]}"/>
+                            </page>
+                            <page string="Extra info" attrs="{'invisible':[('state','not in','refuse')]}">
+                                <field name="reject_status" string="Requset info"/>
+                            </page>
+                            
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        <record id="tree_employee_request_view" model="ir.ui.view">
+            <field name="name">ehr.end.of.service.tree</field>
+            <field name="model">hr.end.of.service</field>
+            <field name="arch" type="xml">
+                <tree string="Employee End of Service">
+                    <field name="employee_id"/>
+                    <field name="department_id"/>
+                    <field name="job_title"/>
+                    <field name="date"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_end_of_employee_service" model="ir.actions.act_window">
+            <field name="name">End of Service Employee</field>
+            <field name="res_model">hr.end.of.service</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">                Click to Requset New employee to be employeed.              </p>
+                <p></p>
+            </field>
+        </record>
+        <record id="view_hr_employee_sattelment_form" model="ir.ui.view">
+            <field name="name">employee.final.statement.form</field>
+            <field name="model">employee.final.sattelment</field>
+            <field name="arch" type="xml">
+                <form string="Employee end of service Process" create='0'>
+                    <header>
+                        <button name="action_approve" type="object" string="Approve" states="draft"/>
+                        <button name="action_department_approve" type="object" string="Approve" states="in_progress"/>
+                        <field name="state" widget="statusbar" />
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box oe_right"></div>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="employee_id" class="oe_outline" string="Employee Name" readonly='1'/>
+                            </h1>
+                        </div>
+                        <group col="1">
+                            <group >
+                                <field name="date"/>
+                            </group>
+                            <group col="2">
+                                <group col="2">
+                                    <field name="employee_salary"/>
+                                    <field name="last_date"/>
+                                    <field name="current_month_salary" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    <field name="salary_per_day"/>
+                                    <field name="legal_leave" readonly='1'/>
+                                    <field name="over_time" attrs="{'readonly':[('state','!=','draft')]}"/>
+                                    <field name="over_amount"/>
+                                    <field name="emp_loan"/>
+                                </group>
+                            </group>
+                            <group string='Employee Receivables'></group>
+                            <group col="4">
+                                <field name="total_amount"/>
+                                <field name="invoice_id" attrs="{'invisible':[('state','!=','done')]}"/>
+                            </group>
+                            <group>
+                                <button name="on_change_checkout" type="object" string="Copmute Target" class="oe_highlight" attrs="{'invisible':[('state','!=','in_progress')]}"/>
+                            </group>
+                        
+                        </group>
+                     
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record id="view_hr_employee_sattelment_tree" model="ir.ui.view">
+            <field name="name">employee.final.statement.tree</field>
+            <field name="model">employee.final.sattelment</field>
+            <field name="arch" type="xml">
+                <tree string="Employee End of Service" create='0'>
+                    <field name="name"/>
+                    <field name="employee_id"/>
+                    <field name="date"/>
+                    <field name="total_amount"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        <record id="action_hr_employee_sattelment" model="ir.actions.act_window">
+            <field name="name">employee final statement</field>
+            <field name="res_model">employee.final.sattelment</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">                Click to Requset New employee to be employeed.              </p>
+                <p></p>
+            </field>
+        </record>
+        <record id="action_custom_contract" model="ir.actions.act_window">
+            <field name="name">Employee Contract</field>
+            <field name="res_model">hr.contract</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        <menuitem id="menu_hr_end_of_service" name="End of Service"
+         parent="hr_custom.hr_process_root_menu" sequence="6"/>
+        <menuitem id="menu_end_of_employee_service" name="End sevice Requset" 
+        parent="menu_hr_end_of_service" action="action_end_of_employee_service" 
+         />
+        <menuitem id="menu_final_sattelment" name="Employee Final Statement"
+         parent="menu_hr_end_of_service" action="action_hr_employee_sattelment"
+          />
+    </data>
+</odoo>

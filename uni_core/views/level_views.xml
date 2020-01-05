@@ -1,0 +1,47 @@
+<odoo>
+	<data>
+		<!-- uni.faculty.level form view -->
+		<record id="uni_faculty_level_view_form" model="ir.ui.view">
+			<field name="name">uni.faculty.level.view.form</field>
+			<field name="model">uni.faculty.level</field>
+			<field name="arch" type="xml">
+				<form string="Years">
+					<sheet>
+						<group colspan="4">
+							<group col="2">
+								<field name="name"/>
+								<field name="order"/>
+							</group>
+							<group col="2">
+								<field name="faculty_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+							</group>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<!-- uni.faculty.level tree view -->
+		<record id="uni_faculty_level_view_tree" model="ir.ui.view">
+			<field name="name">uni.faculty.level.view.tree</field>
+			<field name="model">uni.faculty.level</field>
+			<field name="arch" type="xml">
+				<tree string="Years">
+					<field name="name"/>
+					<field name="faculty_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+					<field name="order"/>
+				</tree>
+			</field>
+		</record>
+		<record id="uni_core_levels_list_action" model="ir.actions.act_window">
+			<field name="name">Years</field>
+			<field name="res_model">uni.faculty.level</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new level</p>
+			</field>
+		</record>
+		<!-- levels left menu -->
+		<menuitem id="uni_core_levels_list_menu" name="Years" parent="uni_core_configurations_view_menu" action="uni_core_levels_list_action"/>
+	</data>
+</odoo>

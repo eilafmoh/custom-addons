@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+
+    <record id="category_dediction" model="ir.module.category">
+        <field name="name">Deduction</field>
+    </record>
+
+
+
+    <record id="deduction_user" model="res.groups">
+        <field name="name">User</field>
+        <field name="category_id" ref="category_dediction" />
+    </record>
+
+    <record id="deduction_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="category_dediction" />
+    </record>
+
+
+</odoo>

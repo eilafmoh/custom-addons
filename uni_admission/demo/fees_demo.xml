@@ -1,0 +1,378 @@
+<odoo>
+	<data noupdate="1">
+		<!-->        Start       of     public fees                     <-->
+		<!-- >                    fees                                  <-->
+		<record id="study_fees_2018" model="uni.study_fees">
+			<field name="name">رسوم القبول العام للعام الدراسي 2018/2019</field>
+			<field name="year_id" ref="year_5"></field>
+			<field name="admission_type">public</field>
+			<field name="certificate_type_id" ref="cert_1"></field>
+			<field name="currency_id" ref="base.USD"></field>
+			<field name="state">draft</field>
+		</record>
+		<!-->   fees line faculty to study_fees_2018 <-->
+		<record id="fees_line_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">100.0</field>
+			<field name="study_fees">4000.0</field>
+		</record>
+		<record id="fees_line1_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas4"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">100.0</field>
+			<field name="study_fees">4000.0</field>
+		</record>
+		<record id="fees_line2_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_prepayment5"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">100.0</field>
+			<field name="study_fees">2500.0</field>
+		</record>
+		<record id="fees_line3_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_stk2"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">150.0</field>
+			<field name="study_fees">3000.0</field>
+		</record>
+		<record id="fees_line4_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas5"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">200.0</field>
+			<field name="study_fees">3500.0</field>
+		</record>
+		<record id="fees_line5_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas6"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">100.0</field>
+			<field name="study_fees">1000.0</field>
+		</record>
+		<record id="fees_line6_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas7"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">200.0</field>
+			<field name="study_fees">1500.0</field>
+		</record>
+		<record id="fees_line7_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_prepayment2"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">150.0</field>
+			<field name="study_fees">2000.0</field>
+		</record>
+		<record id="fees_line8_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_o_income3"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">100.0</field>
+			<field name="study_fees">2400.0</field>
+		</record>
+		<record id="fees_line9_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_o_income4"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">200.0</field>
+			<field name="study_fees">2800.0</field>
+		</record>
+		<record id="fees_line10_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_o_income5"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">100.0</field>
+			<field name="study_fees">1000.0</field>
+		</record>
+		<record id="fees_line11_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_prepayment4"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">100.0</field>
+			<field name="study_fees">6000.0</field>
+		</record>
+		<record id="fees_line12_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas8"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">100.0</field>
+			<field name="study_fees">5000.0</field>
+		</record>
+		<record id="fees_line13_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.uofk_partner30"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">100.0</field>
+			<field name="study_fees">6000.0</field>
+		</record>
+		<record id="fees_line14_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas10"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">200.0</field>
+			<field name="study_fees">8000.0</field>
+		</record>
+		<record id="fees_line15_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">100.0</field>
+			<field name="study_fees">4000.0</field>
+		</record>
+		<record id="fees_line16_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_prepayment3"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">150.0</field>
+			<field name="study_fees">5000.0</field>
+		</record>
+		<record id="fees_line17_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas11"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">140.0</field>
+			<field name="study_fees">4000.0</field>
+		</record>
+		<record id="fees_line18_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas12"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">240.0</field>
+			<field name="study_fees">7000.0</field>
+		</record>
+		<record id="fees_line19_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_o_income6"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">150.0</field>
+			<field name="study_fees">8000.0</field>
+		</record>
+		<record id="fees_line20_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">100.0</field>
+			<field name="study_fees">4000.0</field>
+		</record>
+		<record id="fees_line21_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_o_income7"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">150.0</field>
+			<field name="study_fees">5000.0</field>
+		</record>
+		<!--> fees line department to study_fees_2018 <-->
+		<record id="deb_study_fees_line_2018" model="uni.study_fees.departments">
+			<field name="faculty_id" ref="base_custom.conf_ncas12"></field>
+			<field name="department_id" ref="uni_core.dept_eng1"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">100.0</field>
+			<field name="study_fees">6000.0</field>
+		</record>
+		<record id="deb_study_fees_line1_2018" model="uni.study_fees.departments">
+			<field name="faculty_id" ref="base_custom.conf_ncas12"></field>
+			<field name="department_id" ref="uni_core.dept_eng2"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">100.0</field>
+			<field name="study_fees">7000.0</field>
+		</record>
+		<record id="deb_study_fees_line2_2018" model="uni.study_fees.departments">
+			<field name="faculty_id" ref="base_custom.conf_ncas12"></field>
+			<field name="department_id" ref="uni_core.dept_eng3"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">100.0</field>
+			<field name="study_fees">5500.0</field>
+		</record>
+		<record id="deb_study_fees_line3_2018" model="uni.study_fees.departments">
+			<field name="faculty_id" ref="base_custom.conf_ncas12"></field>
+			<field name="department_id" ref="uni_core.dept_eng4"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">150.0</field>
+			<field name="study_fees">9000.0</field>
+		</record>
+		<record id="deb_study_fees_line4_2018" model="uni.study_fees.departments">
+			<field name="faculty_id" ref="base_custom.conf_ncas12"></field>
+			<field name="department_id" ref="uni_core.dept_eng5"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">200.0</field>
+			<field name="study_fees">10000.0</field>
+		</record>
+		<record id="deb_study_fees_line5_2018" model="uni.study_fees.departments">
+			<field name="faculty_id" ref="base_custom.conf_ncas12"></field>
+			<field name="department_id" ref="uni_core.dept_eng6"></field>
+			<field name="fees_id" ref="study_fees_2018"></field>
+			<field name="registration_fees">100.0</field>
+			<field name="study_fees">1200.0</field>
+		</record>
+		<!-->        End            of           public        fees<-->
+		<!-->         Start          of           private       fees<-->
+		<!--> fees  <-->
+		<record id="priv_study_fees_2018" model="uni.study_fees">
+			<field name="name"> رسوم القبول الخاص للعام الدراسي 2018/2019</field>
+			<field name="year_id" ref="year_5"></field>
+			<field name="admission_type">private</field>
+			<field name="certificate_type_id" ref="cert_1"></field>
+			<field name="currency_id" ref="base.USD"></field>
+			<field name="state">draft</field>
+		</record>
+		<!--> fees line faculty to study_fees_2018 <-->
+		<record id="priv_study_fees_line_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">2000.0</field>
+			<field name="study_fees">10000.0</field>
+		</record>
+		<record id="priv_study_fees_line1_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas4"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">2500.0</field>
+			<field name="study_fees">10000.0</field>
+		</record>
+		<record id="priv_study_fees_line2_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_prepayment5"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">1000.0</field>
+			<field name="study_fees">2500.0</field>
+		</record>
+		<record id="priv_study_fees_line3_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_stk2"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">1500.0</field>
+			<field name="study_fees">1300.0</field>
+		</record>
+		<record id="priv_study_fees_line4_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas5"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">1200.0</field>
+			<field name="study_fees">13500.0</field>
+		</record>
+		<record id="priv_study_fees_line5_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas6"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">1100.0</field>
+			<field name="study_fees">11000.0</field>
+		</record>
+		<record id="priv_study_fees_line6_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas7"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">1200.0</field>
+			<field name="study_fees">15000.0</field>
+		</record>
+		<record id="priv_study_fees_line7_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_prepayment2"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">1500.0</field>
+			<field name="study_fees">12000.0</field>
+		</record>
+		<record id="priv_study_fees_line8_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_o_income3"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">1100.0</field>
+			<field name="study_fees">12400.0</field>
+		</record>
+		<record id="priv_study_fees_line9_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_o_income4"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">1200.0</field>
+			<field name="study_fees">18000.0</field>
+		</record>
+		<record id="priv_study_fees_line10_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_o_income5"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">1300.0</field>
+			<field name="study_fees">11000.0</field>
+		</record>
+		<record id="priv_sstudy_fees_line11_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_prepayment4"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">1100.0</field>
+			<field name="study_fees">16000.0</field>
+		</record>
+		<record id="priv_study_fees_line12_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas8"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">1100.0</field>
+			<field name="study_fees">15000.0</field>
+		</record>
+		<record id="priv_study_fees_line13_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.uofk_partner30"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">1100.0</field>
+			<field name="study_fees">16000.0</field>
+		</record>
+		<record id="priv_study_fees_line14_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas10"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">1200.0</field>
+			<field name="study_fees">18000.0</field>
+		</record>
+		<record id="priv_study_fees_line15_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">1200.0</field>
+			<field name="study_fees">14000.0</field>
+		</record>
+		<record id="priv_study_fees_line16_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_prepayment3"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">11500.0</field>
+			<field name="study_fees">15000.0</field>
+		</record>
+		<record id="priv_study_fees_line17_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas11"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">1400.0</field>
+			<field name="study_fees">14000.0</field>
+		</record>
+		<record id="priv_study_fees_line18_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas12"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">1200.0</field>
+			<field name="study_fees">17000.0</field>
+		</record>
+		<record id="priv_study_fees_line19_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_o_income6"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">1200.0</field>
+			<field name="study_fees">18000.0</field>
+		</record>
+		<record id="priv_study_fees_line20_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_ncas3"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">14000.0</field>
+			<field name="study_fees">1100.0</field>
+		</record>
+		<record id="priv_study_fees_line21_2018" model="uni.study_fees.line">
+			<field name="faculty_id" ref="base_custom.conf_o_income7"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">1400.0</field>
+			<field name="study_fees">15000.0</field>
+		</record>
+		<!-->fees line department to study_fees_2018<-->
+		<record id="priv_deb_study_fees_line_2018" model="uni.study_fees.departments">
+			<field name="faculty_id" ref="base_custom.conf_ncas12"></field>
+			<field name="department_id" ref="uni_core.dept_eng1"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">1400.0</field>
+			<field name="study_fees">16000.0</field>
+		</record>
+		<record id="priv_deb_study_fees_line1_2018" model="uni.study_fees.departments">
+			<field name="faculty_id" ref="base_custom.conf_ncas12"></field>
+			<field name="department_id" ref="uni_core.dept_eng2"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">1200.0</field>
+			<field name="study_fees">17000.0</field>
+		</record>
+		<record id="priv_deb_study_fees_line2_2018" model="uni.study_fees.departments">
+			<field name="faculty_id" ref="base_custom.conf_ncas12"></field>
+			<field name="department_id" ref="uni_core.dept_eng3"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">1200.0</field>
+			<field name="study_fees">15500.0</field>
+		</record>
+		<record id="priv_deb_study_fees_line3_2018" model="uni.study_fees.departments">
+			<field name="faculty_id" ref="base_custom.conf_ncas12"></field>
+			<field name="department_id" ref="uni_core.dept_eng4"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">1200.0</field>
+			<field name="study_fees">19000.0</field>
+		</record>
+		<record id="priv_deb_study_fees_line4_2018" model="uni.study_fees.departments">
+			<field name="faculty_id" ref="base_custom.conf_ncas12"></field>
+			<field name="department_id" ref="uni_core.dept_eng5"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">1100.0</field>
+			<field name="study_fees">11000.0</field>
+		</record>
+		<record id="priv_deb_study_fees_line5_2018" model="uni.study_fees.departments">
+			<field name="faculty_id" ref="base_custom.conf_ncas12"></field>
+			<field name="department_id" ref="uni_core.dept_eng6"></field>
+			<field name="fees_id" ref="priv_study_fees_2018"></field>
+			<field name="registration_fees">2000.0</field>
+			<field name="study_fees">20000.0</field>
+		</record>
+		<!-->          End            of           public fees                     <-->
+	</data>
+</odoo>

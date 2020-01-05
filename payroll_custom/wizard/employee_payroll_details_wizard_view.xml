@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<!-- payroll report wizard -->
+	<record id="hr_employee_wizard_payroll_view" model="ir.ui.view">
+		<field name="name">hr.employee.reports.wizard.payroll.form</field>
+		<field name="model">hr.employee.reports.wizard.payroll</field>
+		<field name="arch" type="xml">
+			<form string="Employees Report">
+				<group col='2'>
+					<field name="date"/>
+                    <!-- <field name="month"/> -->
+                </group>
+ 			
+ 				<notebook>
+					<page string="Employees and Tags">
+						<group>
+							<field name="employee_ids" widget="many2many_tags" options="{'no_create': True}" domain="[('state','=', 'in_service')]"/>
+
+							<field name="category_ids" widget="many2many_tags" options="{'no_create': True}"/>
+
+							<field name="salary_structure_ids" widget="many2many_tags" options="{'no_create': True}"/>
+						</group>
+					</page>
+				</notebook>
+ 			
+				<footer>
+					<button name="print_report" string="Print" type="object" default_focus="1" class="oe_highlight"/>                or
+					<button string="Cancel" class="oe_link" special="cancel" />
+				</footer>
+			</form>
+		</field>
+	</record>
+	<record id="hr_employee_wizard_payroll_menu_action" model="ir.actions.act_window">
+		<field name="name">Payroll Details Reports</field>
+		<field name="res_model">hr.employee.reports.wizard.payroll</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">form</field>
+		<field name="target">new</field>
+	</record>
+
+	<menuitem id="hr_employee_wizard_payroll_menu" name="Payroll Report" action="hr_employee_wizard_payroll_menu_action" parent="hr_reports_menu" sequence="2"/>
+
+</odoo>

@@ -1,0 +1,53 @@
+<odoo>
+    <data>
+
+        <!--########################### FORM ########################-->
+        <record id="hr_custom_form" model="ir.ui.view">
+            <field name="name">Hr Job Custom Form</field>
+            <field name="model">hr.job</field>
+            <field name="inherit_id" ref="hr.view_hr_job_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="/form"  position="attributes">
+                    <attribute name="create">false</attribute>
+                </xpath>
+                <field name="name" position="after">
+                    <field name="request_number" class="oe_inline"/>
+                    <field name="department_id" class="oe_inline"/>
+                </field>
+                 <!--</xpath>-->
+            </field>
+        </record>
+
+        <!--########################## KANBAN ############################-->
+        <!--<record id="hr_custom_tree" model="ir.ui.view">-->
+            <!--<field name="name">Hr Job Custom Tree</field>-->
+            <!--<field name="model">hr.job</field>-->
+            <!--<field name="inherit_id" ref="hr_recruitment.view_hr_job_kanban"/>-->
+            <!--<field name="arch" type="xml">-->
+                <!--<xpath expr="/kanban"  position="attributes">-->
+                    <!--<attribute name="create">false</attribute>-->
+                <!--</xpath>-->
+            <!--</field>-->
+        <!--</record>-->
+
+        <!--##########################  TREE   #######################-->
+        <record model="ir.ui.view" id="job_position_custom_list">
+            <field name="name">Job Position</field>
+            <field name="model">hr.job</field>
+            <field name="arch" type="xml">
+                <tree create="false">
+                    <field name="request_number"/>
+                    <field name="department_id" />
+                </tree>
+            </field>
+        </record>
+
+        <!--##########################  ACTION   #######################-->
+        <record id="hr_recruitment.action_hr_job" model="ir.actions.act_window">
+            <field name="res_model">hr.job</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+
+    </data>
+</odoo>

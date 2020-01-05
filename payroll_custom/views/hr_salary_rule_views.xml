@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="hr_salary_rule_list" model="ir.ui.view">
+        <field name="name">hr.salary.rule.list</field>
+        <field name="model">hr.salary.rule</field>
+        <field name="inherit_id" ref="hr_payroll.hr_salary_rule_list" />
+        <field name="arch" type="xml">
+             <xpath expr="//tree" position="replace">
+               <tree string="Salary Rules">
+                <field name="name"/>
+                <field name="code"/>
+                <field name="category_id"/>
+                <field name="select_linked"/>
+                <field name="register_id"/>
+            </tree>
+            </xpath>
+        </field>
+    </record>
+    <record id="hr_salary_rule_form" model="ir.ui.view">
+        <field name="name">hr.salary.rule.form</field>
+        <field name="model">hr.salary.rule</field>
+        <field name="inherit_id" ref="hr_payroll.hr_salary_rule_form" />
+        <field name="arch" type="xml">
+             <xpath expr="//field[@name='amount_select']" position="after">
+                <field name="select_linked" attrs="{'invisible':[('amount_select','!=', 'fix')]}"/>
+            </xpath>
+            <field name="amount_fix"  position="attributes">
+                <attribute name="attrs">{'invisible':['|',('amount_select','!=','fix'),('select_linked','!=','fix')], 'required':[('amount_select','=','fix')]}</attribute>
+            </field>
+            <field name="quantity"  position="attributes">
+                <attribute name="attrs">{'invisible':['|',('amount_select','!=','fix'),('select_linked','!=','fix')], 'required':[('amount_select','=','fix')]}</attribute>
+            </field>
+            
+             <xpath expr="//page[@name='rules']" position="before">
+                 <page string="Salary Amount Configurations" attrs="{'invisible':[('select_linked','=', 'fix')]}">
+                    <field name="salary_amount_ids">
+                        <tree editable="top">
+                            <field name="job_id" 
+                               readonly='0'/>
+                            <field name="amount" readonly='0'/>
+                        </tree>
+                         <form>
+                            <field name="job_id" 
+                               readonly='0'/>
+                            <field name="amount" readonly='0'/>
+                        </form>
+                   </field>
+                 </page>
+            </xpath>
+            </field>
+            </record> 
+</odoo>

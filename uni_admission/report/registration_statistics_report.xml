@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="registration_statistics_report">
+		<t t-call="report.html_container">
+			<t t-call="report.internal_layout">
+				<div class="page">
+					<h3>
+                    	<u> Registration Statistics Report : </u>
+                    </h3>
+					<div class="row col-xs-12 " style="border:#000000 ; background-color:#60606c">
+                            <div class= "col-xs-4" style="color:#FFFAFA;">
+                                Faculti
+                            </div>
+                            <div class= "col-xs-1" style="color:#FFFAFA ;word-wrap: normal;">
+                                Total Student 
+                                <div class="row" style="font-size:5px;word-wrap: normal">
+                                    <div class="col-xs-2" >
+                                        <span style="font-size:5px;">
+                                        Registered
+
+                                        </span>
+                                    </div>
+                                    <div class="col-xs-2" >
+                                        <span style="font-size:5px;">
+                                        Not
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class= "col-xs-1" style="color:#FFFAFA ;word-wrap: normal;">
+                                level one
+                                <div class="row" style="font-size:5px;word-wrap: normal">
+                                    <div class="col-xs-2" >
+                                        Registered
+                                    </div>
+                                    <div class="col-xs-2" >
+                                        Not
+                                    </div>
+                                </div>                                
+                            </div>
+							<div class= "col-xs-1" style="color:#FFFAFA ;word-wrap: normal;">
+                                 Level Two
+                                 <div class="row" style="font-size:5px;word-wrap: normal">
+                                    <div class="col-xs-2" >
+                                        Registered
+                                    </div>
+                                    <div class="col-xs-2" >
+                                        Not
+                                    </div>
+                                </div>
+                            </div>
+							<div class= "col-xs-1" style="color:#FFFAFA;">
+                            	Third Level
+                                <div class="row" style="font-size:5px;word-wrap: normal">
+                                    
+                                    <div class="col-xs-2" >
+                                        Registered
+                                    </div>
+                                    <div class="col-xs-2" >
+                                        Not
+                                    </div>
+                                </div>
+                            </div>
+							<div class= "col-xs-1" style="color:#FFFAFA;">
+                            	 Level Four 
+                                 <div class="row" style="font-size:5px;word-wrap: normal">
+                                    <div class="col-xs-2" >
+                                        Registered
+                                    </div>
+                                    <div class="col-xs-2" >
+                                        Not
+                                    </div>
+                                </div>
+                            </div>
+							<div class= "col-xs-1" style="color:#FFFAFA;">
+                            	 level Five
+                                 <div class="row" style="font-size:5px;word-wrap: normal">
+                                    <div class="col-xs-2" >
+                                        Registered
+                                    </div>
+                                    <div class="col-xs-2" >
+                                        Not
+                                    </div>
+                                </div>
+                            </div>
+							<div class= "col-xs-1" style="color:#FFFAFA;">
+                            	 level Six
+                                 <div class="row" style="font-size:5px;word-wrap: normal">
+                                    <div class="col-xs-2" >
+                                        Registered
+                                    </div>
+                                    <div class="col-xs-2" >
+                                        Not
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                            
+                            <t t-foreach='docs.get_faculty()' t-as='faculty'>
+                            <div class="row col-xs-12 " style="border: 1px solid black;">
+                                    <div class= " col-xs-4" style="word-wrap: normal; font-size:8px;" >
+                                        <span t-esc="faculty.name"/> 
+                                    </div>
+                                    <div class= "col-xs-1" style=" ;word-wrap: normal;">
+                                        <div class="row" style="font-size:5px;word-wrap: normal">
+                                            <div class="col-xs-2" >
+                                                 <t t-set="total_fucalty" t-value="docs.get_students_of_faculty(level,faculty)"/>
+                                                <span style="font-size:5px;">
+                                                <span t-esc="total_fucalty[0]"/>
+                                                </span>
+                                            </div>
+                                            <div class="col-xs-2" >
+                                                <span style="font-size:5px;">
+                                                <span t-esc="total_fucalty[1]"/>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                <t t-foreach='docs.get_levels()' t-as='level'>
+                                    <t t-set="count" t-value="docs.get_students_counts(level,faculty)"/>
+                                    <div class= "col-xs-1" style=" ;word-wrap: normal;">
+                                        <div class="row" style="font-size:5px;word-wrap: normal">
+                                            <div class="col-xs-2" >
+                                                <span style="font-size:5px;">
+                                                <span t-esc="count[0]" />
+                                                </span>
+                                            </div>
+                                            <div class="col-xs-2" >
+                                                <span style="font-size:5px;">
+                                                <span t-esc="count[1]" />
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </t>
+                                <br/>
+                            </div>
+                            </t>
+                            <div class="row col-xs-12 " style="border:#000000 ; background-color:#60606c">
+                                <div class= "col-xs-4" style="color:#FFFAFA;">
+                                Total
+                                </div>
+                            </div>
+                            
+				</div>
+			</t>
+		</t>
+	</template>
+</odoo>

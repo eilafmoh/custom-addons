@@ -1,0 +1,13 @@
+<?xml version="1.0" ?>
+<openerp>
+    <data noupdate='1'>
+		
+		 <record id="ir_seq_hr_custody_seq" model="ir.sequence">
+            <field name="name">hr custody</field>
+            <field name="code">hr.custody.seq</field>
+            <field name="prefix">CNO</field>
+            <field name="padding">3</field>
+        </record>
+		
+	</data>
+</openerp>

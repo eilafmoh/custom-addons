@@ -1,0 +1,140 @@
+<odoo>
+	<data>
+		<record id="uni_admission_view_form" model="ir.ui.view">
+			<field name="name">uni.admission.form</field>
+			<field name="model">uni.admission</field>
+			<field name="arch" type="xml">
+				<form string="Admission Request" create="0">
+					<header>
+						<field name="state" widget="statusbar" statusbar_visible="form,committee,reg_office,reg_form,payment,clinic,done"/>
+
+						<button name="approve" string="Submit" type="object" states="draft" />
+						<button name="clinic_approval" string="Approve" type="object" states="clinic" groups="uni_health_service.uni_group_medical_admin"/>
+						<button name="committee_approval" string="Accept" type="object" groups="uni_admission.uni_group_commitee_user" states="committee" />
+						<button name="reg_confirmation" string="Confirm" type="object" groups="uni_admission.uni_group_reg_user" states="reg_office" />
+						<button name="cancel_addmission" class="btn-danger" states="committee" string="Refuse" confirm="Are you sure you want to cancel student admission?" type="object" icon="fa-times-circle text-danger"/>
+					</header>
+					<sheet>
+						<div class="oe_title">
+							<!-- <label for="name" class="oe_edit_only"/> -->
+							<h1>
+								<field name="student_id" class="oe_inline" options="{'no_create': True}" attrs="{'required':[('state','=','draft')],'readonly':[('state','!=','draft')]}"/>
+							</h1>
+						</div>
+						<group col="4">
+							<field name="student_name" readonly="1"/>
+							<field name="faculty_id" readonly="1" options="{'no_create': True}"/>
+							<field name="department_id" options="{'no_create': True}" />
+							<field name="specialization_id" options="{'no_create': True}" attrs="{'readonly':[('state','!=','committee')]}"  invisible="1"/>
+						</group>
+						<separator string="Admission Details"/>
+						<group col="4">
+							<field name="certificate_type_id" options="{'no_create': True}" readonly="1"/>
+							<field name="year_id" options="{'no_create': True}"/>
+							<field name="add_fees" options="{'no_create': True}" attrs="{'invisible':[('state','not in',['reg_office','reg_form'])]}" widget="many2many_tags"/>
+							<field name="category_id" options="{'no_create': True}" attrs="{'invisible':[('state','not in',['reg_office','reg_form'])]}" widget="many2many_tags"/>
+							<field name="have_brother" attrs="{'invisible':[('state','in',['draft','form','clinic'])]}"/>
+							<field name="is_installment" attrs="{'readonly':[('state','!=','committee')]}" invisible='1'/>
+						</group>
+						<notebook>
+							<page string="Faculty Committee" attrs="{'invisible':[('state','in',['draft','form'])]}">
+								<field name="committee_notes" attrs="{'readonly':[('state','!=','committee')]}"/>
+							</page>
+							<page string="Clinic" attrs="{'invisible':[('state','in',['draft','form','committee','reg_form','reg_office'])]}">
+								<group>
+									<field name="medical_condition" attrs="{'required':[('state','=','clinic')],'readonly':[('state','!=','clinic')], 'required':[('state','=','clinic')]}" widget="radio"/>
+									<field name="clinic_notes" attrs="{'readonly':[('state','!=','clinic')],'required':[('medical_condition','=','wait')]}"/>
+								</group>
+							</page>
+							<page string="Student Fees" attrs="{'invisible':[('state','in',['draft','form','clinic','committee'])]}">
+								<field name="fees_ids">
+									<tree>
+										<field name="level_id" options="{'no_create': True}"/>
+										<field name="semester_id" options="{'no_create': True}" />
+										<field name="registration_fees" />
+										<field name="study_fees"/>
+										<field name="other_fees"/>
+										<field name="discount"/>
+										<field name="other_discount"  widget="many2many_tags"/>
+										<field name="sub_total"/>
+										<field name="paid_amount"/>
+										<field name="residual_amount"/>
+										<field name="paid"/>
+										<field name="payment_date"/>
+										
+									</tree>
+								</field>
+							</page>
+
+							<page string="Secondary Subject" attrs="{'invisible':[('state','in',['draft','form','clinic'])]}">
+								<field name="sec_subject">
+									<tree>
+										<field name="name" options="{'no_create': True}"/>
+										<field name="degree"/>
+									</tree>
+								</field>
+							</page>
+
+							<page string="Brother Details" attrs="{'invisible':[('have_brother' ,'!=', True)]}">
+								<field name="bro_detail_ids">
+									<tree editable="bottom">
+										<field name="name" />
+										<field name="level_id" options="{'no_create': True}"/>
+									</tree>
+								</field>
+							</page>
+					
+					
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+		<record model="ir.ui.view" id="uni_admission_view_tree">
+			<field name="name">uni.admission.tree</field>
+			<field name="model">uni.admission</field>
+			<field name="arch" type="xml">
+				<tree create="0" decoration-success="state == 'done'" decoration-danger="state == 'cancel'" decoration-info="state == 'form'">
+					<field name="university_id"/>
+					<field name="student_name"/>
+					<field name="faculty_id"/>
+					<field name="department_id"/>
+					<!-- <field name="specialization_id"  invisible="1"/> -->
+					<field name="certificate_type_id"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+		<record id="uni_admission_view_search" model="ir.ui.view">
+			<field name="name">uni.admission.search</field>
+			<field name="model">uni.admission</field>
+			<field name="arch" type="xml">
+				<search string="Search Admission">
+					<group expand="0" string="Group By">
+						<field name="university_id"/>
+						<filter string="Faculty" name="groupby_faculty" domain="[]" context="{'group_by':'faculty_id'}"/>
+						<filter string="Department" name="groupby_department" domain="[]" context="{'group_by':'department_id'}"/>
+						<filter string="Certificate Type" name="groupby_certificate" domain="[]" context="{'group_by':'certificate_type_id'}"/>
+						<filter string="State" name="groupby_state" domain="[]" context="{'group_by':'state'}"/>
+					</group>
+				</search>
+			</field>
+		</record>
+		<!-- actions opening views on models -->
+		<record model="ir.actions.act_window" id="uni_admission_action">
+			<field name="name">Admission Requests</field>
+			<field name="res_model">uni.admission</field>
+			<field name="view_mode">tree,form</field>
+
+		</record>
+		<!-- admission request menues -->
+		<menuitem name="Admission" id="uni_admission_view_menu" sequence="2" 
+		parent="uni_admission_admissions_menu"/>
+		<menuitem name="Admission Requests" id="admission_request_menu" 
+		parent="uni_admission_view_menu" action="uni_admission_action"/>
+	</data>
+</odoo>

@@ -1,0 +1,118 @@
+<odoo>
+    <data>    
+        <record id="hr_rule_initial" model="hr.salary.rule">
+            <field name="name">Initial Salary</field>
+            <field name="sequence" eval="1"/>
+            <field name="code">INIT</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.wage * 0.36</field>
+        </record>
+
+        <record id="hr_rule_cola" model="hr.salary.rule">
+            <field name="name">Cost of living</field>
+            <field name="sequence" eval="2"/>
+            <field name="code">Cola</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.wage * 0.23</field>
+        </record>
+
+        <record id="hr_rule_housing" model="hr.salary.rule">
+            <field name="name">Housing</field>
+            <field name="sequence" eval="3"/>
+            <field name="code">HOUS</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.wage * 0.21</field>
+        </record>
+
+        <record id="hr_rule_transport" model="hr.salary.rule">
+            <field name="name">Transportation</field>
+            <field name="sequence" eval="4"/>
+            <field name="code">TRAN</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.wage * 0.20</field>
+        </record>
+
+        <!-- Salary Structure Rules -->
+        <!-- <record id="hr_rule_outsourcing" model="hr.salary.rule">
+            <field name="name">Outsourcing</field>
+            <field name="sequence" eval="5"/>
+            <field name="code">OUT-Sour</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.outsourcing_allowance</field>
+        </record>
+
+        <record id="hr_rule_office" model="hr.salary.rule">
+            <field name="name">Office Hours</field>
+            <field name="sequence" eval="6"/>
+            <field name="code">OFFICE </field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.office_hour</field>
+        </record>
+
+        <record id="hr_rule_research" model="hr.salary.rule">
+            <field name="name">Research and Books</field>
+            <field name="sequence" eval="7"/>
+            <field name="code">BOOKS</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.research_books</field>
+        </record>
+
+        <record id="hr_rule_calling" model="hr.salary.rule">
+            <field name="name">Phone Allowance</field>
+            <field name="sequence" eval="8"/>
+            <field name="code">PHONE</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.phone_allowance</field>
+        </record>
+
+        <record id="hr_rule_clothing" model="hr.salary.rule">
+            <field name="name">Clothing</field>
+            <field name="sequence" eval="9"/>
+            <field name="code">Colthing</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.clothing</field>
+        </record>
+
+        <record id="hr_rule_medical" model="hr.salary.rule">
+            <field name="name">Medical Allowance</field>
+            <field name="sequence" eval="10"/>
+            <field name="code">MEDICAL</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.medical_allowance </field>
+        </record>
+
+        <record id="hr_rule_secr" model="hr.salary.rule">
+            <field name="name">Secretariat</field>
+            <field name="sequence" eval="11"/>
+            <field name="code">Secret</field>
+            <field name="category_id" ref="hr_payroll.ALW"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.secret </field>
+        </record> -->
+    </data>
+</odoo>
+
+
+
+

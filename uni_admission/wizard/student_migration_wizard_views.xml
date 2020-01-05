@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="student_migration_wizard_view_form" model="ir.ui.view">
+		<field name="name">student.migration.wizard.form</field>
+		<field name="model">student.migration.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Student Migration">
+				<group col="4">
+					<field name="certificate_type_id" options="{'no_create': True}"/>
+					<field name="year_id" options="{'no_create': True}"/>
+				</group>
+				<p class="oe_grey">Once you click on "Migrate" new student records will be created for the selected records </p>
+				<footer>
+					<button name="process_migrate" string="Migrate" type="object" default_focus="1" class="oe_highlight" />
+					<button string="Cancel" class="btn-default" special="cancel"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+	<act_window id="action_student_migration_wizard" name="Migrate Students" res_model="student.migration.wizard" src_model="student.migration" view_mode="form" multi="True" target="new" key2="client_action_multi" />
+</odoo>

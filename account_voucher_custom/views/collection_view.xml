@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+	<data>
+		<!-- ############## customer check views ###################-->
+
+		<record id="customer_check_form" model="ir.ui.view">
+			<field name="name">Customer check</field>
+			<field name="model">customer.check</field>
+			<field name="arch" type="xml">
+				<form >
+					<header>
+						<button name="draft_customer" string="Validate" states="draft" class="oe_highlight" type="object"/>
+						<button name="open_customer" string="Merge" states="open" class="oe_highlight" type="object"/>
+						<button name="merge_customer" string="Paid" states="marged" class="oe_highlight" type="object"/>
+						<!-- confirm="Are you sure you want to cancel this receipt?" -->
+
+						<field name="state" widget="statusbar" statusbar_visible="draft,open,paid,cancel,marged" statusbar_colors='{"draft":"blue"}'/>
+					</header>
+					<sheet>
+						<div class="oe_title">
+							<h1>
+								<field name="name" class="oe_inline" attrs="{'invisible': [('state', '=', 'draft')]}" readonly="1"/>
+							</h1>
+						</div>
+						<group col="4">
+							<field name="date" />
+							<field name="partner_id" colspan="2" attrs="{'readonly':[('state','!=','draft')]}"/>
+						</group>
+						<group col="4">
+							<field name="currency_id" options="{'no_create': True, 'no_open': True}" groups="base.group_multi_currency"/>
+							<field name="total_amount"/>
+							<field name="paid_amount"/>
+							<field name="advance_amount" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="amount"/>
+						</group>
+						<group col="4">
+							<field name="with_equal_periods" />
+							<field name="periods" widget="radio" attrs="{'invisible':[('with_equal_periods', '=', False)]}"/>
+						</group>
+						<group col="4">
+							<field name="monthes" attrs="{'invisible':[('with_equal_periods', '=', False)]}"/>
+							<field name="start_date" attrs="{'required':[('with_equal_periods', '=', True)], 'invisible':[('with_equal_periods', '=', False)]}"/>
+						</group>
+						<group>
+							<button name="create_check" icon="fa-gear" type="object" class="oe_highlight" string="Create Checks" attrs="{'invisible':['|',('with_equal_periods', '=', False),('state','!=','draft')]}"/>
+						</group>
+						<group col="2">
+							<field name="serilaization" attrs="{'readonly':[('state','!=','draft')]}" />
+						</group>
+
+						<group col="4">
+							<field name="serial_amount" attrs="{'readonly':[('state','!=','draft')],'invisible':[('serilaization', '=', False)]}"/>
+							<field name="check_number" attrs="{'readonly':[('state','!=','draft')],'invisible':[('serilaization', '=', False)]}"/>
+							<button name="amount_check_number" string="Add Amount and check Nubmer" class="oe_highlight" type="object" attrs="{'invisible':['|',('state','!=','draft'), ('serilaization','=',False)]}"/>
+						</group>
+						<separator name="serlization"/>
+						<group col="4">
+							<field name="rak_number" attrs="{'invisible':[('serilaization', '=', False)]}"/>
+							<button name="add_rak_num" string="Add Rack Number" type="object" attrs="{'invisible':[('serilaization','=',False)]}" class="oe_highlight"/>
+							<separator name="numbring"/>
+							<field name="last_batch_number" string="Frist batch number"/>
+							<button name="check_description" string="Add check Description" type="object" class="oe_highlight"/>
+							<separator name="description"/>
+						</group>
+						<notebook>
+							<page string="Check Lines" name="check_lines">
+								<field name="check_lines" attrs="{'readonly':[('state','!=','draft')]}">
+									<tree string="check Lines" editable="bottom" decoration-success="check_status =='paid'" decoration-primary="check_status == 'schedule'" decoration-danger="check_status =='revise'" decoration-muted="check_status =='merge'">
+										<field name="date"/>
+										<field name="due_date"/>
+										<field name="description"/>
+										<field name="amount"/>
+										<field name="amount_base_currency"/>
+										<field name="paid_amount"/>
+										<field name="differance"/>
+										<field name="check_number"/>
+										<field name="rack"/>
+										<field name="move_ids"/>
+										<field name="check_status" readonly="1"/>
+										<field name="move_check"/>
+										<button name="create_move" icon="fa-chevron-circle-right" attrs="{'invisible':['|','|',('check_status','=','paid'),('check_status','=','revise'),('check_status','=','merge')]}" string="Create Move" type="object"/>
+										<button name="print_payment_report" icon="fa-download" attrs="{'invisible':[('move_ids', '=', [])]}" string="Print Payment" type="object"/>
+									</tree>
+								</field>
+
+								<group class="oe_subtotal_footer oe_right" colspan="2" name="summation">
+									<group>
+										<field name="amount_posted" widget='monetary'/>
+										<field name="amount_due" widget='monetary'/>
+									</group>
+								</group>
+							</page>
+							<page string="Marge Information">
+								<field name="check_line_id"/>
+								<field name="related_lines"/>
+							</page>
+							<page string="Other Info" name="other">
+								<group>
+									<field name="move_id" readonly="1"/>
+								</group>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers" groups="base.group_user"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record>
+
+		<record id="customer_check_tree" model="ir.ui.view">
+			<field name="name">customer check</field>
+			<field name="model">customer.check</field>
+			<field name="priority">4</field>
+			<field name="arch" type="xml">
+				<tree string="Customer Check" decoration-success="state =='paid'" decoration-primary="state == 'open'" decoration-danger="state =='draft'" decoration-muted="state =='cancel'">
+					<field name="date" />
+					<field name="partner_id"/>
+					<field name="amount" />
+					<field name="amount_posted"/>
+					<field name="amount_due"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="customer_check_graph_view" model="ir.ui.view">
+			<field name="name">customer_check_graph</field>
+			<field name="model">customer.check</field>
+			<field name="arch" type="xml">
+				<graph string="customer check" type="bar">
+					<field name="amount" type="row"/>
+					<field name="paid_amount" type="measure"/>
+				</graph>
+			</field>
+		</record>
+
+		<record id="customer_check_action" model="ir.actions.act_window">
+			<field name="name">Customer check</field>
+			<field name="res_model">customer.check</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem name="Cashier Management" id="collection_management_root" sequence="4"/>
+		<menuitem name="Cashier Management" id="check_collection_menu" parent="collection_management_root" sequence="2"/>
+		<menuitem action="customer_check_action" icon="STOCK_JUSTIFY_FILLf" sequence="1" id="customer_check_menu" parent="check_collection_menu" />
+
+		<record id="customer_check_line_form" model="ir.ui.view">
+			<field name="name">customer.check.line</field>
+			<field name="model">customer.check.line</field>
+			<field name="arch" type="xml">
+				<form string="Customer Check">
+					<group>
+						<field name="date"/>
+						<field name="due_date"/>
+						<field name="description"/>
+						<field name="check_number"/>
+						<field name="rack"/>
+						<field name="amount"/>
+						<field name="paid_amount"/>
+						<field name="customer_bank"/>
+						<field name="move_ids"/>
+					</group>
+				</form>
+			</field>
+		</record>
+
+		<record id="customer_check_line_tree" model="ir.ui.view">
+			<field name="name">customer check</field>
+			<field name="model">customer.check.line</field>
+			<field name="domain">[('check_status','=','schedule')]</field>
+			<field name="priority">5</field>
+			<field name="arch" type="xml">
+				<tree string="Customer Checks" colors="grey:check_status=='cancel';blue:check_status in 'open';green:check_status in 'paid'">
+					<field name="date" />
+					<field name="due_date"/>
+					<field name="partner_id"/>
+					<field name="description"/>
+					<field name="check_number" string="#Ref"/>
+					<field name="rack" string="Rack"/>
+					<field name="amount" sum="total amount" string="amount"/>
+					<field name="check_status"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="customer_check_revise_tree" model="ir.ui.view">
+			<field name="name">Customer check</field>
+			<field name="model">customer.check.line</field>
+			<field name="priority">6</field>
+			<field name="arch" type="xml">
+				<tree create="0">
+					<field name="due_date"/>
+					<field name="partner_id"/>
+					<field name="description"/>
+					<field name="check_number"/>
+					<field name="rack" string="Rack"/>
+					<field name="revise_reson"/>
+					<field name="amount" sum="total amount" string="total"/>
+				</tree>
+			</field>
+		</record>
+
+		<record id="customer_check_action_test" model="ir.actions.act_window">
+			<field name="name">Customer check</field>
+			<field name="res_model">customer.check.line</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<record id="customer_check_revise" model="ir.actions.act_window">
+			<field name="name">Revise check</field>
+			<field name="res_model">customer.check.line</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="view_type">form</field>
+			<field name="domain">[('check_status','=','revise')]</field>
+			<field name="view_id" ref="customer_check_revise_tree"/>
+			<field name="view_mode">tree,form</field>
+		</record>
+
+		<menuitem name="Revise Check" id="revise_check_menu" action="customer_check_revise" parent="check_collection_menu" sequence="3"/>
+
+		<record id="check_Date_edit_form_view" model="ir.ui.view">
+			<field name="name">check wizard form</field>
+			<field name="model">check.edit</field>
+			<field name="arch" type="xml">
+				<form string="Un Delivered Checks">
+
+					<group colspan="2" col="2">
+						<field name="selection" widget="radio" string="Edit type"/>
+						<field name="partner_id" required="True" />
+
+						<field name="check_lines2" domain="[('line_id','=',partner_id),'|',('check_status','=','paid'),('check_status','=','revise')]" attrs="{'invisible':[('selection', '=', 'date')]}"/>
+
+						<field name="move_line"/>
+
+						<field name="new_status" attrs="{'invisible':[('selection', '=', 'date')]}" />
+
+						<field name="check_lines" domain="[('line_id','=',partner_id),'|',('check_status','=','schedule'),('check_status','=','paid')]" attrs="{'invisible':[('selection', '=', 'status')]}" />
+						<field name="revise_reson" attrs="{'invisible':['|',('selection', '=', 'date'),('new_status','=','open')]}" />
+
+					</group>
+					<group>
+						<field name="new_date" attrs="{'invisible':[('selection', '=', 'status')],'required':[('selection', '=', 'date')]}" string="New Date"/>
+						<h2 attrs="{'invisible':[('selection', '=', 'date')]}">By choise status you will be aple to change check status  </h2>
+					</group>
+					<footer>
+						<button name="edit_checks" string="Edit checks" type="object" class="oe_highlight"/>
+                            or
+						<button string="Cancel" class="oe_link" special="cancel" icon="fa-ban"/>
+					</footer>
+				</form>
+			</field>
+		</record>
+
+		<record id="check_edit_action" model="ir.actions.act_window">
+			<field name="name">Edit check status or check due Date</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">check.edit</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">form,tree</field>
+			<field name="view_id" ref="check_Date_edit_form_view"/>
+			<field name="context">{}</field>
+			<field name="target">new</field>
+		</record>
+
+		<menuitem name="Check Edition" id="check_revise_menu" action="check_edit_action" parent="check_collection_menu" sequence="2"/>
+
+	</data>
+</odoo>

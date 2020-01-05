@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="deduction_report">
+            <t t-call="web.html_container">
+                <t t-call="web.internal_layout">
+                <t t-foreach="docs" t-as="doc">
+                    <div class="page">
+                        
+                        <div>
+                            <br/>
+                            <br/>
+                            <h3 class="text-center">Dedution Report</h3>
+                            <br/>
+                            <br/>
+                        </div>
+
+                        <div style="float:left;">
+                            <strong >Date :   </strong>
+                            <span style="!important; " t-raw="doc.date"/>
+                        </div>
+
+                        <div style="float:right;">
+                            <span style="!important;" t-raw="doc.name"/>
+                        </div>
+                        <br/><br/>
+
+                        <div style="float:left">
+                            <strong>Employee:</strong>
+                                <span t-field="doc.employee_id.name"/>
+                        </div>
+                        <div style="float:right;margin-right:500px">
+                            <strong>Manager:</strong>
+                                <span t-field="doc.parent_id.name"/>
+                        </div>
+                        <br/><br/>
+                        <div style="float:left">
+                            <strong>Department:</strong>
+                                <span t-field="doc.department_id.name"/>
+                        </div>
+                        <div style="float:right;margin-right:390px">
+                            <strong>Job Position:</strong>
+                                <span t-field="doc.job_id.name"/>
+                        </div>
+                        <br/><br/>
+                        <div>
+                            <strong>Deduction Type:</strong>
+                                <span t-field="doc.type_id.name"/>
+                        </div>
+                        <br/>
+
+                        <div>
+                            <div t-if="doc.deducted_by != 'hours'">
+                                <strong>Amount : </strong>
+                                <span t-field="doc.amount"/>
+                            </div>
+
+                            <div t-else="">
+                                <strong >Deduct Hours : </strong>
+                                <span t-field="doc.hours_ded"/>
+                                <strong style="margin-left:300px;">Deduct Amount : </strong>
+                                <span t-field="doc.de_amount"/>
+
+                            </div>
+                        </div>
+                    </div>
+                </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

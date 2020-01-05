@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="1">
+        <record id="contrib_register_employees_dedc" model="hr.contribution.register">
+            <field name="name">Employees Ram</field>
+            <field name="partner_id" eval="False"/>
+        </record>
+
+         <record id="GROSS_SALARY" model="hr.salary.rule.category">
+            <field name="name">Gross Salary</field>
+            <field name="code">GROSS_SALARY</field>
+        </record>
+
+
+
+        <record id="BASIC_SALARY" model="hr.salary.rule.category">
+            <field name="name">Basic Salary</field>
+            <field name="code">BASIC_SALARY</field>
+        </record>
+
+
+
+        <record id="COLA" model="hr.salary.rule.category">
+            <field name="name">Cola</field>
+            <field name="code">COLA</field>
+        </record>
+
+        <record id="TRANS" model="hr.salary.rule.category">
+            <field name="name">Trans</field>
+            <field name="code">TRANS</field>
+        </record>
+        <record id="GRANT_1" model="hr.salary.rule.category">
+            <field name="name">Grant-1</field>
+            <field name="code">GRANT_1</field>
+        </record>
+
+
+        
+        <record id="SOCIAL_INSURANCE_EMPL" model="hr.salary.rule.category">
+            <field name="name">Social Insurance</field>
+            <field name="code">hr_deduction</field>
+        </record>
+
+        <record id="SOCIAL_INSURANCE_dedc" model="hr.salary.rule.category">
+            <field name="name">Social Insurance company</field>
+            <field name="code">SOCIAL_INSURANCE_dedc</field>
+        </record>
+        
+        <record id="INCOME_TAX" model="hr.salary.rule.category">
+            <field name="name">Income Tax</field>
+            <field name="code">INCOME_TAX</field>
+        </record>
+
+
+        <record id="SALARY_ADVANCE" model="hr.salary.rule.category">
+            <field name="name">Salary Advance</field>
+            <field name="code">SALARY_ADVANCE</field>
+        </record>
+
+        <record id="LAON" model="hr.salary.rule.category">
+            <field name="name">Laon</field>
+            <field name="code">LAON</field>
+        </record>
+        <record id="DEDUCTION" model="hr.salary.rule.category">
+            <field name="name">Deduction</field>
+            <field name="code">DEDUCTION</field>
+        </record>
+          <record id="T_DEDUCTION" model="hr.salary.rule.category">
+            <field name="name">T. Deduction</field>
+            <field name="code">T_DEDUCTION</field>
+        </record>
+
+
+        <record id="NET_SALARY" model="hr.salary.rule.category">
+            <field name="name">Net Salary</field>
+            <field name="code">NET_SALARY</field>
+        </record>
+        <record id="GRANT" model="hr.salary.rule.category">
+            <field name="name">Grant</field>
+            <field name="code">GRANT</field>
+        </record>
+        <record id="TOTAL" model="hr.salary.rule.category">
+            <field name="name">Total</field>
+            <field name="code">TOTAL</field>
+        </record>
+        
+        <record id="hr_rule_GROSS_SALARY" model="hr.salary.rule">
+            <field name="name">Gross Salary</field>
+            <field name="sequence" eval="5"/>
+            <field name="code">GROSS_SALARY</field>
+            <field name="category_id" ref="hr_deduction.GROSS_SALARY"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.wage</field>
+        </record>
+
+        <record id="hr_rule_BASIC_SALARY" model="hr.salary.rule">
+            <field name="name">Basic Salary</field>
+            <field name="sequence" eval="1"/>
+            <field name="code">BASIC_SALARY</field>
+            <field name="category_id" ref="hr_deduction.BASIC_SALARY"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.wage * 0.40 </field>
+        </record>
+
+        <record id="hr_rule_COLA" model="hr.salary.rule">
+            <field name="name">COLA</field>
+            <field name="sequence" eval="2"/>
+            <field name="code">COLA</field>
+            <field name="category_id" ref="hr_deduction.COLA"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.wage * 0.25 </field>
+        </record>
+
+        <record id="hr_rule_TRANS" model="hr.salary.rule">
+            <field name="name">Trans</field>
+            <field name="sequence" eval="3"/>
+            <field name="code">TRANS</field>
+            <field name="category_id" ref="hr_deduction.TRANS"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.wage * 0.20 </field>
+        </record>
+
+        <record id="hr_rule_GRANT_1" model="hr.salary.rule">
+            <field name="name">GRANT_1</field>
+            <field name="sequence" eval="4"/>
+            <field name="code">GRANT_1</field>
+            <field name="category_id" ref="hr_deduction.GRANT_1"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.wage * 0.15 </field>
+        </record>
+        <record id="hr_rule_SOCIAL_INSURANCE_EMPL" model="hr.salary.rule">
+            <field name="name">Social Insurance</field>
+            <field name="sequence" eval='6'/>
+            <field name="code">SOCIAL_INSURANCE_EMPL</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.wage * 0.08
+             </field>
+
+        </record>
+            <record id="hr_rule_SOCIAL_INSURANCE_dedcL" model="hr.salary.rule">
+            <field name="name">Social Insurance dedc</field>
+            <field name="sequence" eval="7"/>
+            <field name="code">SOCIAL_INSURANCE_dedc</field>
+            <field name="category_id" ref="hr_deduction.SOCIAL_INSURANCE_dedc"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.wage * 0.17
+             </field>
+
+        </record>
+
+        <record id="hr_rule_INCOME_TAX" model="hr.salary.rule">
+            <field name="name">Income Tax</field>
+            <field name="sequence" eval="8"/>
+            <field name="code">INCOME_TAX</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.wage * contract.taxpart
+            </field>
+        </record>
+
+        <record id="hr_rule_Deduction" model="hr.salary.rule">
+            <field name="name">DEDUCTION</field>
+            <field name="sequence" eval="9"/>
+            <field name="code">DEDUCTION</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = (inputs.LOAN and  inputs.DEDUCTION.amount )
+            </field>
+        </record>              
+
+        <record id="hr_rule_LAON" model="hr.salary.rule">
+            <field name="name">Laon</field>
+                <field name="sequence" eval="10"/>
+                <field name="code">LAON</field>
+                <field name="category_id" ref="hr_payroll.DED"/>
+                <field name="condition_select">none</field>
+                <field name="amount_select">code</field>
+                <field name="amount_python_compute">result =(inputs.LOAN and inputs.LOAN.amount)
+            </field>
+        </record>
+
+    
+        <record id="hr_rule_SALARY_ADVANCE" model="hr.salary.rule">
+            <field name="name">SALARY_ADVANCE</field>
+                <field name="sequence" eval="11"/>
+                <field name="code">SALARY_ADVANCE</field>
+                <field name="category_id" ref="hr_payroll.DED"/>
+                <field name="condition_select">none</field>
+                <field name="amount_select">code</field>
+
+                <field name="amount_python_compute">result =(inputs.SALARY_ADVANCE and inputs.SALARY_ADVANCE.amount)
+
+            </field>
+        </record>
+
+        <record id="hr_rule_T_DEDUCTION" model="hr.salary.rule">
+            <field name="name">T. Debuction</field>
+            <field name="sequence" eval="12"/>
+            <field name="code">T_DEDUCTION</field>
+            <field name="category_id" ref="hr_deduction.T_DEDUCTION"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = categories.DED  </field>
+            <!--  categories.STAMP + categories.SOCIAL_INSURANCE + categories.INCOME_TAX + categories.CSSF + categories.MEDICAL_INSURANCE  + categories.PURCHASING + categories.SANCTION + categories.LAON_DED -->
+        </record>
+      
+        <record id="hr_rule_NET_SALARY" model="hr.salary.rule">
+            <field name="name">Net Salary</field>
+            <field name="sequence" eval="13"/>
+            <field name="code">NET_SALARY</field>
+            <field name="category_id" ref="hr_deduction.NET_SALARY"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = categories.GROSS_SALARY -categories.T_DEDUCTION </field > 
+        </record>
+
+        <record id="hr_rule_GRANT" model="hr.salary.rule">
+            <field name="name">GRANT</field>
+            <field name="sequence" eval="14"/>
+            <field name="code">GRANT</field>
+            <field name="category_id" ref="hr_deduction.GRANT"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = contract.grant / 10  </field>
+        </record>
+
+         <record id="hr_rule_TOTAL_SALARY" model="hr.salary.rule">
+            <field name="name">Total</field>
+            <field name="sequence" eval="55"/>
+            <field name="code">TOTAL</field>
+            <field name="category_id" ref="hr_deduction.TOTAL"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = categories.NET_SALARY + categories.GRANT</field >
+
+
+            <field name="register_id" ref="hr_payroll.contrib_register_employees"/>
+
+        </record>
+
+   <!-- /           Salary Structure  -->
+         <record id="hr_payroll.structure_base_dedc" model="hr.payroll.structure">
+            <field name="code">SALARY</field>
+            <field name="name">Salary structures sudan </field>
+            <field eval="[(6, 0, [
+                ref('hr_deduction.hr_rule_BASIC_SALARY'), 
+                ref('hr_deduction.hr_rule_COLA'), 
+                ref('hr_deduction.hr_rule_TRANS'), 
+                ref('hr_deduction.hr_rule_GRANT_1'), 
+                ref('hr_deduction.hr_rule_GROSS_SALARY'), 
+                ref('hr_deduction.hr_rule_SOCIAL_INSURANCE_EMPL'), 
+                ref('hr_deduction.hr_rule_SOCIAL_INSURANCE_dedcL'), 
+                ref('hr_deduction.hr_rule_INCOME_TAX'), 
+                ref('hr_deduction.hr_rule_Deduction'), 
+                ref('hr_deduction.hr_rule_LAON'), 
+                ref('hr_deduction.hr_rule_SALARY_ADVANCE'), 
+                ref('hr_deduction.hr_rule_T_DEDUCTION'), 
+                ref('hr_deduction.hr_rule_NET_SALARY'), 
+                ref('hr_deduction.hr_rule_GRANT'), 
+                ref('hr_deduction.hr_rule_TOTAL_SALARY'), 
+                ])]" name="rule_ids"
+            />
+            <field name="company_id" ref="base.main_company"/>
+        </record>
+
+
+
+
+
+        <record id="hr_rule_ded" model="hr.salary.rule">
+            <field name="name">DED</field>
+            <field name="sequence" eval="100"/>
+            <field name="code">ded</field>
+            <field name="category_id" ref="hr_payroll.DED"/>
+            <field name="condition_select">none</field>
+            <field name="amount_select">code</field>
+            <field name="amount_python_compute">result = payslip.total_amount_ded</field>
+        </record>
+    </data>
+</openerp>

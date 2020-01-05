@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_qualification,hr.qualification,model_hr_qualification,,1,1,1,1
+access_hr_employee_qualification,hr.employee.qualification,model_hr_employee_qualification,,1,1,1,1
+access_excel_extended,excel.extended,payroll_custom.model_excel_extended_report,,1,1,1,1
+access_hr_overtime,hr.overtime,payroll_custom.model_hr_overtime,,1,1,1,1
+access_hr_employee_promotion,hr.employee.promotion,payroll_custom.model_hr_employee_promotion,,1,1,1,1
+access_hr_salary_amount,hr.salary.amount,payroll_custom.model_hr_salary_amount,,1,1,1,1

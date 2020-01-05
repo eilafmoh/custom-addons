@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<report id="action_general_report" model="uni_admission.general_report.wizard" string="General Report" report_type="qweb-pdf" name="uni_admission.general_report" file="uni_admission.general_report" />
+	<report id="action_registration_statistics_report" model="uni_admission.registration_statistics.wizard" string="Registration Statistics Report" report_type="qweb-pdf" name="uni_admission.registration_statistics_report" file="uni_admission.registration_statistics_report" />
+	<report id="action_tution_fees_report" model="uni.study_fees" string="Tuition fees" report_type="qweb-pdf" name="uni_admission.tution_fees_report" file="uni_admission.tution_fees_report" />
+	<report id="action_admission_statistical_report" model="admission.statistical.wizard" string="Admission Statistical" report_type="qweb-pdf" name="uni_admission.admission_statistical" file="uni_admission.admission_statistical_report" />
+	<report id="action_admission_statistical_detailed_report" model="admission.statistical.detailed.wizard" string="Admission Statistical Detailed" report_type="qweb-pdf" name="uni_admission.admission_statistical_detailed" file="uni_admission.admission_statistical_detailed_report" />
+	<report id="action_collage_share_report" model="collage.share.wizard" string="Collage Share" report_type="qweb-pdf" name="collage_share.report" file="uni_admission.collage_share_report" />
+
+	<report
+        id="payment_report"
+        model="account.voucher"
+        string="Print Receipt"
+        report_type="qweb-pdf"
+        name="uni_admission.payment_report_template"
+        file="uni_admission.payment_report_template"
+    />
+
+    <report id="student_statement" string="Student Payment Statment" model="uni.student" report_type="qweb-html" file="uni_admission.student_statement_report" name="uni_admission.student_statement_report"/>
+
+</odoo>

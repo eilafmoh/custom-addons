@@ -1,0 +1,12 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+
+
+access_uni_migration,access_uni_migration,migration_data.model_uni_migration,uni_group_migration,1,1,1,1
+access_tran_migration_wizard,access_uni_migration_tran,migration_data.model_tran_migration_wizard,uni_group_migration,1,1,1,1
+
+access_uni_migration_payable,access_uni_migration_payable,migration_data.model_uni_migration_payable,uni_group_migration,1,1,1,1
+
+access_uni_notfound,access_uni_notfound,migration_data.model_uni_notfound,uni_group_migration,1,1,1,1
+
+access_uni_notfound_payable,access_uni_notfound_payable,migration_data.model_uni_notfound_payable,uni_group_migration,1,1,1,1
+

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record model="ir.module.category" id="users_group">
+			<field name="name">University Users</field>
+			<field name="description">Base users in university system</field>
+			<field name="sequence">3</field>
+		</record>
+		
+		<record id="uni_group_migration" model="res.groups">
+			<field name="name">Migration</field>
+			<field name="users" eval="[(4, ref('base.user_root'))]"/>
+			<field name="category_id" ref="migration_data.users_group"/>
+		</record>
+		
+	</data>
+</odoo>

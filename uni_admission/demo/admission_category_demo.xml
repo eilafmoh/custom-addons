@@ -1,0 +1,22 @@
+<odoo>
+	<data noupdate="1">
+		<!-->          category                                         <-->
+		<record id="category_1" model="uni.student_category">
+			<field name="name">أبناء عاملين</field>
+			<field name="general_discount">20</field>
+			<field name="special_discount">10</field>
+		</record>
+		<record id="category_2" model="uni.student_category">
+			<field name="name">أبناء شهداء</field>
+			<field name="general_discount">30</field>
+			<field name="special_discount">10</field>
+			<field name="include_registration_fees">True</field>
+		</record>
+		<record id="category_3" model="uni.student_category">
+			<field name="name">حفظة قرآن</field>
+			<field name="general_discount">100</field>
+			<field name="special_discount">100</field>
+			<field name="include_registration_fees">True</field>
+		</record>
+	</data>
+</odoo>

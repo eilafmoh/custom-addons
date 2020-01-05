@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="check_wizard_form_view" model="ir.ui.view">
+        <field name="name">check wizard form</field>
+        <field name="model">check.wizard</field>
+        <field name="arch" type="xml">
+            <form string="In Out Checks">
+                <group colspan="2" col="4">
+                    <field name="date_from"/>
+                    <field name="date_to"/>
+                    <newline/>
+                    <field name="state"/>
+                </group>
+                <footer>
+                    <button name="retrive_checks" string="Get checks" type="object" class="oe_highlight"/>
+                        or
+                    <button string="Cancel" class="oe_link" special="cancel" icon="fa-bon"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="check_wizard_action" model="ir.actions.act_window">
+        <field name="name">Check wizard</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">check.wizard</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form,tree</field>
+        <field name="view_id" ref="check_wizard_form_view"/>
+        <field name="context">{}</field>
+        <field name="target">new</field>
+    </record>
+
+    <menuitem name="Reports" parent="collection_management_root" action="check_wizard_action" id="report_menu"/>
+
+    <menuitem name="Check Posting" parent="report_menu" action="check_wizard_action" id="check_wizard_menu" icon="STOCK_PRINT"/>
+
+</odoo>

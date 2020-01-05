@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+    	<menuitem id="hr_payroll.menu_hr_payroll_root" name="Payroll" parent="hr.menu_hr_root"/>
+    	<delete model="ir.ui.menu" id="hr_payroll.hr_contract_advantage_template_menu_action" /> 
+    	
+    	<record id="extend_hr_contract_view_form" model="ir.ui.view">
+	        <field name="name">Extend HR Contract Form</field>
+	        <field name="model">hr.contract</field>
+	        <field name="inherit_id" ref="hr_contract.hr_contract_view_form" />
+	        <field name="arch" type="xml">
+	            <data>
+					<xpath expr="//page" position="after">
+	            		<page string="Salary Structure" name='salary_structure'>
+	            			<group>
+			            		<group string="Special Allowances">
+<!-- 			            			<field name="medical"/>
+ -->				                    <field name='cola_subsidy'/>
+				                    <field name='housing_subsidy'/>
+				                    <field name='transport'/>
+			            			<field name='other_allow'/>
+			            		</group>
+
+			            		<group string="Special Conditions">
+			            			<field name='social_insurance'/>
+			            			<field name='health_insurance'/>
+									<field name='pit_exempted'/>
+									<field name='over_50' attrs='{"invisible":[("pit_exempted","=",True)]}'/>
+									<field name='other_ded'/>
+			            		</group>
+			            	</group>
+			        	</page>
+	            	</xpath>
+
+	            	<xpath expr="//page/group/group/field[@name='advantages']" position="after">
+						<field name='trail_wage'/>	
+						<field name='net_salary'/>	
+	            	</xpath>	
+
+	            	<field name="reported_to_secretariat"  position="attributes">
+	                    <attribute name="invisible">1</attribute>
+	                </field>
+
+	                <field name="company_id"  position="attributes">
+	                    <attribute name="string">Faculty</attribute>
+	                </field> 
+
+	                <field name="type_id"  position="attributes">
+	                    <attribute name="string">Contract Type</attribute>
+	                </field> 
+	            </data>
+	        </field>
+    	</record>
+
+    </data>
+</openerp>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="admission_statistical_detailed_report">
+		<t t-call="report.internal_layout">
+			<div class="page">
+				<div class="page-header">
+					<center>
+						<h2> تفصيلي إحصائيات الطلاب</h2>
+					</center>
+				</div>
+				<div class="row" style="margin-left: 40%;border:4px;">
+					<div class="col-xs-6">
+						<strong>الكلية : </strong>
+						<span t-esc="docs.faculty_id.name"/>
+					</div>
+					<div class="col-xs-6">
+						<strong>القسم : </strong>
+						<span t-esc="docs.department_id.name"/>
+					</div>
+					<div class="col-xs-6" t-if="docs.specialization_id">
+						<strong>التخصص  : </strong>
+						<span t-esc="docs.specialization_id.name"/>
+					</div>
+					<div class="col-xs-6" t-if="docs.level_id">
+						<strong>المستوى : </strong>
+						<span t-esc="docs.level_id.name"/>
+					</div>
+					<div class="col-xs-6" t-if="docs.semester_id">
+						<strong>الفصل الدراسي  : </strong>
+						<span t-esc="docs.semester_id.name"/>
+					</div>
+					<div class="col-xs-6" t-if="docs.admission_category_id">
+						<strong>فئة القبول  : </strong>
+						<span t-esc="docs.admission_category_id.name"/>
+					</div>
+				</div>
+				<br/>
+				<table class="table table-condensed table-bordered">
+					<thead>
+						<tr style="background-color:#e6e6e6">
+							<th>
+								<center>										الكلية									</center>
+							</th>
+							<th>
+								<center>									القسم 									</center>
+							</th>
+							<th>
+								<center>										التخصص 									</center>
+							</th>
+							<th>
+								<center>										 نوع القبول									</center>
+							</th>
+							<th>
+								<center>										فئة القبول									</center>
+							</th>
+							<th>
+								<center>										 المستوى									</center>
+							</th>
+							<th>
+								<center>										الرقم الجامعي									</center>
+							</th>
+							<th>
+								<center>										الإسم 									</center>
+							</th>
+							<th>
+								<center>										الرسوم 									</center>
+							</th>
+							<th>
+								<center>										مدفوع 									</center>
+							</th>
+							<th>
+								<center>										الحالة 									</center>
+							</th>
+						</tr>
+					</thead>
+					<tbody t-foreach="details" t-as="line">
+						<tr >
+							<td>
+								<center>
+									<span t-esc="line['faculty']"/>
+								</center>
+							</td>
+							<td>
+								<center>
+									<span t-esc="line['department']"/>
+								</center>
+							</td>
+							<td >
+								<center>
+									<span t-esc="line['specialization']"/>
+								</center>
+							</td>
+							<td>
+								<center>
+									<span t-esc="line['admission_type']"/>
+								</center>
+							</td>
+							<td>
+								<center>
+									<span t-esc="line['category_id']"/>
+								</center>
+							</td>
+							<td>
+								<center>
+									<span t-esc="line['level']"/>
+								</center>
+							</td>
+							<td>
+								<center>
+									<span t-esc="line['university_id']"/>
+								</center>
+							</td>
+							<td>
+								<center>
+									<span t-esc="line['name']"/>
+								</center>
+							</td>
+							<td>
+								<center>
+									<span t-esc="line['fees']"/>
+								</center>
+							</td>
+							<td>
+								<center>
+									<span t-esc="line['paid']"/>
+								</center>
+							</td>
+							<td>
+								<center>
+									<span t-esc="line['status']"/>
+								</center>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</t>
+	</template>
+</odoo>

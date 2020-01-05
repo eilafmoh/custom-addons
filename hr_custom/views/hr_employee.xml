@@ -1,0 +1,105 @@
+<odoo>
+    <data>
+
+        <menuitem id="hr.menu_hr_root" name="Human Resources" 
+        groups="hr.group_hr_manager,hr.group_hr_user,base.group_user" 
+        web_icon="hr,static/description/icon.png" sequence="75"/>
+
+        <menuitem name="HR Process" id="hr_process_root_menu" parent="hr.menu_hr_root" 
+        sequence="4"/> 
+        <!-- <menuitem name="HR Procedures" id="procedures_menu" parent="hr.menu_hr_root" sequence="3"/>
+         -->
+        <menuitem id="proccess_sub_menu" name="Process" parent="hr_payroll.menu_hr_payroll_root"/>
+
+        <record model="ir.actions.act_window" id="open_employee_action">
+            <field name="name">Employees</field>
+            <field name="res_model">hr.employee</field>
+            <field name="view_mode">kanban,tree,form</field>
+        </record>
+
+        <menuitem  id="menu_employee_custom" name="Employees" parent="hr.menu_open_view_employee_list_my" 
+        action="open_employee_action" sequence="1"/>
+
+        <menuitem action="hr_contract.action_hr_contract" id="hr_contract.hr_menu_contract" 
+        parent="hr.menu_open_view_employee_list_my" sequence="2" groups="hr_contract.group_hr_contract_manager"/>
+
+        <record id="hr_custom_form" model="ir.ui.view">
+            <field name="name">Hr Custom Form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="/form/sheet" position="before">
+                    <header>
+                        <field name="state" widget="statusbar" options="{'fold_field': 'fold'}"/>
+                        <button name="bt_in_service" type="object" string="In Service" states="draft" />
+                        <!-- <button name="bt_out_of_service" type="object" string="Out of Service" states="in_service" /> -->
+                    </header>
+                </xpath>
+                <xpath expr="//field[@name='department_id']" position="before">
+                    <field name="is_acadimic"/>
+                    <field name="company_id"/>
+                </xpath>
+                <field name="company_id"  position="attributes">
+                    <attribute name="string">Faculty</attribute>
+                </field> 
+                <field name="job_title"  position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field> 
+                <xpath expr="//field[@name='address_id']" position="before">
+                    <field name="partner_id"/>
+                </xpath>
+                <xpath expr="//field[@name='category_ids']" position="after">
+                    <group>
+                        <field name="emp_code"/>
+                    </group>
+                </xpath>
+            
+                <xpath expr="//page[2]" position="after">
+
+                    <page string="HR Information">
+                        <group string="HR Info">
+                            <group>
+                                <field name="structure_id"/>
+                                <field name="degree_id" domain="[('structure_id','=',structure_id)]" options="{'no_create_edit': True,'no_create': True}"/>
+                            </group>
+                            <group>
+                                <field name='employment_date'/>
+                                <field name='first_employment_date'/>
+                            </group>
+                        </group>
+                        <group col='8' string="Identity Detail">
+                            <field name="pass_port_img" widget="image"/>
+                            <field name="pass_port_exp_data"/>
+                            <field name="drive_lincese" widget="image"/>
+                            <field name="drive_lincese_end"/>
+                        </group>
+                    </page>
+                </xpath>
+
+                <field name="coach_id"  position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field> 
+                <field name="certificate"  position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field> 
+                <field name="google_drive_link"  position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field> 
+                <field name="additional_note"  position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field> 
+                <field name="km_home_work"  position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field> 
+                <field name="passport_id"  position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field> 
+                <field name="permit_no"  position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+        
+            </field>
+        </record>
+
+    </data>
+</odoo>

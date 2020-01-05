@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<template id="admission_statistical_report">
+		<t t-call="report.internal_layout">
+			<div class="page">
+				<div class="page-header">
+					<center>
+						<h2> تقرير إحصائيات التسجيل للمستوى الاول القبول الجديد</h2>
+					</center>
+				</div>
+				<div class="row" style="margin-left: 40%;border:4px;">
+					<div class="col-xs-6">
+						<strong>السنة : </strong>
+						<span t-esc="docs.year_id.code"/>
+					</div>
+					<div class="col-xs-6" t-if="docs.admission_category_id">
+						<strong>الفئة : </strong>
+						<span t-esc="docs.admission_category_id.name"/>
+					</div>
+					<div class="col-xs-6" t-if="docs.admission_type">
+						<strong>نوع القبول  : </strong>
+						<span t-esc="docs.admission_type"/>
+					</div>
+				</div>
+				<br/>
+				<table class="table table-condensed table-bordered">
+					<thead>
+						<tr style="background-color:#e6e6e6">
+							<th>
+								<center>										الكلية									</center>
+							</th>
+							<th>
+								<center>									العدد المرشح									</center>
+							</th>
+							<th>
+								<center>										اكمل الإجراءات									</center>
+							</th>
+							<th>
+								<center>										اكمل التسجيل									</center>
+							</th>
+							<th>
+								<center>										النسبة									</center>
+							</th>
+							<th>
+								<center>										لم يسجل									</center>
+							</th>
+							<th>
+								<center>										النسبة									</center>
+							</th>
+							<th>
+								<center>										لم يأتو									</center>
+							</th>
+							<th>
+								<center>										النسبة 									</center>
+							</th>
+						</tr>
+					</thead>
+					<tbody t-foreach="registration_details" t-as="line">
+						<tr style="border-style: dashed;border-width: 1px;border-color: black;">
+							<td>
+								<center>
+									<span t-esc="line['name']"/>
+								</center>
+							</td>
+							<td>
+								<center>
+									<span t-esc="line['number_of_candidates']"/>
+								</center>
+							</td>
+							<td >
+								<center>
+									<span t-esc="line['complete_the_procedures']"/>
+								</center>
+							</td>
+							<td>
+								<center>
+									<span t-esc="line['registered']"/>
+								</center>
+							</td>
+							<td>
+								<center>
+									<span t-esc="line['registered_perc']"/>
+								</center>
+							</td>
+							<td>
+								<center>
+									<span t-esc="line['not_registered']"/>
+								</center>
+							</td>
+							<td>
+								<center>
+									<span t-esc="line['not_registered_perc']"/>
+								</center>
+							</td>
+							<td>
+								<center>
+									<span t-esc="line['not_come']"/>
+								</center>
+							</td>
+							<td>
+								<center>
+									<span t-esc="line['not_come_perc']"/>
+								</center>
+							</td>
+						</tr>
+					</tbody>
+					<thead >
+						<tr style="background-color:#e6e6e6">
+							<th>
+								<center>الإجمالي</center>
+							</th>
+							<th>
+								<center>
+									<span t-esc="totals['number_of_candidates']"/>
+								</center>
+							</th>
+							<th>
+								<center>
+									<span t-esc="totals['complete_the_procedures']"/>
+								</center>
+							</th>
+							<th>
+								<center>
+									<span t-esc="totals['registered']"/>
+								</center>
+							</th>
+							<th>
+								<center>
+									<span t-esc="totals['registered_per']"/>
+								</center>
+							</th>
+							<th>
+								<center>
+									<span t-esc="totals['not_registered']"/>
+								</center>
+							</th>
+							<th>
+								<center>
+									<span t-esc="totals['not_registered_per']"/>
+								</center>
+							</th>
+							<th>
+								<center>
+									<span t-esc="totals['not_come']"/>
+								</center>
+							</th>
+							<th>
+								<center>
+									<span t-esc="totals['not_come_per']"/>
+								</center>
+							</th>
+						</tr>
+					</thead>
+				</table>
+			</div>
+		</t>
+	</template>
+</odoo>

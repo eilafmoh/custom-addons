@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+
+		<record id="view_admission_pivote" model="ir.ui.view">
+			<field name="name">uni.admission.pivot</field>
+			<field name="model">admission.report.analysis</field>
+			<field name="arch" type="xml">
+				<pivot string="Admission Analysis" disable_linking="True">
+					<field name="faculty_id" type="col"/>
+					<field name="admission_type" type="row"/>
+
+				</pivot>
+			</field>
+		</record>
+
+		<record id="view_uni_admission_graph" model="ir.ui.view">
+			<field name="name">uni.admission.graph</field>
+			<field name="model">admission.report.analysis</field>
+			<field name="arch" type="xml">
+				<graph string="Admission Analysis">
+					<field name="faculty_id" type="row"/>
+					<field name="admission_type" />
+				</graph>
+			</field>
+		</record>
+
+
+
+		<record id="filter_adminission_faculity" model="ir.filters">
+			<field name="name">By Faculty</field>
+			<field name="model_id">admission.report.analysis</field>
+			<field name="user_id" eval="False"/>
+			<field name="context">{'group_by': ['date:month', 'faculty_id']}</field>
+		</record>
+		<record id="filter_admission_department" model="ir.filters">
+			<field name="name">By Department</field>
+			<field name="model_id">admission.report.analysis</field>
+			<field name="user_id" eval="False"/>
+			<field name="context">{'group_by': ['date:month', 'department_id']}</field>
+		</record>
+		<record id="filter_admission_type" model="ir.filters">
+			<field name="name">By Admission Type</field>
+			<field name="model_id">admission.report.analysis</field>
+			<field name="user_id" eval="False"/>
+			<field name="context">{'group_by': ['date:month', 'admission_type']}</field>
+		</record>
+
+
+
+		<record id="action_uni_admission_analysis" model="ir.actions.act_window">
+			<field name="name">Admission Analysis</field>
+			<field name="res_model">admission.report.analysis</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">pivot,graph</field>
+			<field name="view_id"></field>
+
+		</record>
+
+
+
+
+
+		<menuitem name=" Admission Analysis" id="admission_analysis_report_menu" parent="menu_uni_admission_reports" action="action_uni_admission_analysis" sequence="1"/>
+
+	</data>
+</odoo>

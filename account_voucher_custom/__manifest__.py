@@ -1,0 +1,31 @@
+{
+    'name': 'Collection Management',
+    'version': '0.1',
+    'author': 'App Script For Software',
+    'category': 'Accounting & Finance',
+    'description': "Manage your in /out checks",
+    'depends': ['account_voucher'],
+    'data': [
+        'security/ir.model.access.csv',
+        'data/oncreadit_seq.xml',
+        'views/collection_view.xml',
+        'views/oncreadit_check_view.xml',
+        'views/check_number_view.xml',
+        'views/post_check_account.xml',
+        'wizard/marge_customer_view.xml',
+        'wizard/check_posting_view.xml',
+
+        'wizard/undeliver_check_rep_wiz.xml',
+        # 'report/report_undeliver_qweb.xml',
+        'report/customer_check_report.xml',
+        'report/oncreadit_check_report.xml',
+        # 'report/voucher_report.xml',
+        'report/reports.xml',
+        'wizard/check_action_view.xml',
+        'wizard/customer_action_view.xml',
+        'report/payment_report.xml',
+        'views/payment_report_action.xml'
+    ],
+    'installable': True,
+    'auto_install': False,
+}

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+		<record id="uni_faculty_department_specialization_form_view" model="ir.ui.view">
+			<field name="name">Specializations</field>
+			<field name="model">uni.faculty.department.specialization</field>
+			<field name="arch" type="xml">
+				<form string="Specializations">
+					<sheet>
+						<group col="4">
+							<field name="name"/>
+							<field name="parent_id" options="{'no_create': True}"/>
+							<field name="department_id" options="{'no_create': True}"/>
+							<field name="faculty_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+		<record id="uni_faculty_department_specialization_tree_view" model="ir.ui.view">
+			<field name="name">Specializations</field>
+			<field name="model">uni.faculty.department.specialization</field>
+			<field name="arch" type ="xml">
+				<tree string="Specializations">
+					<field name="name"/>
+					<field name="parent_id"/>
+					<field name="department_id"/>
+					<field name="faculty_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+				</tree>
+			</field>
+		</record>
+		<record id="uni_faculty_department_specialization_action" model="ir.actions.act_window">
+			<field name="name">Specializations</field>
+			<field name="res_model">uni.faculty.department.specialization</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+		</record>
+		<menuitem name="Specializations" id="dept_spsdsd_location_menu_loc" action="uni_faculty_department_specialization_action" parent="uni_core_students_view_menu"/>
+	</data>
+</odoo>

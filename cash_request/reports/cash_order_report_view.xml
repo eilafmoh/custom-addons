@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+         <report
+            id="cash_order_report_view"
+            model="cash.order"
+            string="Financial Ratification"
+            report_type="qweb-pdf"
+            name="cash_request.cash_order_report"
+            file="cash_request.cash_order_report"
+            />
+    </data>
+</odoo>

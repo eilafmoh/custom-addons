@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <report
+            string="Employee Custody"
+            id="employee_custody_report"
+            model="hr.custody"
+            name="hr_custody.emp_custody_report"
+            file="hr_custody.emp_custody_report"
+            report_type="qweb-html"
+            />
+
+
+        
+        <report
+            string="Employee Custody Deliver"
+            id="employee_custody_deliver_report"
+            model="hr.custody.deliver"
+            name="hr_custody.emp_custody_dev_report"
+            file="hr_custody.emp_custody_dev_report"
+            report_type="qweb-html"
+            />    
+
+    </data>
+</odoo>

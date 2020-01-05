@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<data>
+        <template id="payment_report_template">
+			<t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <t t-foreach="docs" t-as="o">
+                        <div class="page">
+                            <div>
+                                <p>
+                                    <h3 style="margin-left:400px">سند قبض </h3>
+                                </p><br/><br/>
+                                <p class="text-right">
+                                    <span style="margin-right:30px" t-esc="o.date"></span>
+                                    <strong style="float:right">التاريخ </strong>
+
+                                </p>
+                            </div>
+                                
+                            <br/><br/>
+                            <div>
+                                <p><strong style="float:right">  استلمت من السيد / السيدة</strong> 
+                                <span style="float:right"> 
+                                    <span style="margin-right:60px" t-esc="o.partner_id.name"/>
+                                </span>
+                                <strong style="float:left">Payment Form</strong></p>
+                                <br/><br/><br/>
+
+                                <p><strong style="float:right">مبلغا وقدره </strong> 
+                                <span style="float:right;margin-right:40px" t-field="o.paid_amount"/>
+                                <strong style="float:left">Amount</strong></p>
+                                <br/><br/>
+
+                                <p>
+                                    <strong style="float:right"> بشيك رقم  </strong> 
+                                    <span style="float:right;margin-right:20px"> <span style="margin-right:10px" t-esc="o.check_number"></span></span> 
+                                    <strong style="float:right;margin-right:150px">بتاريخ</strong>  
+                                    <span style="float:right;margin-right:20px"><span t-esc="o.due_date"></span> </span>
+                                    <strong style="float:right;margin-right:20px">   Date</strong>
+                                    <strong style="float:right;margin-right:170px"> على بنك </strong>
+                                    <span style="float:right;margin-right:20px"> <span style="margin-right:10px" t-esc="o.customer_bank"></span></span> 
+                                    <strong style="float:right;float:left"> Bank  </strong>                  
+                                </p>
+                                <br/><br/>
+
+                                <p>
+                                    <strong style="float:right">وذلك عبارة عن قيمة  </strong> 
+                                    <span style="float:right;margin-right:5px" t-esc="o.description"/>
+                                    <strong style="float:right;margin-right:10px"> للعقار رقم </strong> 
+                                    <span style="float:right;margin-right:20px"> 
+                                        <span t-if="o.reservation_id.type == 'land'" t-esc="o.land_id.realestate_num"></span>
+                                        <span t-else="" t-esc="o.reservation_id.land_id.realestate_num"></span>
+                                    </span> 
+                                    <strong style="float:right;margin-right:120px">مخطط</strong>
+                                    <span style="float:right;margin-right:20px"><span t-esc="o.complex_id.name"></span></span> 
+                                </p>
+                                <br/><br/>
+                                    
+                                <hr></hr>
+                            </div>
+                            
+                            
+                        </div>
+                    </t>
+                </t>
+            </t>
+		</template>
+
+        <template id="payment_report_template2">
+			<t t-call="web.html_container">
+                <t t-call="web.external_layout">
+                    <t t-foreach="docs" t-as="o">
+                        <div class="page">
+                            <div>
+                                <p>
+                                    <h3 style="margin-left:400px">سند قبض </h3>
+                                </p><br/><br/>
+                                <p class="text-right">
+                                    <span style="margin-right:30px" t-esc="o.line_id.date" ></span>
+                                    <strong style="float:right">التاريخ </strong>
+
+                                </p>
+                            </div>
+                                
+                            <br/><br/>
+                            <div>
+                                <p><strong style="float:right">  استلمت من السيد / السيدة</strong> 
+                                <span style="float:right"> <span style="margin-right:60px" t-esc="o.line_id.partner_id.name"></span></span> 
+                                <strong style="float:left">Payment Form</strong></p>
+                                <br/><br/><br/>
+
+                                <p><strong style="float:right">مبلغا وقدره </strong> 
+                                <span style="float:right;margin-right:40px" t-field="o.amount"/>
+                                <strong style="float:left">Amount</strong></p>
+                                <br/><br/>
+
+                                <p>
+                                    <strong style="float:right"> بشيك رقم  </strong> 
+                                    <span style="float:right;margin-right:20px"> <span style="margin-right:10px" t-esc="o.line_id.check_number"></span></span> 
+                                    <strong style="float:right;margin-right:150px">بتاريخ</strong>  
+                                    <span style="float:right;margin-right:20px"><span t-esc="o.line_id.due_date"></span> </span>
+                                    <strong style="float:right;margin-right:20px">   Date</strong>
+                                    <strong style="float:right;margin-right:170px"> على بنك </strong>
+                                    <span style="float:right;margin-right:20px"> <span style="margin-right:10px" t-esc="o.line_id.customer_bank"></span></span> 
+                                    <strong style="float:right;float:left"> Bank  </strong>                  
+                                </p>
+                                <br/><br/>
+
+                                <p>
+                                    <strong style="float:right">وذلك عبارة عن قيمة تنفيذ  </strong> 
+
+                                    <strong style="float:right;margin-right:10px"> للقطعة رقم </strong> 
+                                    <span style="float:right;margin-right:20px"> <span t-esc="o.line_id.land_id.realestate_num"></span></span> 
+                                    <strong style="float:right;margin-right:120px">مخطط</strong>
+                                    <span style="float:right;margin-right:20px"><span t-esc="o.line_id.complex_id.name"></span></span> 
+                                </p>
+                                <br/><br/>
+                                    
+                                <hr></hr>
+                            </div>
+                             -->
+                            
+                        </div>
+                    </t>
+                </t>
+            </t>
+		</template>
+    </data>
+</odoo>

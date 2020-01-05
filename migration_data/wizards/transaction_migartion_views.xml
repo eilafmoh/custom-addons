@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+	<record id="tran_migration_wizard_view_form" model="ir.ui.view">
+		<field name="name">tran.migration.wizard.form</field>
+		<field name="model">tran.migration.wizard</field>
+		<field name="arch" type="xml">
+			<form string="Transaction Migration">
+				<group col="2">
+						<field name="account_id"/>
+						<field name="account_receivable_id"/>
+						<field name="account_equity"/>
+						<field name="journal_id"/>
+					</group>
+				<footer>
+					<button name="cretae_data" string="Migrate receivable" type="object" default_focus="1" class="oe_highlight" />
+					<button name="cretae_payable_data" string="Migrate payable" type="object" default_focus="1" class="oe_highlight" />
+					<button string="Cancel" class="btn-default" special="cancel"/>
+				</footer>
+			</form>
+		</field>
+	</record>
+
+	<record id="action_tran_migration_wizard" model="ir.actions.act_window">
+		<field name="name">Migration</field>
+		<field name="res_model">tran.migration.wizard</field>
+		<field name="view_type">form</field>
+		<field name="view_mode">form</field>
+		<field name="target">new</field>
+	</record>
+
+	<menuitem id="menu_tran_migration_wizard" name="Migrate Transaction" sequence="2" action="action_tran_migration_wizard"/>
+</odoo>

@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_hr_degree,hr.degree,model_hr_degree,,1,1,1,1
+access_hr_department_category,hr.department.category,model_hr_department_category,,1,1,1,1
+

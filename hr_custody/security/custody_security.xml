@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="category_custody" model="ir.module.category">
+        <field name="name">Custody</field>
+    </record>
+
+    <record id="custody_manager" model="res.groups">
+        <field name="name">Manager</field>
+        <field name="category_id" ref="category_custody" />
+    </record>
+
+</odoo>

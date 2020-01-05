@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<template id="journal_report_template">
+    <t t-call="web.html_container">
+        <t t-foreach="docs" t-as="o">
+        <t t-call="web.internal_layout">
+            <div class="page">
+                <br/>
+                <br/>
+                <h2 class="text-center" style="background-color:#d9d9d9;border-style: solid;border-width: 1px;"> Journal Entry</h2>
+                <br/>
+                <br/>
+                <div class="row">
+                    <div class="col-6" style="float:left">
+                        
+                        <p><strong>Date: </strong>
+                        <span t-esc="o.date"/></p>
+                    
+                    </div>
+                    <div class="col-6" style="float:right">
+                        <p><strong>Number : </strong>
+                        <span t-esc="o.name"/></p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6" style="float:left">
+                        <p><strong>Journal: </strong>
+                        <span t-esc="o.journal_id.name"/></p>
+                    </div>
+                    <div class="col-6" style="float:right">
+                        <p><strong>State: </strong>
+                        <span t-esc="o.state"/></p>
+                    </div>
+                </div>
+                <br/><br/>
+                <table class="table table-condensed table-hover table-bordered table-striped">
+                    <thead >
+                        <tr>                           
+                            <th>Account</th>
+                            <th>Partner</th>
+                            <th>Debit</th>
+                            <th>Credit</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr t-foreach="o.line_ids" t-as="line">
+                            <td>
+                                <span t-att-style="style" t-esc="line.account_id.name"/>
+                            </td>
+                            <td>
+                                <span t-att-style="style" t-esc="line.partner_id.name"/>
+                            </td>
+                            <td>
+                                <span t-att-style="style" t-esc="line.debit"/>
+                            </td>
+                            <td>
+                                <span t-att-style="style" t-esc="line.credit"/>
+                            </td>
+                        </tr >
+                        <tr>
+                            <th>Total</th>
+                            <th> - </th>
+                            <th><strong> </strong><span t-att-style="style" t-esc="o.sum_credit()"/></th>
+                            <th><strong> </strong><span t-att-style="style" t-esc="o.sum_credit()"/></th>
+                         </tr>   
+
+                    </tbody>
+                </table>
+            </div>
+            </t>
+        </t>
+    </t>
+</template>
+</odoo>

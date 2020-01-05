@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<odoo>
+    <data>
+        <record id="category_loan_custom" model="ir.module.category">
+            <field name="name">Loan</field>
+        </record>
+
+		
+
+        <record id="loan_user" model="res.groups">
+            <field name="name">User</field>
+            <field name="category_id" ref="category_loan_custom" />
+        </record>
+
+        <record id="loan_manager" model="res.groups">
+            <field name="name">Manager</field>
+            <field name="category_id" ref="category_loan_custom" />
+        </record>
+
+     
+
+        <record id="employee_loan_user" model="ir.rule">
+            <field name="name">Loan User</field>
+            <field name="model_id" ref="model_hr_loan"/>
+            <field name="domain_force">[('user_id.id','=',user.id)]</field>
+            <field name="groups" eval="[(4,ref('hr_loan.loan_user'))]"/>
+        </record>
+
+	</data>
+</odoo>

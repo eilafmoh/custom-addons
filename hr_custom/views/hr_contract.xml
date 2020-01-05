@@ -1,0 +1,37 @@
+<odoo>
+    <data>
+        <record id="contract_custom_form" model="ir.ui.view">
+            <field name="name">Hr contract Form</field>
+            <field name="model">hr.contract</field>
+            <field name="inherit_id" ref="hr_contract.hr_contract_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='state']" position="replace">
+                    <field name="state" widget="statusbar" statusbar_visible="draft,open,ended"/>
+                </xpath>
+                <xpath expr="//field[@name='struct_id']" position="after">
+                    <field name="degree_id" options="{'no_create': True}"/>
+                </xpath>
+
+                <field name="schedule_pay"  position="attributes">
+                    <attribute name="invisible">1</attribute>
+                </field>
+            </field>
+        </record>
+
+        <record id="hr_contract.action_hr_contract" model="ir.actions.act_window">
+            <field name="name">Contracts</field>
+            <field name="res_model">hr.contract</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="domain">[('employee_id', '!=', False)]</field>
+            <field name="context">{}</field>
+            <field name="search_view_id" ref="hr_contract.hr_contract_view_search"/>
+            <field name="help" type="html">
+              <p class="o_view_nocontent_smiling_face">
+                Create a new contract
+              </p>
+            </field>
+        </record>
+
+    </data>
+</odoo>

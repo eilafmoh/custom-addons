@@ -1,0 +1,10 @@
+<odoo>
+	<data>
+		<!-- top level menu: no parent groups="uni_core.group_student" -->
+		<menuitem id="uni_core_faculties_menu" name="Faculties" groups="uni_core.uni_group_student" web_icon="uni_core,static/description/faculty.png"/>
+		<!-- Students groups="uni_core.group_student" -->
+		<menuitem id="uni_core_students_view_menu" name="Students" sequence="0" parent="uni_core_faculties_menu"/>
+		<!-- Configurations -->
+		<menuitem id="uni_core_configurations_view_menu" name="Configurations" sequence="3" parent="uni_core_faculties_menu"/>
+	</data>
+</odoo>

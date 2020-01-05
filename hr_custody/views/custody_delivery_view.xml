@@ -1,0 +1,78 @@
+<odoo>
+    <data>
+        <record id="view_hr_custody_deliver_form" model="ir.ui.view">
+            <field name="name">hr.custody.deliver.form</field>
+            <field name="model">hr.custody.deliver</field>
+            <field name="arch" type="xml">
+                <form string="Hr Custoy">
+                    <header>
+                        <button name="action_approve" type="object" string="Approve" states="draft" class="oe_highlight"/>
+                        <button name="action_maneger_approve" type="object" string="Approve" states="running" class="oe_highlight"/>
+                        <button name="action_maneger_reject" type="object" string="Refuse" />
+                        <field name="state" widget="statusbar" />
+                    </header>
+                    <sheet>
+                        <div class="oe_button_box oe_right">
+                        </div>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="employee_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+                            </h1>
+                        </div>
+                        <group col="4">
+                            <field name="user_id" string="Made By" readonly="1"/>
+                            <field name="date"/>
+                            <field name="department_id" readonly="1"/>
+                            <field name="job_id" readonly="1"/>
+                        </group>
+                    
+                        <notebook>
+                             <page string="Asset Detail">
+                                <field name="custody_line_ids" options="{'no_create': True}">
+                                    <tree editable="bottom">
+                                       
+                                        <field name="asset_id" readonly='1'/>
+                                        <field name="state" readonly='1'/>
+                                        <field name="to_deliver" attrs="{'readonly':[('state','=','done')]}"/>
+
+                                    </tree>
+                                </field>
+                            </page>
+                           <page string="Note">
+                            <field name="note"/>
+                           </page>
+                        </notebook>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+
+        <record id="hr_custody_deliver_tree_view" model="ir.ui.view">
+            <field name="name">hr.custody.deliver.tree</field>
+            <field name="model">hr.custody.deliver</field>
+            <field name="arch" type="xml">
+                <tree string="Custody Deliver">
+                    <field name="employee_id"/>
+                    <field name="department_id"/>
+                    <field name="job_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="action_hr_custody_deliver" model="ir.actions.act_window">
+            <field name="name"> Employee Custody Deliver</field>
+            <field name="res_model">hr.custody.deliver</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem id="menu_custody_dilivary" name="Delivery of custody" parent="menu_hr_custody_root" action="action_hr_custody_deliver" sequence='2'/>
+
+    </data>
+</odoo>
+

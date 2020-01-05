@@ -1,0 +1,380 @@
+<odoo>
+	<data>
+		<!-- uni.student form view -->
+		<record id="uni_student_view_form" model="ir.ui.view">
+            <field name="name">uni.student.form</field>
+            <field name="model">uni.student</field>
+            <field name="arch" type="xml">
+                <form string="Students">
+                	<header>
+						<field name="state" widget="statusbar" />
+					</header>
+					<sheet>
+						<field name="std_img" widget="image" class="oe_left oe_avatar" width="80" height="80"/>
+						<div class="oe_title">
+							<!-- <label string="Name"/> -->
+							<h2>
+								<table >
+									<tr>
+										<td style="padding-right:10px;">
+											<field name="first_name" placeholder="First Name" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+										</td>
+										<td style="padding-right:10px;">
+											<field name="middle_name" placeholder="Middle Name" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+										</td>
+										<td style="padding-right:10px;">
+											<field name="last_name" placeholder="Last Name" attrs="{'readonly':[('state','!=','draft')]}"/>
+										</td>
+										<td style="padding-right:10px;">
+											<field name="fourth_name" placeholder="Fourth Name" attrs="{'readonly':[('state','!=','draft')]}"/>
+										</td>
+									</tr>
+								</table>
+							</h2>
+						</div>
+						<div class="oe_title" style="margin-left:100px">
+							<!-- <label string="Name (English)"/> -->
+							<h2>
+								<table>
+									<tr>
+										<td style="padding-right:10px;">
+											<field name="fourth_name_en" placeholder="Fourth Name (English)" attrs="{'readonly':[('state','!=','draft')]}"/>
+										</td>
+										<td style="padding-right:10px;">
+											<field name="last_name_en" placeholder="Last Name (English)" attrs="{'readonly':[('state','!=','draft')]}"/>
+										</td>
+										<td style="padding-right:10px;">
+											<field name="middle_name_en" placeholder="Middle Name (English)" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+										</td>
+										<td style="padding-right:10px;">
+											<field name="first_name_en" placeholder="First name (English)" required="1" attrs="{'readonly':[('state','!=','draft')]}"/>
+										</td>
+									</tr>
+								</table>
+							</h2>
+						</div>
+						<group col="4">
+							<field name="university_id" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="index_id"/>
+						</group>
+						<group col="4">
+							<field name="faculty_id" options="{'no_create': True}" groups="base.group_multi_company" attrs="{'readonly':[('state','!=','draft')]}"/>
+							<field name="department_id" options="{'no_create': True}"/>	
+							<field name="level_id" options="{'no_create': True}" />
+							<field name="semester_id" options="{'no_create': True}"/>
+						</group>
+						<notebook>
+							<page string="Personal">
+								<group col="4">
+									<field name="birth_date"/>
+									<field name="place_of_birth"/>
+									<field name="gender" />
+									<field name="martial_status"/>
+									<field name="national_id"/>
+									<field name="phone"/>
+									<field name="mobile"/>
+									<field name="email"/>
+
+								</group>
+								<group col='4' string='Other'>
+									<field name="nationality_id" options="{'no_create': True}"/>
+									<!-- <field name="state_id" options="{'no_create': True}"/> -->
+									<field name="city"/>
+									<field name="address"/>
+									<field name="religion"/>
+									
+								</group>
+							</page>
+							<page string="Family" name="family">
+								<form>
+									<group string="Guardian info" col="4">
+										<field name="guardian_name"/>
+										<field name="guardian_phone"/>
+										<field name="guardian_education_level"/>
+										<field name="guardian_job"/>
+										<field name="guardian_nationality_id"/>
+										<field name="guardian_address"/>
+										<field name="guardian_email"/>
+									</group>
+									<group string="Mother info" col="4">
+										<field name="mother_name"/>
+										<field name="mother_job"/>
+										<field name="mother_education_level"/>
+									</group>
+									<group string="Relative's Information" col='4'>
+										<field name="relative_name"/>
+										<field name="relative_phone"/>
+										<field name="relative_address"/>
+									</group>
+								</form>
+							</page>
+							<page string="Medical" name="medical">
+								<group col="4" name='med'>
+									<field name="blood_group"/>
+									<field name="blood_image"/>
+								</group>
+							</page>
+							<page string="Other" name="other">
+								<group col="2" name='other'>
+									<field name="partner_id"/>
+								</group>
+							</page>
+							
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+                </form>
+            </field>
+        </record>
+		<!-- <record id="uni_student_view_form" model="ir.ui.view">
+			<field name="name">uni.student.view.form</field>
+			<field name="model">uni.student</field>
+			<field name="arch" type="xml">
+				<form string="Student" create="0">
+					<header>
+						<field name="state" widget="statusbar" />
+					</header>
+					<sheet>
+						<field name="std_img" widget="image" class="oe_left oe_avatar" width="80" height="80"/>
+						<div class="oe_title">
+							<label string="Name"/>
+							<h2>
+								<table>
+									<tr>
+										<td style="padding-right:10px;">
+											<field name="first_name" placeholder="First Name" required="1"/>
+										</td>
+										<td style="padding-right:10px;">
+											<field name="middle_name" placeholder="Middle Name" required="1"/>
+										</td>
+										<td style="padding-right:10px;">
+											<field name="last_name" placeholder="Last Name" required="1" />
+										</td>
+										<td style="padding-right:10px;">
+											<field name="fourth_name" placeholder="Fourth Name" required="1" />
+										</td>
+									</tr>
+								</table>
+							</h2>
+						</div>
+						<div class="oe_title">
+							<label string="Name (English)"/>
+							<h2>
+								<table>
+									<tr>
+										<td style="padding-right:10px;">
+											<field name="fourth_name_en" placeholder="Fourth Name (English)" required="1" />
+										</td>
+										<td style="padding-right:10px;">
+											<field name="last_name_en" placeholder="Last Name (English)" required="1" />
+										</td>
+										<td style="padding-right:10px;">
+											<field name="middle_name_en" placeholder="Middle Name (English)" required="1"/>
+										</td>
+										<td style="padding-right:10px;">
+											<field name="first_name_en" placeholder="First name (English)" required="1"/>
+										</td>
+									</tr>
+								</table>
+							</h2>
+						</div>
+						<group col="4">
+							<field name="university_id"/>
+							<field name="faculty_id" options="{'no_create': True}" groups="base.group_multi_company"/>
+							<field name="department_id" options="{'no_create': True}"/>
+							<field name="specialization_id" options="{'no_create': True}"/>
+							<field name="level_id" readonly="1" options="{'no_create': True}"/>
+							<field name="semester_id" readonly="1" options="{'no_create': True}"/>
+						</group>
+						<notebook>
+							<page string="Personal">
+								<group col="4">
+									<field name="nationality_id" options="{'no_create': True}"/>
+									<field name="birth_date"/>
+									<field name="national_id"/>
+									<field name="place_of_birth"/>
+									<field name="religion"/>
+									<field name="martial_status"/>
+									<field name="gender" />
+								</group>
+							</page>
+							<page string="Admission">
+								<group colspan="4" col="2">
+									<group col="2">
+										<field name="batch_id" options="{'no_create': True}"/>
+										<field name="number_of_exam_seat"/>
+									</group>
+								</group>
+							</page>
+							<page string="Others">
+								<group colspan="4" col="2">
+									<group col="2">
+										<field name="elementary_school"/>
+										<field name="secondary_school"/>
+										<field name="secondary_school_type"/>
+										<field name="blood_group"/>
+										<field name="state_id" options="{'no_create': True}"/>
+										<field name="city"/>
+										<field name="address"/>
+									</group>
+								</group>
+							</page>
+							<page string="Family" name="family">
+								<form>
+									<group col="4">
+										<field name="is_father_live"/>
+										<field name="guardian_phone"/>
+										<field name="guardian_name"/>
+										<field name="guardian_job"/>
+										<field name="guardian_nationality_id"/>
+										<field name="guardian_education_level"/>
+										<field name="guardian_address"/>
+									</group>
+									<group string="Mother info" col="2">
+										<field name="mother_name"/>
+										<field name="mother_job"/>
+										<field name="mother_education_level"/>
+									</group>
+									<group string="Brother" col="6">
+										<field name="number_of_brother"/>
+										<field name="in_university"/>
+										<field name="in_school"/>
+									</group>
+									<group string="Relative's Information">
+										<field name="relative_name"/>
+										<field name="relative_phone"/>
+										<field name="relative_address"/>
+									</group>
+								</form>
+							</page>
+						</notebook>
+					</sheet>
+					<div class="oe_chatter">
+						<field name="message_follower_ids" widget="mail_followers"/>
+						<field name="message_ids" widget="mail_thread"/>
+					</div>
+				</form>
+			</field>
+		</record> -->
+		<!-- uni.student tree view -->
+		<record id="uni_student_view_tree" model="ir.ui.view">
+			<field name="name">uni.student.view.tree</field>
+			<field name="model">uni.student</field>
+			<field name="arch" type="xml">
+				<tree>
+					<field name="first_name"/>
+					<field name="middle_name"/>
+					<field name="last_name"/>
+					<field name="fourth_name"/>
+					<field name="faculty_id" groups="base.group_multi_company"/>
+					<field name="department_id"/>
+					<field name="batch_id"/>
+					<field name="university_id"/>
+					<field name="state"/>
+				</tree>
+			</field>
+		</record>
+		<!-- uni.student Kanban View  -->
+		<record model="ir.ui.view" id="uni_student_view_kanban">
+			<field name="name">uni.student.view.kanban</field>
+			<field name="model">uni.student</field>
+			<field name="arch" type="xml">
+				<kanban class="o_hr_employee_kanban"> <!-- create="0" -->
+					<field name="id"/>
+
+					<field name="name"/>
+
+					<field name="std_img"/>
+					<templates>
+						<t t-name="kanban-box">
+							<div class="oe_kanban_global_click">
+								<div class="o_kanban_image">
+									<img t-att-src="kanban_image('uni.student', 'std_img', record.id.raw_value)"/>
+								</div>
+								<div class="oe_kanban_details">
+									<h4>
+										<a type="open">
+											<field name="name" />
+										</a>
+									</h4>
+									<ul groups="base.group_multi_company">
+										<strong>Faculty:</strong>
+										<field name="faculty_id" />
+									</ul>
+									<ul>
+										<strong>University ID:</strong>
+										<field name="university_id" />
+									</ul>
+								</div>
+							</div>
+							<!-- <script> $('.oe_employee_picture').load(function() {if($(this).width() > $(this).height()) {$(this).addClass('oe_employee_picture_wide') } });</script> -->
+						</t>
+					</templates>
+				</kanban>
+			</field>
+		</record>
+		<!-- uni.student search view -->
+		<!-- <record id="uni_student_view_search" model="ir.ui.view">
+			<field name="name">uni.student.search</field>
+			<field name="model">uni.student</field>
+			<field name="arch" type="xml">
+				<search > -->
+					<!-- Search by -->
+					<!-- <field name="name"/>
+					<field name="batch_id"/>
+					<field name="university_id"/>
+					<field name="elementary_school"/>
+					<field name="secondary_school"/> -->
+					<!-- Group by -->
+					<!-- <group expand="0" string="Group By">
+						<filter string="Faculty" name="group_by_faculty_id" context="{'group_by':'faculty_id'}"/>
+						<filter string="Department" name="group_by_department_id" context="{'group_by':'department_id'}"/>
+						<filter string="Specialization" name="group_by_specialization_id" context="{'group_by':'specialization_id'}"/>
+						<separator />
+						<filter string="Batch" name="group_by_batch_id" context="{'group_by':'batch_id'}"/>
+						<filter string="Level" name="group_by_level_id" context="{'group_by':'level_id'}"/>
+						<filter string="Semester" name="group_by_semester_id" context="{'group_by':'semester_id'}"/>
+						<filter string="Certificate Type" name="group_by_certificate_type_id" context="{'group_by':'certificate_type_id'}"/>
+						<separator />
+						<filter string="Nationality" name="group_by_nationality_id" context="{'group_by':'nationality_id'}"/>
+						<filter string="Gender" name="group_by_gender" context="{'group_by':'gender'}"/>
+						<filter string="Religion" name="group_by_religion" context="{'group_by':'religion'}"/>
+					</group>
+				</search>
+			</field>
+		</record> -->
+		<!-- Students list action -->
+		<record id="uni_core_students_list_action" model="ir.actions.act_window">
+			<field name="name">Students</field>
+			<field name="type">ir.actions.act_window</field>
+			<field name="res_model">uni.student</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">kanban,tree,form</field>
+			<field name="help" type="html">
+				<p class="oe_view_nocontent_create">Create new student</p>
+			</field>
+		</record>
+		<!-- Students left menu -->
+		<menuitem id="uni_core_students_list_menu" name="Students" groups="uni_core.uni_group_dean,uni_group_student" parent="uni_core_students_view_menu" action="uni_core_students_list_action"/>
+
+
+		<!-- Form view -->
+		<record id="secendery_school_result_view_form" model="ir.ui.view">
+			<field name="name">secendery.school.result.form</field>
+			<field name="model">secendery.school.result</field>
+			<field name="arch" type="xml">
+				<form string="Branches">
+					<sheet>
+						<group>
+							<field name="subject_name"/>
+							<field name="percentage"/>
+						</group>
+					</sheet>
+				</form>
+			</field>
+		</record>
+	</data>
+</odoo>
