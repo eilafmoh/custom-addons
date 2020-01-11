@@ -101,18 +101,5 @@
             </field>
         </record>
 
-        <record id="view_hr_employee_filter" model="ir.ui.view">
-            <field name="name">hr.employee</field>
-            <field name="model">hr.employee</field>
-            <field name="arch" type="xml">
-                <search>
-                    <!-- Group by -->
-                    <group expand="0" string="Group By">
-                        <filter string="Employee Category" name="group_by_category_ids" context="{'group_by':'category_ids'}"/>
-                    </group>
-                </search>
-            </field>
-        </record>
-
     </data>
 </odoo>
